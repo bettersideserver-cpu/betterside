@@ -4,67 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BetterSide | Portal Access</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-    <a href="javascript:void(0)" class="theme-toggle" id="themeToggle">
-        <i class="fa-solid fa-moon"></i>
-    </a>
 
     <div id="view-welcome" class="page-wrapper fade-in">
         <div class="card">
             <div class="logo">
                 <img src="image/Betterside_Logo_1_1-removebg-preview.png" alt="BetterSide Logo">
             </div>
-            
             <a href="./../../index.html" class="back-btn-small">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
-
             <h1>Welcome Back</h1>
             <p class="subtitle">Sign in to continue to BetterSide</p>
-
             <p class="section-title">Who are you?</p>
-
             <div class="options">
                 <a href="javascript:void(0)" onclick="switchView('view-buyer')" class="option-card">
                     <div class="icon"><i class="fa-solid fa-house"></i></div>
-                    <div class="text">
-                        <h3>Home Buyer / Investor</h3>
-                        <p>Explore marketplace projects</p>
-                    </div>
+                    <div class="text"><h3>Home Buyer / Investor</h3><p>Explore marketplace projects</p></div>
                     <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
                 </a>
-
                 <a href="javascript:void(0)" onclick="switchView('view-partner')" class="option-card">
                     <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
-                    <div class="text">
-                        <h3>Channel Partner</h3>
-                        <p>Manage leads & lots</p>
-                    </div>
+                    <div class="text"><h3>Channel Partner</h3><p>Manage leads & lots</p></div>
                     <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
                 </a>
-
                 <a href="javascript:void(0)" onclick="switchView('view-developer')" class="option-card">
                     <div class="icon"><i class="fa-solid fa-building"></i></div>
-                    <div class="text">
-                        <h3>Developer</h3>
-                        <p>List & manage projects</p>
-                    </div>
+                    <div class="text"><h3>Developer</h3><p>List & manage projects</p></div>
                     <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
                 </a>
             </div>
         </div>
     </div>
 
+    <!-- BUYER -->
     <div id="view-buyer" class="main-container hidden fade-in">
         <div class="left-panel">
             <video autoplay muted loop class="bg-video">
@@ -79,51 +56,23 @@
                 </div>
             </div>
         </div>
-
         <div class="right-panel">
             <a href="javascript:void(0)" onclick="switchView('view-welcome')" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
-         <form id="buyerForm">
-    <div class="input-group full-width">
-        <label>Full Name</label>
-        <input type="text" name="fullName" required>
-    </div>
-
-    <div class="row">
-        <div class="input-group half-width">
-            <label>Phone</label>
-            <input type="tel" name="phone" required>
-        </div>
-
-        <div class="input-group half-width">
-            <label>Email</label>
-            <input type="email" name="email" required>
+            <form id="buyerForm">
+                <div class="input-group full-width"><label>Full Name</label><input type="text" name="fullName" required></div>
+                <div class="row">
+                    <div class="input-group half-width"><label>Phone</label><input type="tel" name="phone" required></div>
+                    <div class="input-group half-width"><label>Email</label><input type="email" name="email" required></div>
+                </div>
+                <div class="input-group full-width"><label>City</label><input type="text" name="city" required></div>
+                <div class="input-group full-width"><label>Password</label><input type="password" name="password" required></div>
+                <div class="input-group full-width"><label>Budget (Optional)</label><input type="text" name="budget"></div>
+                <button type="submit" class="submit-btn">Complete Registration</button>
+            </form>
         </div>
     </div>
 
-    <div class="input-group full-width">
-        <label>City</label>
-        <input type="text" name="city" required>
-    </div>
-
-    <div class="input-group full-width">
-        <label>Password</label>
-        <input type="password" name="password" required>
-    </div>
-
-    <div class="input-group full-width">
-        <label>Budget (Optional)</label>
-        <input type="text" name="budget">
-    </div>
-
-                  <button type="button" class="submit-btn" onclick="window.location.href='../dashboard/dashboard.html'">
-    Complete Registration
-</button>
-          
-</form>
-
-        </div>
-    </div>
-
+    <!-- PARTNER -->
     <div id="view-partner" class="main-container hidden fade-in">
         <div class="left-panel">
             <video autoplay muted loop class="bg-video">
@@ -131,7 +80,6 @@
             </video>
             <div class="video-overlay"></div>
             <div class="noise-overlay"></div>
-            
             <div class="content-wrapper">
                 <div class="vertical-line"></div>
                 <div class="text-content">
@@ -140,44 +88,23 @@
                 </div>
             </div>
         </div>
-
         <div class="right-panel">
             <a href="javascript:void(0)" onclick="switchView('view-welcome')" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
-            
-            <form>
-                <div class="input-group full-width">
-                    <label>Full Name</label>
-                    <input type="text" required>
-                </div>
-                <div class="input-group full-width">
-                    <label>Company / Firm Name</label>
-                    <input type="text" required>
-                </div>
+            <form id="partnerForm">
+                <div class="input-group full-width"><label>Full Name</label><input type="text" name="fullName" required></div>
+                <div class="input-group full-width"><label>Company / Firm Name</label><input type="text" name="companyName" required></div>
                 <div class="row">
-                    <div class="input-group half-width">
-                        <label>Phone</label>
-                        <input type="tel" required>
-                    </div>
-                    <div class="input-group half-width">
-                        <label>Email</label>
-                        <input type="email" required>
-                    </div>
+                    <div class="input-group half-width"><label>Phone</label><input type="tel" name="phone" required></div>
+                    <div class="input-group half-width"><label>Email</label><input type="email" name="email" required></div>
                 </div>
-                <div class="input-group full-width">
-                    <label>City</label>
-                    <input type="text" required>
-                </div>
-                <div class="input-group full-width">
-                    <label>Password</label>
-                    <input type="password" required>
-                </div>
-                <button type="button" class="submit-btn" onclick="window.location.href='../dashboard/dashboard.html'">
-    Complete Registration
-</button>
+                <div class="input-group full-width"><label>City</label><input type="text" name="city" required></div>
+                <div class="input-group full-width"><label>Password</label><input type="password" name="password" required></div>
+                <button type="submit" class="submit-btn">Complete Registration</button>
             </form>
         </div>
     </div>
 
+    <!-- DEVELOPER -->
     <div id="view-developer" class="main-container hidden fade-in">
         <div class="left-panel">
             <video autoplay muted loop class="bg-video">
@@ -185,7 +112,6 @@
             </video>
             <div class="video-overlay"></div>
             <div class="noise-overlay"></div>
-            
             <div class="content-wrapper">
                 <div class="vertical-line"></div>
                 <div class="text-content">
@@ -194,155 +120,144 @@
                 </div>
             </div>
         </div>
-
         <div class="right-panel">
             <a href="javascript:void(0)" onclick="switchView('view-welcome')" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
-            
-            <form>
-                <div class="input-group full-width">
-                    <label>Developer / Group Name</label>
-                    <input type="text" required>
-                </div>
-                <div class="input-group full-width">
-                    <label>Contact Person Name</label>
-                    <input type="text" required>
-                </div>
+            <form id="developerForm">
+                <div class="input-group full-width"><label>Developer / Group Name</label><input type="text" name="developerName" required></div>
+                <div class="input-group full-width"><label>Contact Person Name</label><input type="text" name="contactName" required></div>
                 <div class="row">
-                    <div class="input-group half-width">
-                        <label>Phone</label>
-                        <input type="tel" required>
-                    </div>
-                    <div class="input-group half-width">
-                        <label>Email</label>
-                        <input type="email" required>
-                    </div>
+                    <div class="input-group half-width"><label>Phone</label><input type="tel" name="phone" required></div>
+                    <div class="input-group half-width"><label>Email</label><input type="email" name="email" required></div>
                 </div>
-                <div class="input-group full-width">
-                    <label>City</label>
-                    <input type="text" required>
-                </div>
-                <div class="input-group full-width">
-                    <label>Password</label>
-                    <input type="password" required>
-                </div>
+                <div class="input-group full-width"><label>City</label><input type="text" name="city" required></div>
+                <div class="input-group full-width"><label>Password</label><input type="password" name="password" required></div>
                 <div class="row">
-                    <div class="input-group half-width">
-                        <label>GST Number</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="input-group half-width">
-                        <label>RERA No.</label>
-                        <input type="text" required>
-                    </div>
+                    <div class="input-group half-width"><label>GST Number</label><input type="text" name="gstNumber" required></div>
+                    <div class="input-group half-width"><label>RERA No.</label><input type="text" name="reraNumber" required></div>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="rera-confirm" required>
                     <label for="rera-confirm">I confirm that I am RERA Registered</label>
                 </div>
-                <div class="input-group full-width">
-                    <label>Document Link (Optional)</label>
-                    <input type="url" placeholder="Google Drive / Dropbox Link">
-                </div>
-                         <button type="button" class="submit-btn" onclick="window.location.href='../dashboard/dashboard.html'">
-    Complete Registration
-</button>
+                <div class="input-group full-width"><label>Document Link (Optional)</label><input type="url" name="documentLink"></div>
+                <button type="submit" class="submit-btn">Complete Registration</button>
             </form>
         </div>
     </div>
 
     <script>
-        // 1. Theme Toggle Logic
-        const toggle = document.getElementById("themeToggle");
-        const icon = toggle.querySelector("i");
-        const body = document.body;
-
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark');
-            icon.classList.replace("fa-moon", "fa-sun");
+        async function safeJson(res) {
+            const text = await res.text();
+            try { return JSON.parse(text); }
+            catch { return { message: "Unexpected server response: " + text.substring(0, 150) }; }
         }
 
-        toggle.addEventListener("click", () => {
-            body.classList.toggle("dark");
-            
-            if (body.classList.contains("dark")) {
-                icon.classList.replace("fa-moon", "fa-sun");
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.replace("fa-sun", "fa-moon");
-                localStorage.setItem('theme', 'light');
-            }
+        function setBtnLoading(btn, loading) {
+            btn.disabled = loading;
+            btn.textContent = loading ? "Please wait..." : "Complete Registration";
+        }
+
+        const SHEET_URL = "https://script.google.com/macros/s/AKfycbyIOYx29rQ2Dg5X4nN2F5uNRjFD1zwqyZk_Ah-PjcKIB9MDk3eiWizY3wcKJP-wi6YIeg/exec";
+
+        function logToSheet(payload) {
+            fetch(SHEET_URL, {
+                method: "POST",
+                headers: { "Content-Type": "text/plain" },
+                body: JSON.stringify(payload)
+            }).catch(err => console.error("Sheet log failed:", err));
+        }
+
+        // ── BUYER SIGNUP ─────────────────────────────────────────────────────
+        document.getElementById("buyerForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector(".submit-btn");
+            setBtnLoading(btn, true);
+            const f = new FormData(this);
+            try {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name: f.get("fullName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), budget: f.get("budget"), role: "buyer" })
+                });
+                const data = await safeJson(res);
+                if (res.ok) {
+                    localStorage.setItem("userName", data.user.name);
+                    localStorage.setItem("userRole", data.user.role);
+                    localStorage.setItem("userEmail", data.user.email);
+                    localStorage.setItem("userCity", data.user.city);
+                    localStorage.setItem("userPhone", data.user.phone);
+                    logToSheet({ role: "buyer", name: data.user.name, phone: data.user.phone, email: data.user.email, city: data.user.city, budget: data.user.budget || "-" });
+                    window.location.href = "../Dashboard/dashboard.html";
+                } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
+            } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });
 
-        // 2. View Navigation Logic (Switching between Cards)
-        function switchView(viewId) {
-            // Hide all views
-            const views = document.querySelectorAll('.main-container, .page-wrapper');
-            views.forEach(view => {
-                view.classList.add('hidden');
-                // Stop videos in hidden views to save resources
-                const video = view.querySelector('video');
-                if(video) video.pause();
-            });
+        // ── PARTNER SIGNUP ───────────────────────────────────────────────────
+        document.getElementById("partnerForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector(".submit-btn");
+            setBtnLoading(btn, true);
+            const f = new FormData(this);
+            try {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name: f.get("fullName"), companyName: f.get("companyName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), role: "partner" })
+                });
+                const data = await safeJson(res);
+                if (res.ok) {
+                    localStorage.setItem("userName", data.user.name);
+                    localStorage.setItem("userRole", data.user.role);
+                    localStorage.setItem("userEmail", data.user.email);
+                    localStorage.setItem("userCity", data.user.city);
+                    localStorage.setItem("userPhone", data.user.phone);
+                    localStorage.setItem("companyName", data.user.companyName);
+                    logToSheet({ role: "partner", name: data.user.name, phone: data.user.phone, email: data.user.email, city: data.user.city, companyName: data.user.companyName || "-" });
+                    window.location.href = "../Dashboard/dashboard.html";
+                } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
+            } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
+        });
 
-            // Show target view
+        // ── DEVELOPER SIGNUP ─────────────────────────────────────────────────
+        document.getElementById("developerForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector(".submit-btn");
+            setBtnLoading(btn, true);
+            const f = new FormData(this);
+            try {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name: f.get("contactName"), developerName: f.get("developerName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), gstNumber: f.get("gstNumber"), reraNumber: f.get("reraNumber"), documentLink: f.get("documentLink"), role: "developer" })
+                });
+                const data = await safeJson(res);
+                if (res.ok) {
+                    localStorage.setItem("userName", data.user.name);
+                    localStorage.setItem("userRole", data.user.role);
+                    localStorage.setItem("userEmail", data.user.email);
+                    localStorage.setItem("userCity", data.user.city);
+                    localStorage.setItem("userPhone", data.user.phone);
+                    localStorage.setItem("developerName", data.user.developerName);
+                    logToSheet({ role: "developer", name: data.user.name, developerName: data.user.developerName || "-", phone: data.user.phone, email: data.user.email, city: data.user.city, gstNumber: data.user.gstNumber || "-", reraNumber: data.user.reraNumber || "-", documentLink: data.user.documentLink || "-" });
+                    window.location.href = "../Dashboard/dashboard.html";
+                } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
+            } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
+        });
+
+        // ── VIEW SWITCHER ─────────────────────────────────────────────────────
+        function switchView(viewId) {
+            document.querySelectorAll('.main-container, .page-wrapper').forEach(view => {
+                view.classList.add('hidden');
+                const video = view.querySelector('video');
+                if (video) video.pause();
+            });
             const target = document.getElementById(viewId);
             if (target) {
                 target.classList.remove('hidden');
-                // Play video if the view has one
                 const video = target.querySelector('video');
-                if(video) video.play();
+                if (video) video.play();
             }
         }
-        document.addEventListener('DOMContentLoaded', () => {
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
-
-  if (!dot || !ring) return;
-
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    // Dot sticks exactly to mouse
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    const dx = mouseX - ringX;
-    const dy = mouseY - ringY;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    // Snap on fast movement
-    if (distance > 70) {
-      ringX = mouseX;
-      ringY = mouseY;
-    } else {
-      ringX += dx * 0.18;
-      ringY += dy * 0.18;
-    }
-
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-
-    requestAnimationFrame(animateRing);
-  }
-
-  animateRing();
-
-  /* Hover effect on clickable elements */
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
-  });
-});
     </script>
-    
-
 </body>
 </html>

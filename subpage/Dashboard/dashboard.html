@@ -9,17 +9,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
 
     <aside class="sidebar">
         <div>
-       <div class="logo" onclick="window.location.href='/'" style="cursor:pointer;">
-    <div class="logo-icon">
-        <i class="fa-solid fa-house"></i>
-    </div>
-    Channel Partner
-</div>
+            <div class="logo" onclick="window.location.href='/'" style="cursor:pointer;">
+                <div class="logo-icon"><i class="fa-solid fa-house"></i></div>
+                Channel Partner
+            </div>
             <ul class="nav-links">
                 <li><a id="nav-dashboard" class="active" onclick="showSection('dashboard')"><i class="fa-solid fa-table-columns"></i> Dashboard</a></li>
                 <li><a id="nav-leads" onclick="showSection('leads')"><i class="fa-solid fa-user-group"></i> Leads</a></li>
@@ -30,66 +26,60 @@
         </div>
 
         <div class="bottom-section">
-            <div class="theme-switch-container">
-                <span class="theme-label">Theme</span>
-                <button id="theme-toggle" class="theme-btn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-            </div>
-
             <div class="user-profile">
                 <div class="user-info">
-                    <div class="avatar">RS</div>
+                    <div class="avatar" id="sidebarAvatar">
+                        <img id="profileImage" src="" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+                        <span id="avatarInitials">--</span>
+                    </div>
+                    <input type="file" id="imageUpload" accept="image/*" hidden>
                     <div class="user-details">
-                        <h4>Rohit Sharma</h4>
-                        <span>Registered Partner</span>
+                        <h4 id="sidebarName">Loading...</h4>
+                        <span id="sidebarRole">--</span>
                     </div>
                 </div>
-                <a href="#" class="sign-out">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
-                </a>
             </div>
+
+            <a href="#" class="sign-out" id="logoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
         </div>
     </aside>
 
     <main class="main-content">
 
+        <!-- DASHBOARD -->
         <div id="dashboard" class="content-section active-section">
             <header>
-                <h1>Welcome back, Rohit!</h1>
+                <h1>Welcome back, <span id="welcomeName"></span>!</h1>
                 <p class="page-desc">Here's what's happening with your projects today.</p>
             </header>
 
             <section class="stats-grid">
                 <div class="card">
                     <div class="card-header"><span class="card-title">Today's Leads</span><span class="badge blue">+2</span></div>
-                    <div class="card-number">12</div>
+                    <div class="card-number" id="todayLeads">12</div>
                 </div>
                 <div class="card">
                     <div class="card-header"><span class="card-title">Total Leads</span><span class="badge orange">+15%</span></div>
-                    <div class="card-number">843</div>
+                    <div class="card-number" id="totalLeads">843</div>
                 </div>
                 <div class="card">
                     <div class="card-header"><span class="card-title">Active Projects</span><span class="badge green">Running</span></div>
-                    <div class="card-number">8</div>
+                    <div class="card-number" id="activeProjects">8</div>
                 </div>
                 <div class="card">
                     <div class="card-header"><span class="card-title">Ads in Progress</span><span class="badge purple">Reviewing</span></div>
-                    <div class="card-number">3</div>
+                    <div class="card-number" id="adsInProgress">3</div>
                 </div>
             </section>
 
             <section class="table-section">
-                <h3>Recent Leads</h3>
-                <br>
+                <h3>Recent Leads</h3><br>
                 <table>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Project</th>
-                            <th>Source</th>
-                            <th>Status</th>
+                            <th>Name</th><th>Phone</th><th>Project</th><th>Source</th><th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -122,36 +112,26 @@
             </section>
         </div>
 
+        <!-- LEADS -->
         <div id="leads" class="content-section">
             <div class="top-nav-link"><a onclick="showSection('dashboard')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a></div>
             <header>
                 <h1>My Leads</h1>
                 <p class="page-desc">Manage and track all your potential clients. (2 total)</p>
             </header>
-
             <div style="display:flex; gap:10px; margin-bottom: 20px;">
                 <input type="text" class="input-field" placeholder="Search by name or phone..." style="max-width: 400px;">
                 <button class="status-select" style="background:var(--card-bg);">Filter <i class="fa-solid fa-filter"></i></button>
             </div>
-
             <section class="table-section">
                 <table>
                     <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Project</th>
-                            <th>Source</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Notes</th>
-                        </tr>
+                        <tr><th>Name</th><th>Phone</th><th>Project</th><th>Source</th><th>Date</th><th>Status</th><th>Notes</th></tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><h5>Rahul</h5></td>
-                            <td>1234567890</td>
-                            <td>Skyline Residency</td>
+                            <td>1234567890</td><td>Skyline Residency</td>
                             <td><span class="source-tag">Organic</span></td>
                             <td>24 Jan 2026</td>
                             <td><select class="status-select"><option>New</option></select></td>
@@ -159,8 +139,7 @@
                         </tr>
                         <tr>
                             <td><h5>Rohit Verma</h5></td>
-                            <td>9876543210</td>
-                            <td>Emerald Heights</td>
+                            <td>9876543210</td><td>Emerald Heights</td>
                             <td><span class="source-tag">Meta Ads</span></td>
                             <td>24 Jan 2026</td>
                             <td><select class="status-select"><option>Contacted</option></select></td>
@@ -171,10 +150,10 @@
             </section>
         </div>
 
+        <!-- ADS -->
         <div id="ads" class="content-section">
             <div class="top-nav-link"><a onclick="showSection('dashboard')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a></div>
             <h1>Run Ads with BetterSide</h1>
-            
             <form>
                 <div class="ad-form-grid">
                     <select class="input-field"><option>Skyline Residency</option><option>Emerald Heights</option></select>
@@ -184,7 +163,6 @@
                 </div>
                 <button type="button" class="submit-btn">Submit Ad Request</button>
             </form>
-
             <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px;">
                 <div class="card" style="border: 1px solid var(--border-color);">
                     <h3>Skyline Residency</h3>
@@ -195,30 +173,25 @@
             </div>
         </div>
 
+        <!-- MARKETING -->
         <div id="marketing" class="content-section">
             <div class="top-nav-link"><a onclick="showSection('dashboard')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a></div>
             <header>
                 <h1>Marketing Support</h1>
                 <p class="page-desc">Track the marketing collateral shared with you.</p>
             </header>
-
             <div style="background: rgba(13,110,253,0.1); border:1px solid rgba(13,110,253,0.25); padding:20px; border-radius:10px; color:#9ec5fe; margin-bottom:30px; font-size:0.9rem;">
                 <i class="fa-solid fa-circle-info"></i> Files are shared via WhatsApp/Email. This page tracks volume.
             </div>
-
             <section class="stats-grid-4">
                 <div class="card"><span style="color:var(--text-gray); font-size:0.8rem; font-weight:700;">CREATIVES TODAY</span><span class="card-number">2</span></div>
                 <div class="card"><span style="color:var(--text-gray); font-size:0.8rem; font-weight:700;">TOTAL</span><span class="card-number">142</span></div>
                 <div class="card"><span style="color:var(--text-gray); font-size:0.8rem; font-weight:700;">EDMs SENT</span><span class="card-number">64</span></div>
             </section>
-
-            <h3>Support History</h3>
-            <br>
+            <h3>Support History</h3><br>
             <section class="table-section">
                 <table>
-                    <thead>
-                        <tr><th>Date</th><th>Type</th><th>Project</th><th>Status</th></tr>
-                    </thead>
+                    <thead><tr><th>Date</th><th>Type</th><th>Project</th><th>Status</th></tr></thead>
                     <tbody>
                         <tr><td>24 Jan 2026</td><td><span class="status-pill pill-creative">Creative</span></td><td>Skyline Residency</td><td><span class="status-pill pill-completed">completed</span></td></tr>
                         <tr><td>23 Jan 2026</td><td><span class="status-pill pill-edm">EDM</span></td><td>Emerald Heights</td><td><span class="status-pill pill-pending">pending</span></td></tr>
@@ -227,33 +200,37 @@
             </section>
         </div>
 
+        <!-- PROFILE -->
         <div id="profile" class="content-section">
             <div class="top-nav-link"><a onclick="showSection('dashboard')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a></div>
             <header>
                 <h1>My Profile</h1>
                 <p class="page-desc">Manage your account details and preferences.</p>
             </header>
-
             <section class="profile-card">
                 <div class="card-banner"></div>
                 <div class="profile-content-container">
-                    <div class="profile-avatar-lg">RS</div>
+                    <div class="profile-avatar-lg" id="profileAvatarLg">--</div>
                     <div class="info-grid">
                         <div>
                             <span class="info-label">Full Name</span>
-                            <div class="info-value"><i class="fa-regular fa-user" style="color:var(--icon-blue)"></i> Rohit Sharma</div>
+                            <div class="info-value"><i class="fa-regular fa-user" style="color:var(--icon-blue)"></i> <span id="profileName">-</span></div>
                         </div>
                         <div>
                             <span class="info-label">Company Name</span>
-                            <div class="info-value"><i class="fa-regular fa-building" style="color:var(--icon-orange)"></i> Registered Partner</div>
+                            <div class="info-value"><i class="fa-regular fa-building" style="color:var(--icon-orange)"></i> <span id="profileCompany">-</span></div>
+                        </div>
+                        <div>
+                            <span class="info-label">Phone</span>
+                            <div class="info-value"><i class="fa-solid fa-phone" style="color:var(--icon-blue)"></i> <span id="profilePhone">-</span></div>
                         </div>
                         <div>
                             <span class="info-label">Email</span>
-                            <div class="info-value"><i class="fa-regular fa-envelope" style="color:var(--icon-blue)"></i> cp@betterside.local</div>
+                            <div class="info-value"><i class="fa-regular fa-envelope" style="color:var(--icon-blue)"></i> <span id="profileEmail">-</span></div>
                         </div>
                         <div>
                             <span class="info-label">Location</span>
-                            <div class="info-value"><i class="fa-solid fa-location-dot" style="color:var(--icon-orange)"></i> Mumbai</div>
+                            <div class="info-value"><i class="fa-solid fa-location-dot" style="color:var(--icon-orange)"></i> <span id="profileLocation">-</span></div>
                         </div>
                         <div>
                             <button class="edit-btn">Edit Profile</button>
@@ -266,5 +243,101 @@
     </main>
 
     <script src="script.js"></script>
+
+    <script>
+        // ── AVATAR / IMAGE UPLOAD ─────────────────────────────────────────────
+        const avatar = document.getElementById("sidebarAvatar");
+        const imageUpload = document.getElementById("imageUpload");
+        const profileImage = document.getElementById("profileImage");
+        const avatarInitials = document.getElementById("avatarInitials");
+        const STORAGE_KEY = "userProfileImage";
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedPhoto = localStorage.getItem(STORAGE_KEY);
+            if (savedPhoto && profileImage) {
+                profileImage.src = savedPhoto;
+                profileImage.style.display = "block";
+                if (avatarInitials) avatarInitials.style.display = "none";
+            }
+        });
+
+        avatar.addEventListener("click", () => imageUpload.click());
+
+        imageUpload.addEventListener("change", function() {
+            const file = this.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.src = e.target.result;
+                img.onload = function() {
+                    const canvas = document.createElement("canvas");
+                    const ctx = canvas.getContext("2d");
+                    const size = 200;
+                    canvas.width = size; canvas.height = size;
+                    const minDim = Math.min(img.width, img.height);
+                    const sx = (img.width - minDim) / 2;
+                    const sy = (img.height - minDim) / 2;
+                    ctx.drawImage(img, sx, sy, minDim, minDim, 0, 0, size, size);
+                    const compressedData = canvas.toDataURL("image/jpeg", 0.7);
+                    try {
+                        localStorage.setItem(STORAGE_KEY, compressedData);
+                        profileImage.src = compressedData;
+                        profileImage.style.display = "block";
+                        avatarInitials.style.display = "none";
+                    } catch(err) {
+                        alert("Storage full! Please clear with localStorage.clear()");
+                    }
+                };
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // ── FILL USER INFO FROM LOCALSTORAGE ──────────────────────────────────
+        {
+            const _name    = localStorage.getItem("userName");
+            const _role    = localStorage.getItem("userRole");
+            const _email   = localStorage.getItem("userEmail");
+            const _city    = localStorage.getItem("userCity");
+            const _phone   = localStorage.getItem("userPhone");
+            const _company = localStorage.getItem("companyName") || localStorage.getItem("developerName") || "-";
+
+            if (_name) {
+                document.getElementById("welcomeName").textContent = _name;
+                document.getElementById("sidebarName").textContent = _name;
+                const initials = _name.split(" ").map(w => w[0]).join("").toUpperCase().substring(0, 2);
+                document.getElementById("avatarInitials").textContent = initials;
+                document.getElementById("profileAvatarLg").textContent = initials;
+            }
+            if (_role) {
+                document.getElementById("sidebarRole").textContent =
+                    _role.charAt(0).toUpperCase() + _role.slice(1);
+            }
+            if (_name)    document.getElementById("profileName").textContent     = _name;
+            if (_email)   document.getElementById("profileEmail").textContent    = _email;
+            if (_city)    document.getElementById("profileLocation").textContent = _city;
+            if (_phone)   document.getElementById("profilePhone").textContent    = _phone;
+            if (_company) document.getElementById("profileCompany").textContent  = _company;
+        }
+
+        // ── DASHBOARD STATS (Google Sheets) ───────────────────────────────────
+        const API_URL = "https://script.google.com/macros/s/AKfycbyIOYx29rQ2Dg5X4nN2F5uNRjFD1zwqyZk_Ah-PjcKIB9MDk3eiWizY3wcKJP-wi6YIeg/exec";
+
+        async function loadDashboardData() {
+            try {
+                const res = await fetch(API_URL);
+                const data = await res.json();
+                document.getElementById("todayLeads").textContent     = data.today_leads;
+                document.getElementById("totalLeads").textContent     = data.total_leads;
+                document.getElementById("activeProjects").textContent = data.active_projects;
+                document.getElementById("adsInProgress").textContent  = data.ads_in_progress;
+            } catch(error) {
+                console.error("Error loading dashboard data:", error);
+            }
+        }
+
+        loadDashboardData();
+    </script>
+
 </body>
 </html>

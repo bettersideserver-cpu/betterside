@@ -1,151 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Real Estate</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — BetterSide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
 
-    <a href="./../../index.html" class="back-arrow">&larr;</a>
+  <!-- Back Arrow -->
+  <a href="./../../index.html" class="back-arrow">←</a>
 
-    <div class="video-background">
-        <video autoplay muted loop playsinline poster="fallback.jpg">
-            <source src="video/Cinematic_Cityscape_Background_Video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+   <a href="./../../index.html" class="logo-space">
+      <img src="../../images/Betterside Logo 1.png" alt="BetterSide"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./../../index.html">Home</a></li>
+      <li><a href="./../../subpage/Explore/explore.html">Explore</a></li>
+      <li><a href="./../../subpage/About/index.html">About</a></li>
+      <li class="has-dropdown" id="unitsDropdown">
+        <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
+        <ul class="dropdown-menu">
+          subpage/Explore/explore.html
+        </ul>
+      </li>
+      <li><a href="#">Blog</a></li>
+      <li class="active"><a href="./../contact/contact.html">Contact FAQ</a></li>
+      <li class="mobile-auth-btn">
+        <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'">Login</button>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'">Login</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Hero Header -->
+    <div class="main-container">
+      <section class="contact-header">
+        <div class="header-eyebrow">BetterSide &nbsp;·&nbsp; Get In Touch &nbsp;·&nbsp; We'd Love to Hear From You</div>
+        <h1 class="header-title">
+          <span class="hover-contact">CONTACT</span><br>
+          <span class="hover-us">US</span>
+        </h1>
+      </section>
     </div>
 
- <nav class="navbar">
-  <!-- Hamburger FIRST -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <!-- Marquee -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span class="marquee-item">3D Walkthroughs</span>
+        <span class="marquee-item">VR Solutions</span>
+        <span class="marquee-item">3D Websites</span>
+        <span class="marquee-item">IPX Solutions</span>
+        <span class="marquee-item">Social Marketing</span>
+        <span class="marquee-item">Performance Ads</span>
+        <span class="marquee-item">PR &amp; Branding</span>
+        <span class="marquee-item">Partner Network</span>
+        <span class="marquee-item">3D Walkthroughs</span>
+        <span class="marquee-item">VR Solutions</span>
+        <span class="marquee-item">3D Websites</span>
+        <span class="marquee-item">IPX Solutions</span>
+        <span class="marquee-item">Social Marketing</span>
+        <span class="marquee-item">Performance Ads</span>
+        <span class="marquee-item">PR &amp; Branding</span>
+        <span class="marquee-item">Partner Network</span>
+      </div>
+    </div>
 
-  <div class="nav-links" id="navLinks">
-    <a href="./../../index.html">Home</a>
-    <a href="#">Explore</a>
-    <a href="#">Blog</a>
-    <a href="./../../subpage/about/index.html">About</a>
-    <a href="./../contact/contact.html">Contact</a>
-  </div>
-</nav>
+    <div class="main-container">
 
+      <!-- Main Contact Body -->
+      <section class="contact-body reveal">
 
+        <!-- ── LEFT: Info + Map ── -->
+        <div class="contact-left">
+          <p class="section-tag">Reach Out</p>
+          <h2 class="section-title">Let's Create<br><span class="gradient-text-orange">Something</span><br>Extraordinary</h2>
+          <p class="contact-desc">We're here to guide you every step of the way. Whether you have a question, need more details, or are ready to take the next step — our team is just a message away.</p>
 
-    <div class="full-screen-container">
-        <div class="content-wrapper">
-            
-            <div class="left-section">
-                <div class="hero-text">
-                    <h1>
-                        <span class="blue-text">CONTACT</span><br>
-                        <span class="orange-text">US</span>
-                        <span class="black-line"></span>
-                    </h1>
-                    <p>
-                        We're here to guide you every step of the way. Whether you have a question, need more details, or are ready to take the next step, our team is just a message away. Let's help you discover the better side of living.
-                    </p>
-                </div>
+          <div class="contact-info-stack">
+           
+          
+           
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="map-wrapper">
+            <div class="map-label">
+              <span class="map-dot"></span>
+              Find Us on the Map
             </div>
-
-            <div class="right-section">
-                <h2>Let's Stay in Touch</h2>
-                <p class="sub-text">Let's connect and take the first step toward a better side of living.</p>
-                
-                <form action="#">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <input type="text" id="message" name="message" required>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send</button>
-                </form>
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.5156752562984!2d75.84474317558585!3d30.872232174517286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83eb70abb0a3%3A0xb2cea78c46492a36!2sBetterSide!5e0!3m2!1sen!2sin!4v1775458439162!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="BetterSide Location">
+              </iframe>
             </div>
-
+          </div>
         </div>
+
+        <!-- ── RIGHT: Form Card ── -->
+        <div class="contact-right">
+          <div class="form-card">
+            <div class="pill-tag">Available for New Projects</div>
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-sub">Let's connect and take the first step toward a better side of living.</p>
+
+            <form id="contactForm" action="#">
+
+              <div class="input-group">
+                <label for="name">Full Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required/>
+              </div>
+
+              <div class="input-group">
+                <label for="email">Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+              </div>
+
+              <div class="input-group">
+                <label for="mobile">Mobile Number <span class="req">*</span></label>
+                <div class="phone-input-wrap">
+                  <span class="phone-prefix">+91</span>
+                  <input type="tel" id="mobile" name="mobile"
+                    placeholder="00000 00000"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    title="Please enter a valid 10-digit mobile number"
+                    required/>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="city">City <span class="req">*</span></label>
+                  <input type="text" id="city" name="city" placeholder="Your city" required/>
+                </div>
+                <div class="input-group">
+                  <label for="state">State <span class="req">*</span></label>
+                  <input type="text" id="state" name="state" placeholder="Your state" required/>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="query">Your Query <span class="req">*</span></label>
+                <textarea id="query" name="query" rows="4"
+                  placeholder="Tell us how we can help — property inquiry, partnership, general question…"
+                  required></textarea>
+              </div>
+
+              <!-- Consent Checkbox -->
+              <div class="consent-box">
+                <label class="consent-label" for="consent">
+                  <input type="checkbox" id="consent" name="consent" required/>
+                  <span class="consent-custom-check">
+                    <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 8.5L11 1.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="consent-text">
+                    I hereby give my consent to receive further communication from <strong>BetterSide</strong> via
+                    Call, SMS, Email or WhatsApp about its products and offers.
+                    <em>This consent overrides any registration for DND / NDNC.</em>
+                  </span>
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <span class="btn-arrow">→</span>
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Links -->
+      <div class="footer-links reveal">
+        <a href="tel:+917986519697">📞 +91 7986519697</a>
+        <a href="#" id="footer-email">✉ info@betterside.com</a>
+        <a href="./../../subpage/About/index.html">↗ About Us</a>
+      </div>
+
     </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
+  </div>
 
-  if (!dot || !ring) return;
+  <script>
+  (function () {
+    // ── Navbar scroll hide/show ──
+    var navbar = document.getElementById('navbar');
+    var lastY  = window.scrollY;
+    window.addEventListener('scroll', function () {
+      var curr = window.scrollY;
+      navbar.classList.toggle('scrolled', curr > 60);
+      if (curr > lastY && curr > 120) navbar.classList.add('nav-hide');
+      else if (curr < lastY) navbar.classList.remove('nav-hide');
+      lastY = curr;
+    });
 
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    // Dot sticks exactly to mouse
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    const dx = mouseX - ringX;
-    const dy = mouseY - ringY;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    // Snap on fast movement
-    if (distance > 70) {
-      ringX = mouseX;
-      ringY = mouseY;
-    } else {
-      ringX += dx * 0.18;
-      ringY += dy * 0.18;
+    // ── Hamburger ──
+    var hamburger = document.getElementById('hamburger');
+    var navLinks  = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function () { navLinks.classList.toggle('active'); });
+      navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { navLinks.classList.remove('active'); });
+      });
     }
 
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
+    // ── Scroll Reveal ──
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
 
-    requestAnimationFrame(animateRing);
-  }
+    // ── Mobile number: digits only ──
+    var mobileInput = document.getElementById('mobile');
+    if (mobileInput) {
+      mobileInput.addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '');
+      });
+    }
 
-  animateRing();
+    // ── Form submit feedback ──
+    var form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var consent = document.getElementById('consent');
+        if (!consent.checked) {
+          consent.closest('.consent-box').classList.add('consent-error');
+          return;
+        }
+        var btn = form.querySelector('.submit-btn');
+        btn.innerHTML = '<span>Message Sent ✓</span>';
+        btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+        btn.disabled = true;
+      });
+      document.getElementById('consent').addEventListener('change', function () {
+        this.closest('.consent-box').classList.remove('consent-error');
+      });
+    }
 
-  /* Hover effect on clickable elements */
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
-  });
-});
-
-
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
+    // ── Units dropdown ──
+    var dropdown = document.getElementById('unitsDropdown');
+    var trigger  = dropdown.querySelector('.dropdown-trigger');
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault(); e.stopPropagation();
+      dropdown.classList.toggle('open');
     });
-  });
-}
-
-</script>
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+    });
+  }());
+  </script>
 
 </body>
 </html>

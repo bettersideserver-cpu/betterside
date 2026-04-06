@@ -1,564 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetterSide Real Estate</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetterSide Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="book-a-visit.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
+  <header class="hero" style="background-image: url('images/family.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-<header class="hero" style="background-image: url('images/hero\ \(background\).jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="fade-overlay"></div>
-    
-    <nav class="navbar">
-      <div class="logo-space">
-        <img src="images/Betterside Logo 1.png" alt="BetterSide Logo">
-      </div>
-      
-      <ul class="nav-links">
-        <li>Explore</li>
-        <li>Blog</li>
-        <li><a href="subpage/About/index.html" class="primary">About</a></li>
-        <li><a href="subpage/Contact/contact.html" class="primary">Contact</a></li>
-        
-        <li class="mobile-auth-btn">
-            <button class="login-btn" onclick="window.location.href='subpage/login/index.html'" style="width: 150px; margin-bottom: 10px; border: 1px solid #ccc;">Login</button>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="mainNav">
+     <a href="./../../index.html" class="logo-space">
+      <img src="../../images/Betterside Logo 1.png" alt="BetterSide"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
+    </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/subpage/Explore/explore.html">Explore</a></li>
+        <li><a href="/subpage/About/index.html">About</a></li>
+
+        <!-- ✦ Units Dropdown -->
+        <li class="has-dropdown" id="unitsDropdown">
+          <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="scrollToSection('mdb-section'); return false;">3+1 BHK</a></li>
+            <li><a href="#" onclick="scrollToSection('cm-section'); return false;">4 BHK</a></li>
+            <li><a href="#" onclick="scrollToSection('featured-projects-section'); return false;">Penthouse</a></li>
+          </ul>
         </li>
+
+        <li><a href="#">Blog</a></li>
+        <li><a href="/subpage/Contact/contact.html">Contact FAQ</a></li>
+
         <li class="mobile-auth-btn">
-            <button class="signup-btn" onclick="window.location.href='subpage/sign up/index.html'" style="width: 150px;">Sign Up</button>
+          <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
         </li>
       </ul>
 
       <div class="nav-actions">
-          <button class="signup-btn" onclick="window.location.href='subpage/sign up/index.html'"></button>
-          <button class="login-btn" onclick="window.location.href='subpage/login/index.html'"></button>
+        <button class="cp-btn" onclick="window.location.href='/subpage/Sign up/index.html'">Become a CP</button>
+        <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'">Login</button>
       </div>
-
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </nav>
 
-    <div class="hero-wrapper">
-   <div class="hero-content hero-intro">
-  <h2 class="intro-line">Your Home. In <span class="accent">3D</span>.</h2>
+    <!-- Hero Body -->
+    <div class="hero-body">
+      <div class="hero-center hero-intro">
 
-  <h1 class="intro-title">
-    <span>See Your Home</span>
-    <span>with <span class="brand">Better<span>Side</span></span></span>
-  </h1>
+        <!-- Badge -->
+        <span class="hero-badge intro-item">
+          <span class="badge-dot"></span>Punjab's Premier Real Estate Platform
+        </span>
 
-  <p class="intro-sub">Digital-first real estate solutions for modern homes</p>
+        <!-- Headline -->
+        <h1 class="hero-headline intro-item">
+          <span class="hl-strong">Don't View Properties. Enter Them</span>
+        </h1>
 
-  <div class="hero-actions intro-ui">
-    <button class="primary-btn" id="exploreBtn">Explore Projects</button>
-    <div class="slider-line"></div>
+       
+      
+
+      </div>
+
+      <div class="hero-scroll-cue" id="scrollCue">
+        <span class="scroll-label">Scroll to explore</span>
+        <div class="scroll-track"><div class="scroll-runner"></div></div>
+      </div>
+
+      <div class="hero-search-bottom intro-item">
+        <div class="bs-search-box">
+          <div class="bs-search-bar">
+            <div class="bs-search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <input type="text" id="heroSearch" class="bs-search-input" placeholder="Search by project name, location, or keyword..." autocomplete="off">
+            <div class="bs-search-filters">
+              <div class="bs-filter-pill">
+                <i class="fa-solid fa-building"></i>
+                <select id="filterType">
+                  <option value="">Property Type</option>
+                  <option value="apartments">Apartments</option>
+                  <option value="villa">Villa</option>
+                  <option value="commercial">Commercial</option>
+                </select>
+              </div>
+              <div class="bs-filter-pill">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <select id="filterBudget">
+                  <option value="">Budget</option>
+                  <option value="0-50">Under ₹50 Lac</option>
+                  <option value="50-100">₹50 Lac – ₹1 Cr</option>
+                  <option value="100+">₹1 Cr+</option>
+                </select>
+              </div>
+              <button class="bs-search-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+              </button>
+            </div>
+          </div>
+          <div class="bs-search-results" id="searchResults"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Projects -->
+  <section class="featured-projects-section" id="featured-projects-section">
+    <div class="featured-projects-container">
+      <h2 class="featured-title">Our Premium Projects</h2>
+      <div class="featured-cards-grid">
+        <div class="featured-project-card">
+          <div class="featured-card-image"><img src="images/cm.jpg" alt="CM Infinia"></div>
+          <div class="featured-card-content">
+            <h3>CM Infinia</h3>
+            <p class="featured-card-location"><i class="fa-solid fa-location-dot"></i> CM Valley, Jainpur, Ludhiana</p>
+            <p class="featured-card-desc">Premium luxury residential tower in the heart of Ludhiana</p>
+            <div class="featured-card-tags"><span>Apartments</span><span>4600+ sq.ft</span></div>
+            <a href="./Subpage/Website/CMInfinia/CMInfinia.html" class="featured-card-btn">View Project</a>
+          </div>
+        </div>
+        <div class="featured-project-card">
+          <div class="featured-card-image"><img src="images/MDB_Lutyens_1766146795158.jpg" alt="MDB Lutyens"></div>
+          <div class="featured-card-content">
+            <h3>MDB Lutyens</h3>
+            <p class="featured-card-location"><i class="fa-solid fa-location-dot"></i> Fauji Colony, Banur, Punjab</p>
+            <p class="featured-card-desc">An iconic luxury residential development redefining modern living</p>
+            <div class="featured-card-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
+            <a href="./Subpage/Website/MDBTheLutyens/MDBTheLutyens.html" class="featured-card-btn">View Project</a>
+          </div>
+        </div>
+        <div class="featured-project-card">
+          <div class="featured-card-image"><img src="images/AnantaStreet_1766146992482.jpg" alt="Ananta Street"></div>
+          <div class="featured-card-content">
+            <h3>Ananta Street</h3>
+            <p class="featured-card-location"><i class="fa-solid fa-location-dot"></i> Canal Rd, South City, Ludhiana</p>
+            <p class="featured-card-desc">A serene premium township alongside the canal with lush greenery</p>
+            <div class="featured-card-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
+            <a href="./Subpage/Website/Ananta/Ananta.html" class="featured-card-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CM Infinia Section -->
+  <div class="cm-section-container" id="cm-section">
+    <div class="cm-hero-card">
+      <div class="cm-hero-img-wrap"><img src="images/cm.jpg" alt="CM Infinia" class="cm-hero-bg"><div class="cm-overlay"></div></div>
+      <div class="cm-hero-text">
+        <h1>CM Infinia</h1>
+        <p class="cm-desc">Full immersive tour of CM Infinia, a premium luxury residential tower in the heart of the city</p>
+      </div>
+    </div>
+    <div class="cm-top-row">
+      <div class="cm-placeholder"></div>
+      <div class="cm-sidebar">
+        <h3>Project Amenities</h3>
+        <div class="cm-amenities-grid">
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/ambulance--v1.png" alt=""></div><p>Ambulance</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/meditation-guru.png" alt=""></div><p>Meditation</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/video-playlist.png" alt=""></div><p>Mini Theatre</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/beach-umbrella.png" alt=""></div><p>Sky Lounge</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/badminton.png" alt=""></div><p>Badminton</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/sauna.png" alt=""></div><p>Sauna & Spa</p></div>
+          <div class="cm-amenity-item cm-amenity-center"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/restaurant-table.png" alt=""></div><p>Restaurant</p></div>
+        </div>
+        <div class="cm-contact-area">
+          <div class="cm-contact-card"><div class="cm-brand-info"><span class="cm-brand-name">BetterSide</span><span class="cm-sub-text">(for any query)</span></div><button class="cm-btn-contact">Contact</button></div>
+          <button class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="cm-bottom-bar">
+      <div class="cm-info-pill"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/marker--v1.png" alt=""></div><div class="cm-info-text"><span class="cm-label">Location</span><span class="cm-value">CM Valley, Jainpuri</span></div></div>
+      <div class="cm-info-pill"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/home--v1.png" alt=""></div><div class="cm-info-text"><span class="cm-label">Property type</span><span class="cm-value">Apartments</span></div></div>
+      <div class="cm-info-pill"><div class="cm-price-sym">₹</div><div class="cm-info-text"><span class="cm-label">Area</span><span class="cm-value">4600 sq.ft and above</span></div></div>
+      <button class="cm-info-pill cm-options-btn"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/horizontal-settings-mixer.png" alt=""></div><span class="cm-value">More options</span></button>
+      <button class="cm-download-btn"><img src="https://img.icons8.com/ios/50/long-arrow-down.png" alt="" style="width:24px;"></button>
+    </div>
   </div>
-</div>
-      <div class="hero-image tilt-card">
-  <img src="images/house (hero).png" alt="3D House">
-</div>
 
-    </div>
-</header>
-
-<div class="cm-section-container" id="cm-section">
+  <!-- MDB Lutyens Section -->
+  <div class="cm-section-container" id="mdb-section">
     <div class="cm-hero-card">
-        <div class="cm-hero-img-wrap">
-             <img src="images/cm.jpg" alt="CM Infinia" class="cm-hero-bg">
-            <div class="cm-overlay"></div>
-        </div>
-        <div class="cm-hero-text">
-            <h1>CM Infinia</h1>
-            <p class="cm-desc">Full immersive tour of CM Infinia, a premium luxury residential tower in the heart of the city</p>
-            <a href="https://www.cminfiniaimmersive.com/" class="cm-btn-primary" style="text-decoration: none;">View Full DGI Experience</a>
-        </div>
+      <div class="cm-hero-img-wrap"><img src="images/MDB_Lutyens_1766146795158.jpg" alt="MDB Lutyens" class="cm-hero-bg"><div class="cm-overlay"></div></div>
+      <div class="cm-hero-text">
+        <h1>MDB Lutyens</h1>
+        <p class="cm-desc">Full immersive tour of MDB Lutyens, an iconic luxury residential development redefining modern living</p>
+      </div>
     </div>
-
     <div class="cm-top-row">
-        <div class="cm-placeholder"></div>
-        <div class="cm-sidebar">
-            <h3>Project Amenities</h3>
-            <div class="cm-amenities-grid">
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/ambulance--v1.png" alt="Ambulance"></div><p>Ambulance Service</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/meditation-guru.png" alt="Meditation"></div><p>Meditation room</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/video-playlist.png" alt="Theatre"></div><p>Mini Theatre</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/beach-umbrella.png" alt="Sky Lounge"></div><p>Sky Lounge</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/badminton.png" alt="Badminton"></div><p>Badminton Court</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/sauna.png" alt="Sauna"></div><p>Sauna & Spa</p></div>
-                <div class="cm-amenity-item cm-amenity-center"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/restaurant-table.png" alt="Restaurant"></div><p>Restaurant</p></div>
-            </div>
-            <div class="cm-contact-area">
-                <div class="cm-contact-card">
-                    <div class="cm-brand-info">
-                        <span class="cm-brand-name"><span class="cm-highlight"></span>BetterSide</span>
-                        <span class="cm-sub-text">(for any query)</span>
-                    </div>
-                    <button class="cm-btn-contact">Contact</button>
-                </div>
-                <button class="cm-btn-vr">Book for VR <span class="cm-vr-subtext">(for greater experience)</span></button>
-            </div>
+      <div class="cm-placeholder"></div>
+      <div class="cm-sidebar">
+        <h3>Project Amenities</h3>
+        <div class="cm-amenities-grid">
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/city-hall.png" alt=""></div><p>Clubhouse</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/park-bench.png" alt=""></div><p>Green Park</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/swimming-pool.png" alt=""></div><p>Infinity Pool</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/security-shield-green.png" alt=""></div><p>Security</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/000000/ping-pong.png" alt=""></div><p>Recreational</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/sauna.png" alt=""></div><p>Sauna & Spa</p></div>
+          <div class="cm-amenity-item cm-amenity-center"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/playground.png" alt=""></div><p>Kids Space</p></div>
         </div>
+        <div class="cm-contact-area">
+          <div class="cm-contact-card"><div class="cm-brand-info"><span class="cm-brand-name">BetterSide</span><span class="cm-sub-text">(for any query)</span></div><button class="cm-btn-contact">Contact</button></div>
+          <button class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></button>
+        </div>
+      </div>
     </div>
-
     <div class="cm-bottom-bar">
-        <div class="cm-info-pill">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/marker--v1.png" alt="Location"></div>
-            <div class="cm-info-text"><span class="cm-label">Location</span><span class="cm-value">CM Valley, Jainpuri</span></div>
-        </div>
-        <div class="cm-info-pill">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/home--v1.png" alt="Home"></div>
-            <div class="cm-info-text"><span class="cm-label">Property type</span><span class="cm-value">Apartments</span></div>
-        </div>
-        <div class="cm-info-pill">
-            <div class="cm-price-sym">₹</div>
-            <div class="cm-info-text"><span class="cm-label">Area</span><span class="cm-value">4600s.ft and above <span class="cm-unit"></span></span></div>
-        </div>
-        <button class="cm-info-pill cm-options-btn">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/horizontal-settings-mixer.png" alt="Options"></div>
-           <span  class="cm-value">More options</span> 
-        </button>
-        <button class="cm-download-btn"><img src="https://img.icons8.com/ios/50/long-arrow-down.png" alt="Download" style="width: 24px;"></button>
+      <div class="cm-info-pill"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/marker--v1.png" alt=""></div><div class="cm-info-text"><span class="cm-label">Location</span><span class="cm-value">Fauji Colony, Banur</span></div></div>
+      <div class="cm-info-pill"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/home--v1.png" alt=""></div><div class="cm-info-text"><span class="cm-label">Property type</span><span class="cm-value">Apartments</span></div></div>
+      <div class="cm-info-pill"><div class="cm-price-sym">₹</div><div class="cm-info-text"><span class="cm-label">Price</span><span class="cm-value">₹ 7000 <span class="cm-unit">per sqft.</span></span></div></div>
+      <button class="cm-info-pill cm-options-btn"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/horizontal-settings-mixer.png" alt=""></div><span class="cm-value">More options</span></button>
+      <button class="cm-download-btn"><img src="https://img.icons8.com/ios/50/long-arrow-down.png" alt="" style="width:24px;"></button>
     </div>
-</div>
+  </div>
 
-<div class="cm-section-container" id="mbd-section">
+  <!-- Ananta Street Section -->
+  <div class="cm-section-container" id="ananta-section">
     <div class="cm-hero-card">
-        <div class="cm-hero-img-wrap">
-             <img src="images/MDB_Lutyens_1766146795158.jpg" alt="MBD Lyutens" class="cm-hero-bg">
-            <div class="cm-overlay"></div>
-        </div>
-        <div class="cm-hero-text">
-            <h1>MDB Lyutens</h1>
-            <p class="cm-desc">Full immersive tour of MDB Lyutens, a premium luxury residential tower in the heart of the city</p>
-            <a href="https://www.mdbthelutyens.in/" class="cm-btn-primary" style="text-decoration: none;">View Full DGI Experience</a>
-        </div>
+      <div class="cm-hero-img-wrap"><img src="images/AnantaStreet_1766146992482.jpg" alt="Ananta" class="cm-hero-bg"><div class="cm-overlay"></div></div>
+      <div class="cm-hero-text">
+        <h1>Ananta Street</h1>
+        <p class="cm-desc">Full immersive tour of Ananta, a serene premium township alongside the canal with lush greenery</p>
+      </div>
     </div>
-
     <div class="cm-top-row">
-        <div class="cm-placeholder"></div>
-        <div class="cm-sidebar">
-            <h3>Project Amenities</h3>
-            <div class="cm-amenities-grid">
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/city-hall.png" alt="Clubhouse"></div><p>Clubhouse</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/park-bench.png" alt="Park"></div><p>Green Park</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/swimming-pool.png" alt="Pool"></div><p>Infinity Pool</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/security-shield-green.png" alt="Security"></div><p>Essential Service</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/000000/ping-pong.png" alt="Rec"></div><p>Recreational</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/sauna.png" alt="Sauna"></div><p>Sauna & Spa</p></div>
-                <div class="cm-amenity-item cm-amenity-center"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/playground.png" alt="Kids"></div><p>Children Space</p></div>
-            </div>
-            <div class="cm-contact-area">
-                <div class="cm-contact-card">
-                    <div class="cm-brand-info"><span class="cm-brand-name"><span class="cm-highlight"></span>BetterSide</span><span class="cm-sub-text">(for any query)</span></div>
-                    <button class="cm-btn-contact">Contact</button>
-                </div>
-                <button class="cm-btn-vr">Book for VR <span class="cm-vr-subtext">(for greater experience)</span></button>
-            </div>
+      <div class="cm-placeholder"></div>
+      <div class="cm-sidebar">
+        <h3>Project Amenities</h3>
+        <div class="cm-amenities-grid">
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/ambulance--v1.png" alt=""></div><p>Ambulance</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/meditation-guru.png" alt=""></div><p>Meditation</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/video-playlist.png" alt=""></div><p>Mini Theatre</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/beach-umbrella.png" alt=""></div><p>Sky Lounge</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/badminton.png" alt=""></div><p>Badminton</p></div>
+          <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/sauna.png" alt=""></div><p>Sauna & Spa</p></div>
+          <div class="cm-amenity-item cm-amenity-center"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/restaurant-table.png" alt=""></div><p>Restaurant</p></div>
         </div>
+        <div class="cm-contact-area">
+          <div class="cm-contact-card"><div class="cm-brand-info"><span class="cm-brand-name">BetterSide</span><span class="cm-sub-text">(for any query)</span></div><button class="cm-btn-contact">Contact</button></div>
+          <button class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></button>
+        </div>
+      </div>
     </div>
-
     <div class="cm-bottom-bar">
-        <div class="cm-info-pill">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/marker--v1.png" alt="Location"></div>
-            <div class="cm-info-text"><span class="cm-label">Location</span><span class="cm-value">CM Valley, Jainpuri</span></div>
-        </div>
-        <div class="cm-info-pill">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/home--v1.png" alt="Home"></div>
-            <div class="cm-info-text"><span class="cm-label">Property type</span><span class="cm-value">Apartments</span></div>
-        </div>
-        <div class="cm-info-pill">
-            <div class="cm-price-sym">₹</div>
-            <div class="cm-info-text"><span class="cm-label">Price</span><span class="cm-value">₹ 7000 <span class="cm-unit">per sqft.</span></span></div>
-        </div>
-        <button class="cm-info-pill cm-options-btn">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/horizontal-settings-mixer.png" alt="Options"></div>
-            <span class="cm-value">More options</span>
-        </button>
-        <button class="cm-download-btn"><img src="https://img.icons8.com/ios/50/long-arrow-down.png" alt="Download" style="width: 24px;"></button>
+      <div class="cm-info-pill"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/marker--v1.png" alt=""></div><div class="cm-info-text"><span class="cm-label">Location</span><span class="cm-value">Canal Rd, South City</span></div></div>
+      <div class="cm-info-pill"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/home--v1.png" alt=""></div><div class="cm-info-text"><span class="cm-label">Property type</span><span class="cm-value">Apartments</span></div></div>
+      <div class="cm-info-pill"><div class="cm-price-sym">₹</div><div class="cm-info-text"><span class="cm-label">Price</span><span class="cm-value">₹ 7000 <span class="cm-unit">per sqft.</span></span></div></div>
+      <button class="cm-info-pill cm-options-btn"><div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/horizontal-settings-mixer.png" alt=""></div><span class="cm-value">More options</span></button>
+      <button class="cm-download-btn"><img src="https://img.icons8.com/ios/50/long-arrow-down.png" alt="" style="width:24px;"></button>
     </div>
-</div>
+  </div>
 
-<div class="cm-section-container" id="ananta-section">
-    <div class="cm-hero-card">
-        <div class="cm-hero-img-wrap">
-            <img src="images/AnantaStreet_1766146992482.jpg" alt="Ananta" class="cm-hero-bg">
-            <div class="cm-overlay"></div>
-        </div>
-        <div class="cm-hero-text">
-            <h1>Ananta Street</h1>
-            <p class="cm-desc">Full immersive tour of Ananta, a premium luxury residential tower in the heart of the city</p>
-            <a href="https://bettersideserver-cpu.github.io/AnantaStreet/" class="cm-btn-primary" style="text-decoration: none">View Full DGI Experience</a>
-        </div>
-    </div>
-
-    <div class="cm-top-row">
-        <div class="cm-placeholder"></div>
-        <div class="cm-sidebar">
-            <h3>Project Amenities</h3>
-            <div class="cm-amenities-grid">
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/ambulance--v1.png" alt="Ambulance"></div><p>Ambulance</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/meditation-guru.png" alt="Meditation"></div><p>Meditation</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/video-playlist.png" alt="Theatre"></div><p>Mini Theatre</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/beach-umbrella.png" alt="Sky Lounge"></div><p>Sky Lounge</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/badminton.png" alt="Badminton"></div><p>Badminton</p></div>
-                <div class="cm-amenity-item"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/sauna.png" alt="Sauna"></div><p>Sauna & Spa</p></div>
-                <div class="cm-amenity-item cm-amenity-center"><div class="cm-icon-box"><img src="https://img.icons8.com/ios/50/restaurant-table.png" alt="Restaurant"></div><p>Restaurant</p></div>
+  <!-- Project Locations -->
+  <section class="bs-locations-section">
+    <div class="bs-locations-inner">
+      <div class="bs-locations-header">
+        <span class="bs-loc-label">Where We Build</span>
+        <h2 class="bs-loc-title">Our Project <span>Locations</span></h2>
+        <p class="bs-loc-sub">Explore our developments across Punjab — click a project to see it on the map.</p>
+      </div>
+      <div class="bs-locations-layout">
+        <div class="bs-loc-cards">
+          <div class="bs-loc-card active" data-index="0">
+            <div class="bs-loc-card-accent"></div>
+            <div class="bs-loc-card-num">01</div>
+            <div class="bs-loc-card-body">
+              <h3>CM Infinia</h3>
+              <div class="bs-loc-address"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> CM Valley, Jainpur, Ludhiana</div>
+              <p class="bs-loc-card-desc">Premium luxury residential tower in the heart of Ludhiana.</p>
+              <div class="bs-loc-tags"><span>Apartments</span><span>4600+ sq.ft</span></div>
             </div>
-            <div class="cm-contact-area">
-                <div class="cm-contact-card">
-                    <div class="cm-brand-info"><span class="cm-brand-name"><span class="cm-highlight"></span>BetterSide</span><span class="cm-sub-text">(for any query)</span></div>
-                    <button class="cm-btn-contact">Contact</button>
-                </div>
-                <button class="cm-btn-vr">Book for VR <span class="cm-vr-subtext">(for greater experience)</span></button>
+            <a href="./Subpage/Website/CMInfinia/CMInfinia.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
+          </div>
+          <div class="bs-loc-card" data-index="1">
+            <div class="bs-loc-card-accent"></div>
+            <div class="bs-loc-card-num">02</div>
+            <div class="bs-loc-card-body">
+              <h3>MDB Lutyens</h3>
+              <div class="bs-loc-address"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Fauji Colony, Banur, Punjab</div>
+              <p class="bs-loc-card-desc">An iconic luxury residential development redefining modern living.</p>
+              <div class="bs-loc-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
             </div>
+            <a href="./Subpage/Website/MDBTheLutyens/MDBTheLutyens.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
+          </div>
+          <div class="bs-loc-card" data-index="2">
+            <div class="bs-loc-card-accent"></div>
+            <div class="bs-loc-card-num">03</div>
+            <div class="bs-loc-card-body">
+              <h3>Ananta Street</h3>
+              <div class="bs-loc-address"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Canal Rd, South City, Ludhiana</div>
+              <p class="bs-loc-card-desc">A serene premium township alongside the canal with lush greenery.</p>
+              <div class="bs-loc-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
+            </div>
+            <a href="./Subpage/Website/Ananta/Ananta.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
+          </div>
         </div>
+        <div class="bs-loc-map-wrap">
+          <div class="bs-loc-map-label" id="bs-map-label">CM Infinia — Jainpur, Ludhiana</div>
+          <div class="bs-loc-map-frame">
+            <iframe class="bs-map-pane active" src="https://maps.google.com/maps?q=30.9334374,75.7481009&z=16&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="bs-map-pane" src="https://maps.google.com/maps?q=30.5785159,76.7120108&z=16&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="bs-map-pane" src="https://maps.google.com/maps?q=30.9056156,75.7329895&z=16&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="bs-loc-dots">
+            <button class="bs-loc-dot active" data-dot="0"></button>
+            <button class="bs-loc-dot" data-dot="1"></button>
+            <button class="bs-loc-dot" data-dot="2"></button>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="cm-bottom-bar">
-        <div class="cm-info-pill">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/marker--v1.png" alt="Location"></div>
-            <div class="cm-info-text"><span class="cm-label">Location</span><span class="cm-value">Ananta Valley, Jainpuri</span></div>
-        </div>
-        <div class="cm-info-pill">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/home--v1.png" alt="Home"></div>
-            <div class="cm-info-text"><span class="cm-label">Property type</span><span class="cm-value">Apartments</span></div>
-        </div>
-        <div class="cm-info-pill">
-            <div class="cm-price-sym">₹</div>
-            <div class="cm-info-text"><span class="cm-label">Price</span><span class="cm-value">₹ 7000 <span class="cm-unit">per sqft.</span></span></div>
-        </div>
-        <button class="cm-info-pill cm-options-btn">
-            <div class="cm-info-icon-wrapper"><img src="https://img.icons8.com/ios/50/horizontal-settings-mixer.png" alt="Options"></div>
-            <span class="cm-value">More options</span>
-        </button>
-        <button class="cm-download-btn"><img src="https://img.icons8.com/ios/50/long-arrow-down.png" alt="Download" style="width: 24px;"></button>
-    </div>
-</div>
-
-<footer class="bs-footer">
+  <!-- Footer -->
+  <footer class="bs-footer">
     <div class="bs-container">
-        <div class="bs-footer-flex-wrapper">
-            <div class="bs-top-section">
-                <span class="bs-label">Find Us</span>
-                <h2 class="bs-heading">Visit Our <br>Headquarters</h2>
-                <p class="bs-subtext">Come visit our office to discuss your real estate needs in person. We are open Mon-Sat, 9am - 6pm.</p>
-                
-                <div class="bs-contact-list">
-                    <div class="bs-contact-item">
-                        <div class="bs-icon-box">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="bs-contact-info">
-                            <h4>Office Address</h4>
-                            <p class="bs-detail-label">Main Branch</p>
-                            <p class="bs-detail-value">404, Nirmal Nagar Rd, Duggri,<br>Ludhiana, Punjab 141001</p>
-                        </div>
-                    </div>
-                    <div class="bs-contact-item">
-                        <div class="bs-icon-box">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="bs-contact-info">
-                            <h4>Contact</h4>
-                            <p class="bs-detail-value">+91 98765 43210<br>betterside.in@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="bs-footer-flex-wrapper">
+        <div class="bs-top-section">
+          <span class="bs-label">Find Us</span>
+          <h2 class="bs-heading">Visit Our<br>Headquarters</h2>
+          <p class="bs-subtext">Come visit our office to discuss your real estate needs in person. We are open Mon–Sat, 9am – 6pm.</p>
+          <div class="bs-contact-list">
+            <div class="bs-contact-item">
+              <div class="bs-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="bs-contact-info">
+                <h4>Office Address</h4>
+                <p class="bs-detail-label">Main Branch</p>
+                <p class="bs-detail-value">404, Nirmal Nagar Rd, Duggri,<br>Ludhiana, Punjab 141001</p>
+              </div>
             </div>
-
-            <div class="bs-map-section">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.678912345678!2d75.845!3d30.895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a828f09012345%3A0xabcdef0123456789!2sNirmal%20Nagar%20Rd%2C%20Dugri%2C%20Ludhiana%2C%20Punjab%20141003!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="bs-contact-item">
+              <div class="bs-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="bs-contact-info">
+                <h4>Contact</h4>
+                <p class="bs-detail-value">+91 98765 43210<br>hello@betterside.in</p>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="bs-divider"></div>
-        
-        <div class="bs-bottom-section">
-            <div class="bs-col bs-brand-col">
-                <div class="bs-logo-wrapper">
-                    <img src="images/Betterside Logo 1.png" alt="BetterSide" class="bs-logo">
-                </div>
-                <p class="bs-brand-desc">Experience real estate before it's built.</p>
-                <div class="bs-social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="bs-col">
-                <h5>Platform</h5>
-                <ul class="bs-links">
-                   <li><a href="#" id="scrollToTop">Home</a></li>
-                    <li><a href="subpage/about/index.html">About Us</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="./subpage/Login/index.html">Login</a></li>
-                </ul>
-            </div>
-            <div class="bs-col">
-                <h5>Resources</h5>
-                <ul class="bs-links">
-                    <li><a href="./subpage/Sign up/index.html">For Developers</a></li>
-                    <li><a href="./subpage/Sign up/index.html">For Channel Partners</a></li>
-                    <li><a href="./subpage/Sign up/index.html">For Home Buyers</a></li>
-                    <li><a href="">Case Studies</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
-            </div>
-            <div class="bs-col">
-                <h5>Contact</h5>
-                <ul class="bs-links">
-                    <li><a href="mailto:hello@better-side.com">betterside.in@gmail.com</a></li>
-                    <li class="bs-copyright">© 2026 BetterSide<br>All rights reserved</li>
-                    <li><a href="#">Privacy Policy - Terms of Service</a></li>
-                </ul>
-            </div>
+        <div class="bs-map-section">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.5156752562984!2d75.84474317558585!3d30.872232174517286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83eb70abb0a3%3A0xb2cea78c46492a36!2sBetterSide!5e0!3m2!1sen!2sin!4v1775458439162!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+      </div>
+      <div class="bs-divider"></div>
+      <div class="bs-bottom-section">
+        <div class="bs-col bs-brand-col">
+          <div class="bs-logo-wrapper"><img src="images/Betterside Logo 1.png" alt="BetterSide" class="bs-logo"></div>
+          <p class="bs-brand-desc">Experience real estate before it's built.</p>
+          <div class="bs-social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="bs-col">
+          <h5>Platform</h5>
+          <ul class="bs-links">
+            <li><a href="#" id="scrollToTop">Home</a></li>
+            <li><a href="subpage/about/index.html">About Us</a></li>
+            <li><a href="./subpage/Features/index.html">Features</a></li>
+            <li><a href="./subpage/Pricing/index.html">Pricing</a></li>
+            <li><a href="./subpage/Login/index.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="bs-col">
+          <h5>Resources</h5>
+          <ul class="bs-links">
+            <li><a href="#">For Developers</a></li>
+            <li><a href="#">For Channel Partners</a></li>
+            <li><a href="#">For Home Buyers</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="bs-col">
+          <h5>Contact</h5>
+          <ul class="bs-links">
+            <li><a href="#">hello@betterside.in</a></li>
+            <li class="bs-copyright">© 2026 BetterSide<br>All rights reserved</li>
+            <li><a href="#">Privacy Policy · Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<label class="theme-switch">
-      <input type="checkbox" id="theme-toggle">
-      <span class="slider round">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </span>
-  </label>
-          
-<script>
-   document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+  <!-- ═══════════════════════════════════════
+       BOOK A VISIT MODAL
+  ═══════════════════════════════════════ -->
+  <div class="bav-overlay" id="bavOverlay">
+    <div class="bav-backdrop" id="bavBackdrop"></div>
+
+    <div class="bav-modal" role="dialog" aria-modal="true" aria-label="Book a Site Visit">
+
+      <div class="bav-modal-header">
+        <div class="bav-header-top">
+          <div class="bav-brand-pill">
+            <span class="bav-brand-dot"></span>
+            BetterSide Real Estate
+          </div>
+          <button class="bav-close-btn" id="bavCloseBtn" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <h2 class="bav-modal-title">Book a <span>Site Visit</span></h2>
+        <p class="bav-modal-sub">Our expert will call you within 24 hours to confirm your slot.</p>
+        <div class="bav-header-stats">
+          <div class="bav-stat">
+            <div class="bav-stat-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="bav-stat-text"><strong>Quick Response</strong>Within 24 hours</div>
+          </div>
+          <div class="bav-stat">
+            <div class="bav-stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="bav-stat-text"><strong>100% Free</strong>No hidden charges</div>
+          </div>
+          <div class="bav-stat">
+            <div class="bav-stat-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="bav-stat-text"><strong>3 Projects</strong>Across Punjab</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bav-form-body" id="bavFormBody">
+        <form id="bavForm" novalidate>
+          <div class="bav-form-grid">
+
+            <div class="bav-form-group">
+              <label class="bav-label" for="bavName">Full Name <span class="bav-required"></span></label>
+              <div class="bav-input-wrap">
+                <input type="text" id="bavName" class="bav-input" placeholder="Name">
+                <span class="bav-input-icon"><i class="fa-solid fa-user"></i></span>
+              </div>
+              <span class="bav-error-hint" id="bavNameErr">Please enter your full name</span>
+            </div>
+
+            <div class="bav-form-group">
+              <label class="bav-label" for="bavEmail">Email Address <span class="bav-required"></span></label>
+              <div class="bav-input-wrap">
+                <input type="email" id="bavEmail" class="bav-input" placeholder="Email">
+                <span class="bav-input-icon"><i class="fa-solid fa-envelope"></i></span>
+              </div>
+              <span class="bav-error-hint" id="bavEmailErr">Please enter a valid email</span>
+            </div>
+
+            <div class="bav-form-group">
+              <label class="bav-label" for="bavPhone">Mobile Number <span class="bav-required"></span></label>
+              <div class="bav-phone-wrap">
+                <span class="bav-phone-prefix">🇮🇳 +91</span>
+                <input type="tel" id="bavPhone" class="bav-input" placeholder="" maxlength="10" autocomplete="tel">
+              </div>
+              <span class="bav-error-hint" id="bavPhoneErr">Please enter a valid 10-digit number</span>
+            </div>
+
+            <div class="bav-form-group">
+              <label class="bav-label" for="bavCity">City / State <span class="bav-required"></span></label>
+              <div class="bav-input-wrap">
+                <input type="text" id="bavCity" class="bav-input" placeholder="City / State">
+                <span class="bav-input-icon"><i class="fa-solid fa-location-dot"></i></span>
+              </div>
+              <span class="bav-error-hint" id="bavCityErr">Please enter your city / state</span>
+            </div>
+
+          </div>
+
+          <div class="bav-consent" id="bavConsentBox" role="checkbox" aria-checked="false" tabindex="0">
+            <div class="bav-checkbox-custom" id="bavCheckbox"></div>
+            <p class="bav-consent-text">
+              I hereby give my consent to receive further communication from <strong>BetterSide</strong> via Call, SMS, Email or WhatsApp about its products and offers. This consent overrides any registration for <strong>DND / NDNC</strong>.
+            </p>
+          </div>
+          <span class="bav-error-hint" id="bavConsentErr" style="margin-top:-12px; margin-bottom:14px; display:none;">Please give your consent to proceed</span>
+
+          <button type="submit" class="bav-submit-btn" id="bavSubmitBtn">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Submit</span>
+            <span class="bav-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+
+          <p class="bav-footer-note">
+            <i class="fa-solid fa-lock"></i>
+            Your information is secure and will never be shared with third parties.
+          </p>
+        </form>
+
+        <div class="bav-success" id="bavSuccess">
+          <div class="bav-success-ring"><i class="fa-solid fa-check"></i></div>
+          <h3>Visit Booked!</h3>
+          <p>Thank you! Our team will reach out within 24 hours to confirm your site visit. We look forward to seeing you.</p>
+          <button class="bav-success-close" id="bavSuccessClose">Done</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END BOOK A VISIT MODAL -->
+
+  <script>
+    /* ---- Smooth scroll helper ---- */
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top, behavior: 'smooth' });
+      document.getElementById('unitsDropdown').classList.remove('open');
+      document.getElementById('navLinks').classList.remove('active');
     }
 
-    // 2. Custom Cursor (Desktop Only)
-    const dot = document.querySelector('.cursor-dot');
-    const ring = document.querySelector('.cursor-ring');
+    /* ---- Map Switcher ---- */
+    (function(){
+      const cards = document.querySelectorAll('.bs-loc-card');
+      const dots  = document.querySelectorAll('.bs-loc-dot');
+      const panes = document.querySelectorAll('.bs-map-pane');
+      const label = document.getElementById('bs-map-label');
+      const labels = ['CM Infinia — Jainpur, Ludhiana','MDB Lutyens — Banur, Punjab','Ananta Street — South City, Ludhiana'];
+      function switchTo(i){ cards.forEach((c,j)=>c.classList.toggle('active',j===i)); dots.forEach((d,j)=>d.classList.toggle('active',j===i)); panes.forEach((p,j)=>p.classList.toggle('active',j===i)); label.textContent=labels[i]; }
+      cards.forEach((c,i)=>c.addEventListener('click',()=>switchTo(i)));
+      dots.forEach((d,i)=>d.addEventListener('click',e=>{e.stopPropagation();switchTo(i);}));
+    })();
+  </script>
 
-    if (window.matchMedia("(pointer: fine)").matches && dot && ring) {
-        let mouseX = 0, mouseY = 0;
-        let ringX = 0, ringY = 0;
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
 
-        document.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            dot.style.left = mouseX + 'px';
-            dot.style.top  = mouseY + 'px';
-        });
+      /* ---- Hamburger ---- */
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+      if (hamburger && navLinks) hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
 
-        function animateRing() {
-            const dx = mouseX - ringX;
-            const dy = mouseY - ringY;
-            if (Math.sqrt(dx * dx + dy * dy) > 70) {
-                ringX = mouseX;
-                ringY = mouseY;
-            } else {
-                ringX += dx * 0.18;
-                ringY += dy * 0.18;
-            }
-            ring.style.left = ringX + 'px';
-            ring.style.top  = ringY + 'px';
-            requestAnimationFrame(animateRing);
+      /* ---- Units dropdown ---- */
+      const dropdown = document.getElementById('unitsDropdown');
+      const trigger  = dropdown.querySelector('.dropdown-trigger');
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+      });
+
+      /* ---- Navbar scroll ---- */
+      const navbar = document.querySelector('.navbar');
+      let lastY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const cur = window.scrollY;
+        if (navbar) {
+          navbar.classList.toggle('scrolled', cur > 60);
+          if (cur > lastY && cur > 120) navbar.classList.add('nav-hide');
+          else if (cur < lastY) navbar.classList.remove('nav-hide');
         }
-        animateRing();
+        const cue = document.getElementById('scrollCue');
+        if (cue) { cue.style.opacity = cur > 80 ? '0' : '1'; cue.style.pointerEvents = cur > 80 ? 'none' : 'auto'; }
+        lastY = cur;
+      }, { passive: true });
 
-        document.querySelectorAll('a, button').forEach(el => {
-            el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
-            el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
-        });
-    } else {
-        if(dot) dot.style.display = 'none';
-        if(ring) ring.style.display = 'none';
-    }
+      /* ---- Scroll-to-top ---- */
+      const stt = document.getElementById('scrollToTop');
+      if (stt) stt.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-    // 3. Theme Toggle
-    const toggleSwitch = document.querySelector('#theme-toggle');
-    const body = document.body;
+      /* ---- Hero animation ---- */
+      const heroIntro = document.querySelector('.hero-intro');
+      if (heroIntro) { heroIntro.classList.remove('animate'); void heroIntro.offsetWidth; setTimeout(() => heroIntro.classList.add('animate'), 60); }
 
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        if(toggleSwitch) toggleSwitch.checked = true;
-    }
-
-    if(toggleSwitch) {
-        toggleSwitch.addEventListener('change', function() {
-            if (this.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    }
-
-    // 4. Navbar Scroll
-    const navbar = document.querySelector(".navbar");
-    let lastScrollY = window.scrollY;
-    let showTimeout = null;
-
-    window.addEventListener("scroll", () => {
-        const currentScroll = window.scrollY;
-        if(navbar) {
-            navbar.classList.toggle("scrolled", currentScroll > 60);
-            if (currentScroll > lastScrollY && currentScroll > 120) {
-                clearTimeout(showTimeout);
-                navbar.classList.add("nav-hide");
-            } else if (currentScroll < lastScrollY) {
-                navbar.classList.remove("nav-hide");
-            }
-        }
-        lastScrollY = currentScroll;
+      /* ---- Scroll cue click ---- */
+      const cueEl = document.getElementById('scrollCue');
+      if (cueEl) cueEl.addEventListener('click', () => document.querySelector('.featured-projects-section')?.scrollIntoView({ behavior: 'smooth' }));
     });
+  </script>
 
-    // 5. Smooth Scroll
-    const exploreBtn = document.getElementById('exploreBtn');
-    const cmSection = document.getElementById('cm-section');
-    const scrollToTop = document.getElementById('scrollToTop');
-
-    if (exploreBtn && cmSection) {
-        exploreBtn.addEventListener('click', () => {
-            cmSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    }
-    
-    if (scrollToTop) {
-        scrollToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-});
-document.addEventListener("DOMContentLoaded", () => {
-
-  /* ================================
-     HERO INTRO ANIMATION (REUSABLE)
-  ================================ */
-  const heroIntro = document.querySelector(".hero-intro");
-
-  function playHeroIntro() {
-    if (!heroIntro) return;
-
-    // Remove class to reset animation
-    heroIntro.classList.remove("animate");
-
-    // Force browser reflow to restart animation
-    void heroIntro.offsetWidth;
-
-    // Re-add class after tiny delay
-    setTimeout(() => {
-      heroIntro.classList.add("animate");
-    }, 50);
-  }
-
-  // Play once on page load
-  playHeroIntro();
-
-  /* ================================
-     RESTART ON THEME TOGGLE
-  ================================ */
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-
-  if (themeToggle) {
-    themeToggle.addEventListener("change", () => {
-      if (themeToggle.checked) {
-        body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-      } else {
-        body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
+  <script>
+    /* ---- Hero Search ---- */
+    (function(){
+      const projects = [
+        { name:'CM Infinia',    location:'CM Valley, Jainpur, Ludhiana',   type:'apartments', price:'100+',   area:'4600+ sq.ft', sectionId:'cm-section',     image:'images/cm.jpg',                          desc:'Premium luxury residential tower in the heart of Ludhiana' },
+        { name:'MDB Lutyens',   location:'Fauji Colony, Banur, Punjab',     type:'apartments', price:'50-100', area:'₹7000/sq.ft', sectionId:'mdb-section',    image:'images/MDB_Lutyens_1766146795158.jpg',   desc:'An iconic luxury residential development redefining modern living' },
+        { name:'Ananta Street', location:'Canal Rd, South City, Ludhiana',  type:'apartments', price:'50-100', area:'₹7000/sq.ft', sectionId:'ananta-section', image:'images/AnantaStreet_1766146992482.jpg',  desc:'A serene premium township alongside the canal with lush greenery' }
+      ];
+      const si=document.getElementById('heroSearch'), sr=document.getElementById('searchResults'), sb=document.getElementById('searchBtn'), ft=document.getElementById('filterType'), fb=document.getElementById('filterBudget');
+      if(!si) return;
+      function filter(){ const q=si.value.toLowerCase().trim(); return projects.filter(p=>{ let m=!q||p.name.toLowerCase().includes(q)||p.location.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q); if(ft.value&&m)m=p.type===ft.value; if(fb.value&&m)m=p.price===fb.value; return m; }); }
+      function show(res){
+        if(!res.length){ sr.innerHTML='<div class="bs-no-result"><i class="fa-regular fa-face-frown"></i> No projects match</div>'; }
+        else { sr.innerHTML=res.map(p=>`<a href="#${p.sectionId}" class="bs-result-card" data-section="${p.sectionId}"><div class="bs-result-img" style="background-image:url('${p.image}')"></div><div class="bs-result-info"><h4>${p.name}</h4><p class="bs-result-loc"><i class="fa-solid fa-location-dot"></i> ${p.location}</p><div class="bs-result-meta"><span><i class="fa-solid fa-building"></i> ${p.type}</span><span><i class="fa-solid fa-ruler-combined"></i> ${p.area}</span></div></div><div class="bs-result-arrow"><i class="fa-solid fa-arrow-right"></i></div></a>`).join('');
+          sr.querySelectorAll('.bs-result-card').forEach(c=>c.addEventListener('click',e=>{ e.preventDefault(); document.getElementById(c.dataset.section)?.scrollIntoView({behavior:'smooth',block:'start'}); sr.classList.remove('visible'); si.value=''; }));
+        }
+        sr.classList.add('visible');
       }
+      si.addEventListener('input',()=>si.value.trim().length>0?show(filter()):sr.classList.remove('visible'));
+      sb.addEventListener('click',()=>{ const r=filter(); if(r.length===1)document.getElementById(r[0].sectionId)?.scrollIntoView({behavior:'smooth',block:'start'}); else show(r); });
+      si.addEventListener('keydown',e=>{ if(e.key==='Enter')sb.click(); });
+      ft.addEventListener('change',()=>{ if(si.value.trim()||ft.value||fb.value)show(filter()); });
+      fb.addEventListener('change',()=>{ if(si.value.trim()||ft.value||fb.value)show(filter()); });
+      document.addEventListener('click',e=>{ if(!e.target.closest('.bs-search-box'))sr.classList.remove('visible'); });
+      si.addEventListener('focus',()=>{ if(si.value.trim().length>0)show(filter()); });
+    })();
+    
+  </script>
 
-      // Restart hero animation on theme change
-      playHeroIntro();
-    });
-  }
-
-  // Load saved theme on refresh
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    if (themeToggle) themeToggle.checked = true;
-  }
-
-});
-
-
-
-
-// ===== PERFECTLY SMOOTH FLOAT + 3D TILT (NO JERK) =====
-const tiltCard = document.querySelector(".tilt-card");
-
-if (tiltCard) {
-  const img = tiltCard.querySelector("img");
-
-  let currentTiltX = 0;
-  let currentTiltY = 0;
-  let targetTiltX = 0;
-  let targetTiltY = 0;
-
-  let floatTime = 0;
-
-  function animate() {
-    // Smoothly ease tilt (lerp)
-    currentTiltX += (targetTiltX - currentTiltX) * 0.08;
-    currentTiltY += (targetTiltY - currentTiltY) * 0.08;
-
-    // Floating motion (sin wave)
-    floatTime += 0.01;
-    const floatY = Math.sin(floatTime) * 6; // subtle float
-
-    const rotateX = currentTiltY;
-    const rotateY = currentTiltX;
-
-    img.style.transform = `
-      translateY(${floatY}px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      scale(1.02)
-    `;
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-
-  tiltCard.addEventListener("mousemove", (e) => {
-    const rect = tiltCard.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    targetTiltX = ((x - centerX) / centerX) * 3;   // left/right
-    targetTiltY = ((y - centerY) / centerY) * -3;  // up/down
-  });
-
-  tiltCard.addEventListener("mouseleave", () => {
-    // Smoothly return to center
-    targetTiltX = 0;
-    targetTiltY = 0;
-  });
-}
-
-
-</script>
+  <!-- Book a Visit Script -->
+  <script src="book-a-visit.js"></script>
 
 </body>
 </html>

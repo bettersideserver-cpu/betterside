@@ -1,217 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - We Are The Future</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - BetterSide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="about-style.css"/>
 </head>
 <body>
-    <div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
 
-<a href="/" class="back-arrow">
-    <i class="fa-solid fa-arrow-left"></i>
-</a>
+<a href="/" class="back-arrow"> ←</a>
 
-    <div class="video-container">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="video/Luxury_Building_Animation_Ready.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
+  <div class="video-container">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video/Luxury_Building_Animation_Ready.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <a href="./../../index.html" class="logo-space">
+      <img src="../../images/Betterside Logo 1.png" alt="BetterSide"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./../../index.html">Home</a></li>
+      <li><a href="./../../subpage/Explore/explore.html">Explore</a></li>
+      <li class="active"><a href="./../../subpage/About/index.html">About</a></li>
+        <li class="has-dropdown" id="unitsDropdown">
+          <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
+          <ul class="dropdown-menu">
+                     <li><a href="/#mdb-section">3+1 BHK</a></li>
+<li><a href="/#cm-section">4 BHK</a></li>
+<li><a href="/#featured-projects-section">Penthouse</a></li>
+          </ul>
+        </li>
+      <li><a href="#">Blog</a></li>
+      
+      <li><a href="./../../subpage/contact/contact.html">Contact FAQ</a></li>
+      <li class="mobile-auth-btn">
+        <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
+      </li>
+      <li class="mobile-auth-btn">
+        <button class="signup-btn" onclick="window.location.href='/subpage/Sign%20up/index.html'" style="width:150px;">Sign Up</button>
+      </li>
+    </ul>
+    <div class="nav-actions">
    
-    <nav class="navbar">
-  <!-- Hamburger (mobile) -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+      <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'">Login</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
-  <!-- Links -->
-  <div class="nav-links" id="navLinks">
-    <a href="./../../index.html">Home</a>
-    <a href="#">Explore</a>
-    <a href="#">Blog</a>
-    <a href="#" class="active">About</a>
-    <a href="./../../subpage/contact/contact.html">Contact</a>
-  </div>
-</nav>
+  <div class="page-wrapper">
+    <div class="main-container">
+
+      <section class="about-header">
+        <div class="header-eyebrow">BetterSide &nbsp;&middot;&nbsp; Real Estate Technology &nbsp;&middot;&nbsp; Since 2023</div>
+        <h1 class="header-title">
+          <span class="hover-about">ABOUT</span><br>
+          <span class="underline-style hover-us">US</span>
+        </h1>
+      </section>
+
+    </div>
+
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span class="marquee-item">3D Walkthroughs</span>
+        <span class="marquee-item">VR Solutions</span>
+        <span class="marquee-item">3D Websites</span>
+        <span class="marquee-item">IPX Solutions</span>
+        <span class="marquee-item">Social Marketing</span>
+        <span class="marquee-item">Performance Ads</span>
+        <span class="marquee-item">PR &amp; Branding</span>
+        <span class="marquee-item">Partner Network</span>
+        <span class="marquee-item">3D Walkthroughs</span>
+        <span class="marquee-item">VR Solutions</span>
+        <span class="marquee-item">3D Websites</span>
+        <span class="marquee-item">IPX Solutions</span>
+        <span class="marquee-item">Social Marketing</span>
+        <span class="marquee-item">Performance Ads</span>
+        <span class="marquee-item">PR &amp; Branding</span>
+        <span class="marquee-item">Partner Network</span>
+      </div>
+    </div>
 
     <div class="main-container">
-        
-    <section class="about-header">
-    <h1 class="header-title">
-        <span class="hover-about">ABOUT</span> <br>
-        
-        <span class="underline-style hover-us">US</span>
-    </h1>
-</section>
-        <section class="future-showcase">
-            
 
-            <div class="full-width-type">
-                <h2 class="fw-line gradient-text">WE ARE</h2>
-                
-                <div class="vr-interruption">
-                    <img src="image/Untitled design (7).png" alt="VR Headset" class="floating-vr">
-                </div>
+      <section class="future-showcase reveal">
+        <div class="full-width-type">
+          <h2 class="fw-line gradient-text">WE ARE</h2>
+          <h2 class="fw-line white-text">THE FUTURE</h2>
+        </div>
+        <blockquote class="quote-box">
+          "We help premium real estate developers go beyond brochures and 3D walkthrough videos."
+        </blockquote>
+      </section>
 
-                <h2 class="fw-line white-text">THE FUTURE</h2>
+      <section class="team-section">
+        <div class="section-tag reveal">The People Behind It</div>
+        <h3 class="section-title reveal">Meet the <span class="gradient-text-orange">Founders</span></h3>
+        <p class="section-subtitle reveal">Real estate veterans turned technology innovators, building the future of property marketing in India and beyond.</p>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-photo-wrap">
+              <img src="image/Owner.jpeg" alt="Founder" class="team-photo" onerror="this.style.opacity='0'"/>
+              <div class="team-photo-placeholder">
+                <span>📷</span>
+                <span class="tp-hint">Place Photo Here</span>
+              </div>
             </div>
-            
-            <blockquote class="quote-box">
-                "We help premium real estate developers go beyond brochures and 3D walkthrough videos."
-            </blockquote>
-        </section>
-
-        <section class="expertise-section">
-            <div class="section-tag">What We Offer</div>
-            <h3 class="section-title">Our <span class="gradient-text-orange">Expertise</span></h3>
-            <p class="section-subtitle">A comprehensive suite of cutting-edge services designed to elevate your brand</p>
-
-            <div class="cards-grid">
-                <div class="glass-card">
-                    <div class="icon-box gradient-pink"><i class="fa-solid fa-cube"></i></div>
-                    <h4>Immersive Experiences</h4>
-                    <p>Next-gen digital experiences that captivate and engage audiences.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-blue"><i class="fa-solid fa-eye"></i></div>
-                    <h4>3D Walkthroughs</h4>
-                    <p>Experience architectural projects in stunning photo-realistic detail.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-purple"><i class="fa-solid fa-vr-cardboard"></i></div>
-                    <h4>VR Solutions</h4>
-                    <p>Virtual reality solutions that transport users to new worlds.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-cyan"><i class="fa-solid fa-bullhorn"></i></div>
-                    <h4>Social Marketing</h4>
-                    <p>Strategic social media campaigns that amplify your brand voice.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-indigo"><i class="fa-solid fa-tag"></i></div>
-                    <h4>PR & Branding</h4>
-                    <p>Build authority and credibility through strategic public relations.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-teal"><i class="fa-solid fa-user-group"></i></div>
-                    <h4>Personal Brands</h4>
-                    <p>Thought leadership through video interviews and content.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-red"><i class="fa-solid fa-chart-line"></i></div>
-                    <h4>Performance Ads</h4>
-                    <p>Data-driven Google & Meta campaigns optimized for ROI.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="icon-box gradient-orange"><i class="fa-solid fa-network-wired"></i></div>
-                    <h4>Partner Network</h4>
-                    <p>Connect with influencers and partners within our vast network.</p>
-                </div>
+            <div class="team-info">
+              <h4 class="team-name">Founder Name</h4>
+              <span class="team-role">Co-Founder &amp; CEO</span>
+              <p class="team-bio">With over a decade in luxury real estate development, driving innovation at the intersection of technology and premium property marketing across India's fastest-growing markets.</p>
+              <div class="team-tags">
+                <span>Real Estate</span>
+                <span>Strategy</span>
+                <span>Luxury Markets</span>
+              </div>
             </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="pill-tag">Available for New Projects</div>
-            
-            <h2 class="cta-title">Let's Create<br>
-                <span class="gradient-text-blue">Something</span> 
-                <span class="gradient-text-orange">Extraordinary</span>
-            </h2>
-            
-            <div class="cta-buttons">
-                <a href="#" class="btn-primary"><i class="fa-regular fa-envelope"></i> Start a Project &rarr;</a>
-                <a href="#" class="btn-outline"><i class="fa-regular fa-calendar"></i> Schedule a Call</a>
+          </div>
+          <div class="team-card reveal" style="transition-delay:.12s">
+            <div class="team-photo-wrap">
+              <img src="image/founder2.jpg" alt="Founder" class="team-photo" onerror="this.style.opacity='0'"/>
+              <div class="team-photo-placeholder">
+                <span>📷</span>
+                <span class="tp-hint">Place Photo Here</span>
+              </div>
             </div>
-
-            <div class="footer-links">
-                <a href="#"><i class="fa-regular fa-envelope"></i> hello@company.com</a>
-                <a href="#"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
+            <div class="team-info">
+              <h4 class="team-name">Founder Name</h4>
+              <span class="team-role">Co-Founder &amp; CTO</span>
+              <p class="team-bio">Pioneering immersive real estate experiences with cutting-edge 3D technology and digital marketing expertise, turning property visions into unforgettable buyer journeys.</p>
+              <div class="team-tags">
+                <span>3D Technology</span>
+                <span>Digital Marketing</span>
+                <span>Innovation</span>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider reveal"></div>
+
+      <section class="expertise-section">
+        <div class="section-tag reveal">What We Offer</div>
+        <h3 class="section-title reveal">Our <span class="gradient-text-orange">Expertise</span></h3>
+        <p class="section-subtitle reveal">A comprehensive suite of cutting-edge services designed to elevate your brand</p>
+
+        <div class="cards-grid">
+          <div class="glass-card reveal">
+            <div style="font-size:1.4rem" class="icon-box gradient-pink">🎯</div>
+            <h4>Immersive Experiences</h4>
+            <p>Next-gen digital experiences that captivate and engage audiences.</p>
+            <div class="card-num">01</div>
+          </div>
+          <div class="glass-card reveal" style="transition-delay:.07s">
+            <div style="font-size:1.4rem" class="icon-box gradient-blue">🏛️</div>
+            <h4>3D Walkthroughs</h4>
+            <p>Experience architectural projects in stunning photo-realistic detail.</p>
+            <div class="card-num">02</div>
+          </div>
+          <div class="glass-card reveal" style="transition-delay:.14s">
+            <div style="font-size:1.4rem" class="icon-box gradient-orange">🌐</div>
+            <h4>Partner Network</h4>
+            <p>Connect with influencers and partners within our vast network.</p>
+            <div class="card-num">03</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider reveal"></div>
+
+      <section class="cta-section reveal">
+        <div class="cta-bg-text">LET'S GO</div>
+        <div class="pill-tag">Available for New Projects</div>
+        <h2 class="cta-title">
+          Let's Create<br>
+          <span class="gradient-text-blue">Something</span>
+          <span class="gradient-text-orange"> Extraordinary</span>
+        </h2>
+        <div class="cta-buttons">
+          <a href="#" class="btn-primary">✉ Start a Project</a>
+          <a href="#" class="btn-outline">📅 Schedule a Call</a>
+        </div>
+        <div class="footer-links">
+          <a href="#" id="email-link">✉ <span id="email-text"></span></a>
+          <a href="tel:+917986519697">📞 +91 7986519697</a>
+        </div>
+      </section>
 
     </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
+  </div>
 
-  if (!dot || !ring) return;
+  <script>
+  (function () {
 
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    // Dot sticks exactly to mouse
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    const dx = mouseX - ringX;
-    const dy = mouseY - ringY;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    // Snap on fast movement
-    if (distance > 70) {
-      ringX = mouseX;
-      ringY = mouseY;
-    } else {
-      ringX += dx * 0.18;
-      ringY += dy * 0.18;
+    // ── Set email via JS so Cloudflare cannot obfuscate it ──
+    var u = 'info';
+    var d = '@betterside.com';
+    var el = document.getElementById('email-link');
+    var tx = document.getElementById('email-text');
+    if (el && tx) {
+      el.href = 'mailto:' + u + '@' + d;
+      tx.textContent = u + '@' + d;
     }
+  /* ---- Units dropdown — click to toggle ---- */
+      const dropdown = document.getElementById('unitsDropdown');
+      const trigger  = dropdown.querySelector('.dropdown-trigger');
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
+      /* Close on outside click */
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+      });
+    document.addEventListener('DOMContentLoaded', function () {
 
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
+      // ── Navbar scroll hide/show ──
+      var navbar = document.getElementById('navbar');
+      var lastY  = window.scrollY;
+      window.addEventListener('scroll', function () {
+        var curr = window.scrollY;
+        navbar.classList.toggle('scrolled', curr > 60);
+        if (curr > lastY && curr > 120) {
+          navbar.classList.add('nav-hide');
+        } else if (curr < lastY) {
+          navbar.classList.remove('nav-hide');
+        }
+        lastY = curr;
+      });
 
-    requestAnimationFrame(animateRing);
-  }
+      // ── Hamburger ──
+      var hamburger = document.getElementById('hamburger');
+      var navLinks  = document.getElementById('navLinks');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function () {
+          navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+          });
+        });
+      }
 
-  animateRing();
+      // ── Scroll Reveal ──
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-  /* Hover effect on clickable elements */
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
-  });
-});
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
     });
-  });
-}
-</script>
 
+  }());
+  </script>
 
 </body>
 </html>
