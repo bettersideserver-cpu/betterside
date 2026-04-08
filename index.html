@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetterSide Real Estate</title>
@@ -22,30 +23,33 @@
         onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
     </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/subpage/Explore/explore.html">Explore</a></li>
-        <li><a href="/subpage/About/index.html">About</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="about.html">About</a></li>
 
         <!-- ✦ Units Dropdown -->
         <li class="has-dropdown" id="unitsDropdown">
           <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#" onclick="scrollToSection('mdb-section'); return false;">3+1 BHK</a></li>
-            <li><a href="#" onclick="scrollToSection('cm-section'); return false;">4 BHK</a></li>
-            <li><a href="#" onclick="scrollToSection('featured-projects-section'); return false;">Penthouse</a></li>
-          </ul>
+      <ul class="dropdown-menu">
+  <li><a href="#" onclick="filterProjects('3bhk'); return false;">3+1 BHK</a></li>
+  <li><a href="#" onclick="filterProjects('4bhk'); return false;">4 BHK</a></li>
+  <li><a href="#" onclick="filterProjects('penthouse'); return false;">Penthouse</a></li>
+  <li><a href="#" onclick="filterProjects('apartments'); return false;">Apartments</a></li>
+  <li><a href="#" onclick="filterProjects('commercial'); return false;">Commercials</a></li>
+  <li><a href="#" onclick="filterProjects('all'); return false;">Show All</a></li>
+</ul>
         </li>
 
-        <li><a href="#">Blog</a></li>
-        <li><a href="/subpage/Contact/contact.html">Contact FAQ</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact FAQ</a></li>
 
         <li class="mobile-auth-btn">
-          <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
+          <button class="login-btn" onclick="window.location.href='login.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
         </li>
       </ul>
 
       <div class="nav-actions">
-        <button class="cp-btn" onclick="window.location.href='/subpage/Sign up/index.html'">Become a CP</button>
-        <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'">Login</button>
+        <button class="cp-btn" onclick="window.location.href='sign-up.html'">Become a CP</button>
+        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
       </div>
       <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </nav>
@@ -115,34 +119,34 @@
     <div class="featured-projects-container">
       <h2 class="featured-title">Our Premium Projects</h2>
       <div class="featured-cards-grid">
-        <div class="featured-project-card">
+      <div class="featured-project-card" data-type="4bhk penthouse" data-category="apartments">
           <div class="featured-card-image"><img src="images/cm.jpg" alt="CM Infinia"></div>
           <div class="featured-card-content">
             <h3>CM Infinia</h3>
             <p class="featured-card-location"><i class="fa-solid fa-location-dot"></i> CM Valley, Jainpur, Ludhiana</p>
             <p class="featured-card-desc">Premium luxury residential tower in the heart of Ludhiana</p>
             <div class="featured-card-tags"><span>Apartments</span><span>4600+ sq.ft</span></div>
-            <a href="./Subpage/Website/CMInfinia/CMInfinia.html" class="featured-card-btn">View Project</a>
+            <a href="./property-listing/cm-infinia.html" class="featured-card-btn">View Project</a>
           </div>
         </div>
-        <div class="featured-project-card">
+     <div class="featured-project-card" data-type="3bhk 4bhk penthouse" data-category="apartments">
           <div class="featured-card-image"><img src="images/MDB_Lutyens_1766146795158.jpg" alt="MDB Lutyens"></div>
           <div class="featured-card-content">
             <h3>MDB Lutyens</h3>
             <p class="featured-card-location"><i class="fa-solid fa-location-dot"></i> Fauji Colony, Banur, Punjab</p>
             <p class="featured-card-desc">An iconic luxury residential development redefining modern living</p>
             <div class="featured-card-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
-            <a href="./Subpage/Website/MDBTheLutyens/MDBTheLutyens.html" class="featured-card-btn">View Project</a>
+            <a href="./property-listing/mdb-the-lutyens.html" class="featured-card-btn">View Project</a>
           </div>
         </div>
-        <div class="featured-project-card">
+       <div class="featured-project-card" data-type="commercial" data-category="commercial">
           <div class="featured-card-image"><img src="images/AnantaStreet_1766146992482.jpg" alt="Ananta Street"></div>
           <div class="featured-card-content">
             <h3>Ananta Street</h3>
             <p class="featured-card-location"><i class="fa-solid fa-location-dot"></i> Canal Rd, South City, Ludhiana</p>
             <p class="featured-card-desc">A serene premium township alongside the canal with lush greenery</p>
             <div class="featured-card-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
-            <a href="./Subpage/Website/Ananta/Ananta.html" class="featured-card-btn">View Project</a>
+            <a href="./property-listing/ananta-street.html" class="featured-card-btn">View Project</a>
           </div>
         </div>
       </div>
@@ -173,8 +177,8 @@
         </div>
         <div class="cm-contact-area">
           <div class="cm-contact-card"><div class="cm-brand-info"><span class="cm-brand-name">BetterSide</span><span class="cm-sub-text">(for any query)</span></div><button class="cm-btn-contact">Contact</button></div>
-          <button class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></button>
-        </div>
+          <a href="./property-listing/cm-infinia.html" class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></a>
+        </div>  
       </div>
     </div>
     <div class="cm-bottom-bar">
@@ -210,7 +214,7 @@
         </div>
         <div class="cm-contact-area">
           <div class="cm-contact-card"><div class="cm-brand-info"><span class="cm-brand-name">BetterSide</span><span class="cm-sub-text">(for any query)</span></div><button class="cm-btn-contact">Contact</button></div>
-          <button class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></button>
+         <a href="./property-listing/mdb-the-lutyens.html" class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></a>
         </div>
       </div>
     </div>
@@ -247,7 +251,7 @@
         </div>
         <div class="cm-contact-area">
           <div class="cm-contact-card"><div class="cm-brand-info"><span class="cm-brand-name">BetterSide</span><span class="cm-sub-text">(for any query)</span></div><button class="cm-btn-contact">Contact</button></div>
-          <button class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></button>
+         <a href="./property-listing/ananta-street.html" class="cm-btn-vr">View Full IPX Experience <span class="cm-vr-subtext">(for greater experience)</span></a>
         </div>
       </div>
     </div>
@@ -279,7 +283,7 @@
               <p class="bs-loc-card-desc">Premium luxury residential tower in the heart of Ludhiana.</p>
               <div class="bs-loc-tags"><span>Apartments</span><span>4600+ sq.ft</span></div>
             </div>
-            <a href="./Subpage/Website/CMInfinia/CMInfinia.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
+            <a href="./property-listing/cm-infinia.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
           </div>
           <div class="bs-loc-card" data-index="1">
             <div class="bs-loc-card-accent"></div>
@@ -290,7 +294,7 @@
               <p class="bs-loc-card-desc">An iconic luxury residential development redefining modern living.</p>
               <div class="bs-loc-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
             </div>
-            <a href="./Subpage/Website/MDBTheLutyens/MDBTheLutyens.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
+            <a href="./property-listing/mdb-the-lutyens.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
           </div>
           <div class="bs-loc-card" data-index="2">
             <div class="bs-loc-card-accent"></div>
@@ -301,7 +305,7 @@
               <p class="bs-loc-card-desc">A serene premium township alongside the canal with lush greenery.</p>
               <div class="bs-loc-tags"><span>Apartments</span><span>₹7000/sq.ft</span></div>
             </div>
-            <a href="./Subpage/Website/Ananta/Ananta.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
+            <a href="./property-listing/ananta-street.html" target="_blank" class="bs-loc-card-link">View IPX →</a>
           </div>
         </div>
         <div class="bs-loc-map-wrap">
@@ -320,7 +324,47 @@
       </div>
     </div>
   </section>
+<section class="developers-section">
+  <div class="developers-inner">
+    <p class="dev-eyebrow">India's Finest</p>
+    <h2 class="dev-heading">Best Real Estate <span>Developers in Punjab</span></h2>
+    <p class="dev-subheading">We partner with the most visionary developers redefining India's real estate landscape — builders who don't just construct spaces, they craft lifestyles.</p>
 
+    <div class="developers-grid">
+
+      <div class="developer-card">
+        <div class="dev-number">01</div>
+        <p class="dev-para">Finding the perfect 3BHK flats in Ludhiana, Mohali, Patiala, or Banur is now easier with the growing number of modern residential projects across Punjab. Homebuyers today look for luxury 3BHK flats in Mohali and premium 3BHK apartments in Ludhiana that offer comfort, connectivity, and world-class amenities. Whether you are searching for ready to move 3BHK flats in Ludhiana or planning to invest in new residential projects in Mohali, these cities provide excellent options for families and investors alike.</p>
+      </div>
+
+      <div class="developer-card">
+        <div class="dev-number">02</div>
+        <p class="dev-para">In Ludhiana, areas like Ferozepur Road, South City, and Pakhowal Road are known for their modern 3BHK apartments in Ludhiana and gated society 3BHK flats in Ludhiana. Buyers looking to buy 3BHK flat in Ludhiana can choose from several luxury apartments in Ludhiana that combine contemporary architecture with premium lifestyle amenities</p>
+      </div>
+
+      <div class="developer-card">
+        <div class="dev-number">03</div>
+        <p class="dev-para">Mohali continues to be one of the fastest-growing real estate markets near Chandigarh. Popular locations such as Sector 66, Sector 88, Aerocity, and IT City Mohali offer 3BHK flats for sale in Mohali, including ready to move 3BHK flats in Mohali and luxury apartments near Chandigarh Airport Mohali. Many homebuyers prefer premium 3BHK flats near Chandigarh due to their excellent connectivity and high investment potential.</p>
+      </div>
+
+      <div class="developer-card">
+        <div class="dev-number">04</div>
+        <p class="dev-para">In Patiala, buyers can explore affordable 3BHK flats in Patiala and modern apartments in Patiala located near Rajpura Road and Patiala Chandigarh Highway. These gated society flats in Patiala provide comfortable living spaces for families looking for a peaceful environment.</p>
+      </div>
+
+      <div class="developer-card">
+        <div class="dev-number">05</div>
+        <p class="dev-para">For those seeking emerging investment destinations, 3BHK flats in Banur and apartments near Banur Chandigarh Highway are gaining attention. Investors interested in new residential projects in Banur can find affordable flats in Banur as well as luxury flats in Banur close to Chandigarh.</p>
+      </div>
+
+      <div class="developer-card">
+        <div class="dev-number">06</div>
+        <p class="dev-para">Whether you want to buy 3BHK flats in Mohali, invest in premium 3BHK apartments in Ludhiana, or explore 3BHK property in Patiala and Banur, Punjab offers some of the best residential opportunities for modern homebuyers</p>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- Footer -->
   <footer class="bs-footer">
     <div class="bs-container">
@@ -367,26 +411,34 @@
           <h5>Platform</h5>
           <ul class="bs-links">
             <li><a href="#" id="scrollToTop">Home</a></li>
-            <li><a href="subpage/about/index.html">About Us</a></li>
-            <li><a href="./subpage/Features/index.html">Features</a></li>
-            <li><a href="./subpage/Pricing/index.html">Pricing</a></li>
-            <li><a href="./subpage/Login/index.html">Login</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
         </div>
         <div class="bs-col">
+  <h5>Projects</h5>
+  <ul class="bs-links">
+    <li><a href="./property-listing/cm-infinia.html">CM Infinia</a></li>
+    <li><a href="./property-listing/mdb-the-lutyens.html">MDB Lutyens</a></li>
+    <li><a href="./property-listing/ananta-street.html">Ananta Street</a></li>
+  </ul>
+</div>
+        <div class="bs-col">
           <h5>Resources</h5>
           <ul class="bs-links">
-            <li><a href="#">For Developers</a></li>
-            <li><a href="#">For Channel Partners</a></li>
-            <li><a href="#">For Home Buyers</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="/sign-up.html">For Developers</a></li>
+            <li><a href="/sign-up.html">For Channel Partners</a></li>
+            <li><a href="/sign-up.html">For Home Buyers</a></li>
+            <li><a href="/case-study.html">Case Studies</a></li>
+            <li><a href="/blog.html">Blog</a></li>
           </ul>
         </div>
         <div class="bs-col">
           <h5>Contact</h5>
           <ul class="bs-links">
-            <li><a href="#">hello@betterside.in</a></li>
+            <li><a href="#">info@betterside.in</a></li>
             <li class="bs-copyright">© 2026 BetterSide<br>All rights reserved</li>
             <li><a href="#">Privacy Policy · Terms of Service</a></li>
           </ul>
@@ -472,6 +524,7 @@
             </div>
 
           </div>
+          
 
           <div class="bav-consent" id="bavConsentBox" role="checkbox" aria-checked="false" tabindex="0">
             <div class="bav-checkbox-custom" id="bavCheckbox"></div>
@@ -581,11 +634,7 @@
   <script>
     /* ---- Hero Search ---- */
     (function(){
-      const projects = [
-        { name:'CM Infinia',    location:'CM Valley, Jainpur, Ludhiana',   type:'apartments', price:'100+',   area:'4600+ sq.ft', sectionId:'cm-section',     image:'images/cm.jpg',                          desc:'Premium luxury residential tower in the heart of Ludhiana' },
-        { name:'MDB Lutyens',   location:'Fauji Colony, Banur, Punjab',     type:'apartments', price:'50-100', area:'₹7000/sq.ft', sectionId:'mdb-section',    image:'images/MDB_Lutyens_1766146795158.jpg',   desc:'An iconic luxury residential development redefining modern living' },
-        { name:'Ananta Street', location:'Canal Rd, South City, Ludhiana',  type:'apartments', price:'50-100', area:'₹7000/sq.ft', sectionId:'ananta-section', image:'images/AnantaStreet_1766146992482.jpg',  desc:'A serene premium township alongside the canal with lush greenery' }
-      ];
+    
       const si=document.getElementById('heroSearch'), sr=document.getElementById('searchResults'), sb=document.getElementById('searchBtn'), ft=document.getElementById('filterType'), fb=document.getElementById('filterBudget');
       if(!si) return;
       function filter(){ const q=si.value.toLowerCase().trim(); return projects.filter(p=>{ let m=!q||p.name.toLowerCase().includes(q)||p.location.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q); if(ft.value&&m)m=p.type===ft.value; if(fb.value&&m)m=p.price===fb.value; return m; }); }
@@ -606,6 +655,117 @@
     })();
     
   </script>
+ <script>
+const projects = [
+  {
+    name: "CM Infinia",
+    type: "4bhk",
+    category: "apartments",
+    budget: "100+",
+    sectionId: "cm-section",
+    location: "Ludhiana"
+  },
+  {
+    name: "MDB Lutyens",
+    type: "3bhk",
+    category: "apartments",
+    budget: "50-100",
+    sectionId: "mdb-section",
+    location: "Banur"
+  },
+  {
+    name: "Ananta Street",
+    type: "3bhk",   // ✅ FIXED (VERY IMPORTANT)
+    category: "commercial",
+    budget: "50-100",
+    sectionId: "ananta-section",
+    location: "Ludhiana"
+  }
+];
+</script>
+<script>
+function filterProjects(type) {
+  const cards = document.querySelectorAll('.featured-project-card');
+
+  if (type === 'all') {
+    cards.forEach(c => c.style.display = '');
+  } else {
+    cards.forEach(card => {
+      const types = (card.getAttribute('data-type') || '').split(' ');
+      const cats = (card.getAttribute('data-category') || '').split(' ');
+      card.style.display = (types.includes(type) || cats.includes(type)) ? '' : 'none';
+    });
+  }
+
+  document.getElementById('featured-projects-section')
+    ?.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('unitsDropdown').classList.remove('open');
+  document.getElementById('navLinks').classList.remove('active');
+}
+</script>
+<script>
+document.getElementById("searchBtn").addEventListener("click", () => {
+  const keyword = document.getElementById("heroSearch").value.toLowerCase();
+  const type = document.getElementById("filterType").value;
+
+  const cards = document.querySelectorAll('.featured-project-card');
+  let found = false;
+
+  cards.forEach(card => {
+    const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
+    const loc = card.querySelector('.featured-card-location')?.textContent.toLowerCase() || '';
+    const cats = (card.getAttribute('data-category') || '').split(' ');
+
+    const matchKeyword = !keyword || name.includes(keyword) || loc.includes(keyword);
+    const matchType = !type || cats.includes(type);
+
+    if (matchKeyword && matchType) {
+      card.style.display = '';
+      found = true;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  if (!found) {
+    cards.forEach(c => c.style.display = '');
+    if (keyword) alert("No project found 😕");
+    return;
+  }
+
+  document.getElementById('featured-projects-section')
+    ?.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Live search as you type
+document.getElementById("heroSearch").addEventListener("input", () => {
+  document.getElementById("searchBtn").click();
+});
+
+// Filter dropdowns trigger search too
+document.getElementById("filterType").addEventListener("change", () => {
+  document.getElementById("searchBtn").click();
+});
+document.getElementById("filterBudget").addEventListener("change", () => {
+  document.getElementById("searchBtn").click();
+});
+
+// Show all when search is cleared
+document.getElementById("heroSearch").addEventListener("input", function() {
+  if (!this.value.trim()) {
+    document.querySelectorAll('.featured-project-card').forEach(c => c.style.display = '');
+  }
+});
+
+// Auto-filter from URL parameter
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const filter = params.get('filter');
+  if (filter) {
+    setTimeout(() => filterProjects(filter), 300);
+  }
+})();
+</script>
 
   <!-- Book a Visit Script -->
   <script src="book-a-visit.js"></script>

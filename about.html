@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png">
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - BetterSide</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="about-style.css"/>
+  <link rel="stylesheet" href="/subpage/About/about-style.css"/>
 </head>
 <body>
 
 <a href="/" class="back-arrow"> ←</a>
 
   <div class="video-container">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="video/Luxury_Building_Animation_Ready.mp4" type="video/mp4">
-    </video>
+  
     <div class="video-overlay"></div>
   </div>
 
@@ -26,19 +25,22 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="./../../index.html">Home</a></li>
-      <li><a href="./../../subpage/Explore/explore.html">Explore</a></li>
-      <li class="active"><a href="./../../subpage/About/index.html">About</a></li>
-        <li class="has-dropdown" id="unitsDropdown">
+      <li><a href="explore.html">Explore</a></li>
+      <li class="active"><a href="./about.html">About</a></li>
+      <li class="has-dropdown" id="unitsDropdown">
           <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
-          <ul class="dropdown-menu">
-                     <li><a href="/#mdb-section">3+1 BHK</a></li>
-<li><a href="/#cm-section">4 BHK</a></li>
-<li><a href="/#featured-projects-section">Penthouse</a></li>
-          </ul>
+    <ul class="dropdown-menu">
+  <li><a href="/index.html?filter=3bhk">3+1 BHK</a></li>
+  <li><a href="/index.html?filter=4bhk">4 BHK</a></li>
+  <li><a href="/index.html?filter=penthouse">Penthouse</a></li>
+  <li><a href="/index.html?filter=apartments">Apartments</a></li>
+  <li><a href="/index.html?filter=commercial">Commercials</a></li>
+  <li><a href="/index.html?filter=all">Show All</a></li>
+</ul>
         </li>
       <li><a href="#">Blog</a></li>
       
-      <li><a href="./../../subpage/contact/contact.html">Contact FAQ</a></li>
+      <li><a href="contact.html">Contact FAQ</a></li>
       <li class="mobile-auth-btn">
         <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
       </li>
@@ -108,16 +110,25 @@
         <div class="team-grid">
           <div class="team-card reveal">
             <div class="team-photo-wrap">
-              <img src="image/Owner.jpeg" alt="Founder" class="team-photo" onerror="this.style.opacity='0'"/>
+              <img src="/subpage/About/media/image/owner 1.jpeg" alt="Founder" class="team-photo" onerror="this.style.opacity='0'"/>
               <div class="team-photo-placeholder">
-                <span>📷</span>
-                <span class="tp-hint">Place Photo Here</span>
+               
               </div>
             </div>
             <div class="team-info">
-              <h4 class="team-name">Founder Name</h4>
-              <span class="team-role">Co-Founder &amp; CEO</span>
-              <p class="team-bio">With over a decade in luxury real estate development, driving innovation at the intersection of technology and premium property marketing across India's fastest-growing markets.</p>
+              <h4 class="team-name">Manik Aggarwal</h4>
+              <span class="team-role">Founder &amp; CEO</span>
+                       <p class="team-bio">
+  <span class="short-text">
+   “What if you could walk through a property before it even exists?” That question stayed with me long before this venture began, and honestly, it still drives every decision I make today. Coming from a technology-first mindset, I’ve always believed that the problem in real estate was never the lack of projects—it was the lack of real experience....
+  </span>
+
+  <span class="full-text">
+    Buyers scroll endlessly through static images, cinematic videos, and brochures that all look perfect, but none of them truly answer the one thing that matters: how does it feel to be there? That gap is exactly where we decided to build. For me, this platform is not just about innovation for the sake of it—it’s about giving power back to the end user. I want a buyer sitting miles away to actually feel the space, understand proportions, light, movement, and even emotional connection with a property before making a decision. Technology today is capable of so much more than what the industry has been using, and it felt like the right time to bridge that gap. We’re building something that replaces imagination with experience—where you don’t have to “picture” your future home, you can step into it digitally. Every feature we design, every interaction we refine, is centered around simplicity and realism, because if it’s not intuitive, it’s not useful. I see this as a shift similar to how streaming replaced DVDs—once people experience it, there’s no going back. And that’s the core belief I bring into this: real estate should not be sold through visuals anymore, it should be experienced. We’re not just creating a product; we’re quietly reshaping expectations of how people explore and connect with spaces.
+  </span>
+
+  <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+</p>
               <div class="team-tags">
                 <span>Real Estate</span>
                 <span>Strategy</span>
@@ -127,16 +138,26 @@
           </div>
           <div class="team-card reveal" style="transition-delay:.12s">
             <div class="team-photo-wrap">
-              <img src="image/founder2.jpg" alt="Founder" class="team-photo" onerror="this.style.opacity='0'"/>
+              <img src="/subpage/About/media/image/owner2.jpg" alt="Founder" class="team-photo" onerror="this.style.opacity='0'"/>
               <div class="team-photo-placeholder">
-                <span>📷</span>
-                <span class="tp-hint">Place Photo Here</span>
+                
+                
               </div>
             </div>
             <div class="team-info">
-              <h4 class="team-name">Founder Name</h4>
-              <span class="team-role">Co-Founder &amp; CTO</span>
-              <p class="team-bio">Pioneering immersive real estate experiences with cutting-edge 3D technology and digital marketing expertise, turning property visions into unforgettable buyer journeys.</p>
+              <h4 class="team-name">Puneet Goyal</h4>
+              <span class="team-role">Founder &amp; CEO</span>
+             <p class="team-bio">
+  <span class="short-text">
+  Real estate doesn’t have a visibility problem—it has a conversion problem.” That’s something I’ve seen closely while working with developers and channel partners over the years. Projects are marketed aggressively, inventories are showcased everywhere, but somewhere between interest and decision, the connection drops...
+  </span>
+
+  <span class="full-text">
+    Developers struggle to communicate the true value of what they’ve built, and CPs often rely on repetitive site visits and explanations that don’t always translate into confidence for the buyer. That’s where our platform steps in—not just as a tool, but as a business enabler. From my perspective, this isn’t just about showcasing properties better; it’s about helping developers sell smarter and faster. When a project can be experienced instead of explained, conversations become clearer, trust builds quicker, and decisions happen more naturally. For channel partners, this changes the game completely—they’re no longer limited by location or availability; they can present projects in a way that feels premium, consistent, and impactful every single time. What excites me the most is how this aligns everyone in the ecosystem. Developers get a stronger narrative for their projects, CPs get a powerful sales edge, and buyers get clarity without friction. It’s rare to find a solution that benefits all sides equally, and that’s exactly what we’re building towards. I see this platform becoming a standard, not an alternative—because once businesses realize that immersive experience leads to better engagement and faster closures, it won’t be a choice anymore, it will be a necessity. And that belief is what I bring into this journey: we’re not just improving real estate sales, we’re redefining how it works.
+  </span>
+
+  <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+</p>
               <div class="team-tags">
                 <span>3D Technology</span>
                 <span>Digital Marketing</span>
@@ -271,6 +292,22 @@
 
   }());
   </script>
+  <script>
+function toggleReadMore(btn) {
+  const bio = btn.parentElement;
+  const shortText = bio.querySelector('.short-text');
+  const fullText = bio.querySelector('.full-text');
 
+  if (fullText.style.display === "inline") {
+    fullText.style.display = "none";
+    shortText.style.display = "inline";
+    btn.innerText = "Read More";
+  } else {
+    fullText.style.display = "inline";
+    shortText.style.display = "none";
+    btn.innerText = "Read Less";
+  }
+}
+</script>
 </body>
 </html>

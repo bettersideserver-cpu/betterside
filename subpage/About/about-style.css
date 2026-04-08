@@ -606,3 +606,18 @@ body {
   .team-info { padding:22px 20px 20px; }
   .team-name { font-size:1.6rem; }
 }
+.team-bio .full-text {
+  display: none;
+}
+
+.team-bio .read-more-btn {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ff7a18;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.team-bio .read-more-btn:hover {
+  text-decoration: underline;
+}

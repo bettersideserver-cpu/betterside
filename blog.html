@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — BetterSide Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/subpage/Blog/blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Questrial&family=Inter:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="blog-page">
+
+  <!-- ══════════════════════════════════
+       NAVBAR (same as homepage)
+  ══════════════════════════════════ -->
+  <nav class="navbar scrolled" id="mainNav">
+    <a href="index.html" class="logo-space">
+      <img src="../../images/Betterside Logo 1.png" alt="BetterSide"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="explore.html">Explore</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="has-dropdown" id="unitsDropdown">
+        <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html?filter=3bhk">3+1 BHK</a></li>
+          <li><a href="index.html?filter=4bhk">4 BHK</a></li>
+          <li><a href="index.html?filter=penthouse">Penthouse</a></li>
+          <li><a href="index.html?filter=apartments">Apartments</a></li>
+          <li><a href="index.html?filter=commercial">Commercials</a></li>
+          <li><a href="index.html?filter=all">Show All</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html" class="nav-active">Blog</a></li>
+      <li><a href="contact.html">Contact FAQ</a></li>
+      <li class="mobile-auth-btn">
+        <button class="login-btn" onclick="window.location.href='login.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cp-btn" onclick="window.location.href='sign-up.html'">Become a CP</button>
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       BLOG HERO
+  ══════════════════════════════════ -->
+  <section class="blog-hero">
+    <div class="blog-hero-bg"></div>
+    <div class="blog-hero-content">
+      <span class="blog-hero-eyebrow">
+        <span class="badge-dot"></span> Real Estate Insights &amp; News
+      </span>
+      <h1 class="blog-hero-title">The <em>BetterSide</em><br>Journal</h1>
+      <p class="blog-hero-sub">Expert perspectives on Punjab's property market, investment strategies, and luxury living — curated for the modern homebuyer.</p>
+
+      <!-- Search -->
+      <div class="blog-search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="blogSearch" placeholder="Search articles, topics, locations…">
+        <button id="blogSearchBtn">Search</button>
+      </div>
+
+      <!-- Category Pills -->
+      <div class="blog-cats">
+        <button class="blog-cat active" data-cat="all">All</button>
+        <button class="blog-cat" data-cat="market">Market Trends</button>
+        <button class="blog-cat" data-cat="investment">Investment</button>
+        <button class="blog-cat" data-cat="lifestyle">Lifestyle</button>
+        <button class="blog-cat" data-cat="legal">Legal &amp; Finance</button>
+        <button class="blog-cat" data-cat="guide">Buyer's Guide</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FEATURED ARTICLE
+  ══════════════════════════════════ -->
+  <section class="blog-featured-section">
+    <div class="blog-container">
+      <div class="blog-featured-card" data-cat="market">
+        <div class="bfc-image">
+          <img src="images/cm.jpg" alt="Punjab Real Estate Boom">
+          <span class="bfc-badge">Featured</span>
+          <span class="bfc-cat-tag">Market Trends</span>
+        </div>
+        <div class="bfc-body">
+          <div class="bfc-meta">
+            <span class="bfc-author"><i class="fa-solid fa-user-circle"></i> Arjun Mehta</span>
+            <span class="bfc-dot">·</span>
+            <span><i class="fa-regular fa-calendar"></i> 2 June 2025</span>
+            <span class="bfc-dot">·</span>
+            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+          </div>
+          <h2 class="bfc-title">Why Punjab Is Becoming India's Next Real Estate Powerhouse in 2025</h2>
+          <p class="bfc-excerpt">From Ludhiana's industrial backbone to Mohali's tech corridor and Banur's emerging residential belt — we break down the data, the demand, and the decade ahead for Punjab's booming property market.</p>
+          <div class="bfc-tags">
+            <span>#Ludhiana</span><span>#Mohali</span><span>#RealEstate2025</span>
+          </div>
+          <a href="blog-post.html" class="bfc-read-btn">
+            Read Full Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       ARTICLE GRID
+  ══════════════════════════════════ -->
+  <section class="blog-grid-section">
+    <div class="blog-container">
+
+      <div class="blog-section-header">
+        <h2>Latest Articles</h2>
+        <div class="blog-sort">
+          <label>Sort by</label>
+          <select id="blogSort">
+            <option value="newest">Newest First</option>
+            <option value="popular">Most Popular</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+
+        <!-- Card 1 -->
+        <article class="blog-card" data-cat="investment" data-date="2025-05-20" data-views="3400">
+          <a href="blog-post.html" class="blog-card-img-wrap">
+            <img src="images/MDB_Lutyens_1766146795158.jpg" alt="Investment Guide">
+            <span class="bc-cat investment">Investment</span>
+          </a>
+          <div class="blog-card-body">
+            <div class="bc-meta">
+              <span><i class="fa-regular fa-calendar"></i> 20 May 2025</span>
+              <span>·</span>
+              <span><i class="fa-regular fa-clock"></i> 6 min</span>
+            </div>
+            <h3 class="bc-title">5 High-ROI Localities in Punjab You Should Invest in Right Now</h3>
+            <p class="bc-excerpt">Banur, Mohali Aerocity, South City Ludhiana — our analysts map out where the smart money is moving in 2025.</p>
+            <div class="bc-footer">
+              <div class="bc-author">
+                <div class="bc-avatar">AM</div>
+                <span>Arjun Mehta</span>
+              </div>
+              <span class="bc-views"><i class="fa-regular fa-eye"></i> 3.4k</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card" data-cat="guide" data-date="2025-05-10" data-views="2800">
+          <a href="blog-post.html" class="blog-card-img-wrap">
+            <img src="images/AnantaStreet_1766146992482.jpg" alt="First Home Guide">
+            <span class="bc-cat guide">Buyer's Guide</span>
+          </a>
+          <div class="blog-card-body">
+            <div class="bc-meta">
+              <span><i class="fa-regular fa-calendar"></i> 10 May 2025</span>
+              <span>·</span>
+              <span><i class="fa-regular fa-clock"></i> 10 min</span>
+            </div>
+            <h3 class="bc-title">First-Time Homebuyer's Complete Checklist for Punjab</h3>
+            <p class="bc-excerpt">From RERA verification to stamp duty — everything you need to know before signing on the dotted line.</p>
+            <div class="bc-footer">
+              <div class="bc-author">
+                <div class="bc-avatar" style="background:#059669;">PS</div>
+                <span>Priya Singh</span>
+              </div>
+              <span class="bc-views"><i class="fa-regular fa-eye"></i> 2.8k</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card" data-cat="lifestyle" data-date="2025-04-28" data-views="1900">
+          <a href="blog-post.html" class="blog-card-img-wrap">
+            <img src="images/cm.jpg" alt="Luxury Living">
+            <span class="bc-cat lifestyle">Lifestyle</span>
+          </a>
+          <div class="blog-card-body">
+            <div class="bc-meta">
+              <span><i class="fa-regular fa-calendar"></i> 28 Apr 2025</span>
+              <span>·</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+            </div>
+            <h3 class="bc-title">Inside CM Infinia: What ₹4 Cr Gets You in Ludhiana's Most Prestigious Tower</h3>
+            <p class="bc-excerpt">Sky lounges, Sauna & Spa, Mini Theatre — a walkthrough of the amenities redefining luxury in Punjab.</p>
+            <div class="bc-footer">
+              <div class="bc-author">
+                <div class="bc-avatar" style="background:#7c3aed;">RK</div>
+                <span>Rohit Kapoor</span>
+              </div>
+              <span class="bc-views"><i class="fa-regular fa-eye"></i> 1.9k</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card" data-cat="legal" data-date="2025-04-15" data-views="4200">
+          <a href="blog-post.html" class="blog-card-img-wrap">
+            <img src="images/MDB_Lutyens_1766146795158.jpg" alt="Legal Guide">
+            <span class="bc-cat legal">Legal &amp; Finance</span>
+          </a>
+          <div class="blog-card-body">
+            <div class="bc-meta">
+              <span><i class="fa-regular fa-calendar"></i> 15 Apr 2025</span>
+              <span>·</span>
+              <span><i class="fa-regular fa-clock"></i> 12 min</span>
+            </div>
+            <h3 class="bc-title">RERA Punjab 2025: What Every Property Buyer Must Verify Before Booking</h3>
+            <p class="bc-excerpt">A plain-language breakdown of your legal rights, builder obligations, and the documents you must demand before any advance payment.</p>
+            <div class="bc-footer">
+              <div class="bc-author">
+                <div class="bc-avatar" style="background:#dc2626;">NK</div>
+                <span>Neha Khanna</span>
+              </div>
+              <span class="bc-views"><i class="fa-regular fa-eye"></i> 4.2k</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="blog-card" data-cat="market" data-date="2025-04-02" data-views="3100">
+          <a href="blog-post.html" class="blog-card-img-wrap">
+            <img src="images/AnantaStreet_1766146992482.jpg" alt="Mohali Market">
+            <span class="bc-cat market">Market Trends</span>
+          </a>
+          <div class="blog-card-body">
+            <div class="bc-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2 Apr 2025</span>
+              <span>·</span>
+              <span><i class="fa-regular fa-clock"></i> 7 min</span>
+            </div>
+            <h3 class="bc-title">Mohali vs Ludhiana: Which City Offers Better Property Returns in 2025?</h3>
+            <p class="bc-excerpt">A data-driven comparison of price appreciation, rental yields, and infrastructure pipeline across Punjab's two biggest real estate markets.</p>
+            <div class="bc-footer">
+              <div class="bc-author">
+                <div class="bc-avatar">AM</div>
+                <span>Arjun Mehta</span>
+              </div>
+              <span class="bc-views"><i class="fa-regular fa-eye"></i> 3.1k</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="blog-card" data-cat="investment" data-date="2025-03-18" data-views="2200">
+          <a href="blog-post.html" class="blog-card-img-wrap">
+            <img src="images/cm.jpg" alt="Channel Partner">
+            <span class="bc-cat investment">Investment</span>
+          </a>
+          <div class="blog-card-body">
+            <div class="bc-meta">
+              <span><i class="fa-regular fa-calendar"></i> 18 Mar 2025</span>
+              <span>·</span>
+              <span><i class="fa-regular fa-clock"></i> 9 min</span>
+            </div>
+            <h3 class="bc-title">Becoming a Channel Partner in Punjab Real Estate: Earnings, Risks, and Reality</h3>
+            <p class="bc-excerpt">Is the CP model right for you? We talk commissions, builder relationships, and how top CPs earn ₹20L+ a year in Punjab.</p>
+            <div class="bc-footer">
+              <div class="bc-author">
+                <div class="bc-avatar" style="background:#d97706;">VS</div>
+                <span>Vikram Sharma</span>
+              </div>
+              <span class="bc-views"><i class="fa-regular fa-eye"></i> 2.2k</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /blog-grid -->
+
+      <!-- No Results -->
+      <div class="blog-no-results" id="blogNoResults" style="display:none;">
+        <i class="fa-regular fa-face-frown"></i>
+        <p>No articles match your search. Try a different keyword or category.</p>
+        <button onclick="resetBlog()">Clear Filters</button>
+      </div>
+
+      <!-- Load More -->
+      <div class="blog-load-more">
+        <button class="blm-btn" id="loadMoreBtn">
+          <i class="fa-solid fa-rotate"></i> Load More Articles
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       NEWSLETTER STRIP
+  ══════════════════════════════════ -->
+  <section class="blog-newsletter">
+    <div class="blog-container">
+      <div class="bln-card">
+        <div class="bln-glow"></div>
+        <div class="bln-left">
+          <span class="bln-badge"><i class="fa-solid fa-envelope-open-text"></i> Weekly Digest</span>
+          <h2>Stay Ahead of Punjab's<br><span>Property Market</span></h2>
+          <p>Get curated insights, price alerts, and new project launches delivered every Monday morning.</p>
+          <div class="bln-stats">
+            <div class="bln-stat"><strong>6,200+</strong><span>Subscribers</span></div>
+            <div class="bln-stat-div"></div>
+            <div class="bln-stat"><strong>Weekly</strong><span>Cadence</span></div>
+            <div class="bln-stat-div"></div>
+            <div class="bln-stat"><strong>0</strong><span>Spam, Ever</span></div>
+          </div>
+        </div>
+        <div class="bln-right">
+          <div class="bln-form-group">
+            <input type="text" placeholder="Your full name" class="bln-input" id="blnName">
+          </div>
+          <div class="bln-form-group">
+            <input type="email" placeholder="Your email address" class="bln-input" id="blnEmail">
+          </div>
+          <button class="bln-submit" id="blnSubmit">
+            <i class="fa-solid fa-paper-plane"></i> Subscribe Now
+          </button>
+          <p class="bln-note"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</p>
+          <div class="bln-success" id="blnSuccess">
+            <i class="fa-solid fa-circle-check"></i> You're subscribed! Check your inbox.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TOPICS CLOUD
+  ══════════════════════════════════ -->
+  <section class="blog-topics-section">
+    <div class="blog-container">
+      <div class="blog-section-header" style="margin-bottom:32px;">
+        <h2>Browse by Topic</h2>
+      </div>
+      <div class="blog-topics-cloud">
+        <a href="#" class="btc-tag large">#LudhianaRealEstate</a>
+        <a href="#" class="btc-tag">#MohaliProperties</a>
+        <a href="#" class="btc-tag large">#3BHKFlats</a>
+        <a href="#" class="btc-tag">#BanurInvestment</a>
+        <a href="#" class="btc-tag">#RERACompliance</a>
+        <a href="#" class="btc-tag large">#LuxuryApartments</a>
+        <a href="#" class="btc-tag">#HomeLoans</a>
+        <a href="#" class="btc-tag">#ChannelPartner</a>
+        <a href="#" class="btc-tag large">#PunjabRealty</a>
+        <a href="#" class="btc-tag">#PropertyInvestment</a>
+        <a href="#" class="btc-tag">#PatialaFlats</a>
+        <a href="#" class="btc-tag">#StampDuty</a>
+        <a href="#" class="btc-tag large">#CMInfinia</a>
+        <a href="#" class="btc-tag">#MDBLutyens</a>
+        <a href="#" class="btc-tag">#AnantaStreet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER (matching homepage)
+  ══════════════════════════════════ -->
+  <footer class="bs-footer">
+    <div class="bs-container">
+      <div class="bs-footer-flex-wrapper">
+        <div class="bs-top-section">
+          <span class="bs-label">Find Us</span>
+          <h2 class="bs-heading">Visit Our<br>Headquarters</h2>
+          <p class="bs-subtext">Come visit our office to discuss your real estate needs in person. We are open Mon–Sat, 9am – 6pm.</p>
+          <div class="bs-contact-list">
+            <div class="bs-contact-item">
+              <div class="bs-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="bs-contact-info">
+                <h4>Office Address</h4>
+                <p class="bs-detail-label">Main Branch</p>
+                <p class="bs-detail-value">404, Nirmal Nagar Rd, Duggri,<br>Ludhiana, Punjab 141001</p>
+              </div>
+            </div>
+            <div class="bs-contact-item">
+              <div class="bs-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="bs-contact-info">
+                <h4>Contact</h4>
+                <p class="bs-detail-value">+91 98765 43210<br>hello@betterside.in</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bs-map-section">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.5156752562984!2d75.84474317558585!3d30.872232174517286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83eb70abb0a3%3A0xb2cea78c46492a36!2sBetterSide!5e0!3m2!1sen!2sin!4v1775458439162!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="bs-divider"></div>
+      <div class="bs-bottom-section">
+        <div class="bs-col bs-brand-col">
+          <div class="bs-logo-wrapper">
+            <img src="../../images/Betterside Logo 1.png" alt="BetterSide" class="bs-logo"
+              onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-weight:700;font-size:1.1rem;\'>BetterSide</span>')">
+          </div>
+          <p class="bs-brand-desc">Experience real estate before it's built.</p>
+          <div class="bs-social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="bs-col">
+          <h5>Platform</h5>
+          <ul class="bs-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="bs-col">
+          <h5>Projects</h5>
+          <ul class="bs-links">
+            <li><a href="./property-listing/cm-infinia.html">CM Infinia</a></li>
+            <li><a href="./property-listing/mdb-the-lutyens.html">MDB Lutyens</a></li>
+            <li><a href="./property-listing/ananta-street.html">Ananta Street</a></li>
+          </ul>
+        </div>
+        <div class="bs-col">
+          <h5>Resources</h5>
+          <ul class="bs-links">
+            <li><a href="sign-up.html">For Developers</a></li>
+            <li><a href="sign-up.html">For Channel Partners</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="bs-col">
+          <h5>Contact</h5>
+          <ul class="bs-links">
+            <li><a href="#">info@betterside.in</a></li>
+            <li class="bs-copyright">© 2026 BetterSide<br>All rights reserved</li>
+            <li><a href="#">Privacy Policy · Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Navbar ── */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const dropdown  = document.getElementById('unitsDropdown');
+
+    if (hamburger) hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+    dropdown.querySelector('.dropdown-trigger').addEventListener('click', e => {
+      e.preventDefault(); e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', e => { if (!dropdown.contains(e.target)) dropdown.classList.remove('open'); });
+
+    /* ── Category Filter ── */
+    const cats  = document.querySelectorAll('.blog-cat');
+    const cards = document.querySelectorAll('.blog-card');
+    let activeCat = 'all';
+    let searchTerm = '';
+
+    cats.forEach(btn => btn.addEventListener('click', () => {
+      cats.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCat = btn.dataset.cat;
+      filterCards();
+    }));
+
+    /* ── Search ── */
+    const searchInput = document.getElementById('blogSearch');
+    searchInput.addEventListener('input', () => { searchTerm = searchInput.value.toLowerCase(); filterCards(); });
+    document.getElementById('blogSearchBtn').addEventListener('click', () => { searchTerm = searchInput.value.toLowerCase(); filterCards(); });
+
+    function filterCards() {
+      let visible = 0;
+      cards.forEach(card => {
+        const catMatch  = activeCat === 'all' || card.dataset.cat === activeCat;
+        const textMatch = !searchTerm ||
+          card.querySelector('.bc-title').textContent.toLowerCase().includes(searchTerm) ||
+          card.querySelector('.bc-excerpt').textContent.toLowerCase().includes(searchTerm);
+        const show = catMatch && textMatch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      document.getElementById('blogNoResults').style.display = visible === 0 ? 'flex' : 'none';
+    }
+
+    function resetBlog() {
+      cats.forEach(b => b.classList.remove('active'));
+      cats[0].classList.add('active');
+      activeCat = 'all'; searchTerm = '';
+      searchInput.value = '';
+      filterCards();
+    }
+
+    /* ── Sort ── */
+    document.getElementById('blogSort').addEventListener('change', function() {
+      const grid = document.getElementById('blogGrid');
+      const cardArr = [...cards];
+      if (this.value === 'newest') cardArr.sort((a,b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+      else if (this.value === 'oldest') cardArr.sort((a,b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+      else if (this.value === 'popular') cardArr.sort((a,b) => parseInt(b.dataset.views) - parseInt(a.dataset.views));
+      cardArr.forEach(c => grid.appendChild(c));
+    });
+
+    /* ── Load More (cosmetic) ── */
+    document.getElementById('loadMoreBtn').addEventListener('click', function() {
+      this.innerHTML = '<i class="fa-solid fa-circle-check"></i> All articles loaded';
+      this.disabled = true;
+      this.style.opacity = '0.5';
+    });
+
+    /* ── Newsletter ── */
+    document.getElementById('blnSubmit').addEventListener('click', () => {
+      const name  = document.getElementById('blnName').value.trim();
+      const email = document.getElementById('blnEmail').value.trim();
+      if (!name || !email || !email.includes('@')) {
+        alert('Please enter a valid name and email.'); return;
+      }
+      document.getElementById('blnSuccess').style.display = 'flex';
+      document.getElementById('blnSubmit').style.display  = 'none';
+    });
+  </script>
+
+</body>
+</html>

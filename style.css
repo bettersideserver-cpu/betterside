@@ -355,12 +355,16 @@ body {
   background: linear-gradient(90deg, #0055ff, #00d4ff);
   margin: 10px auto 0; border-radius: 2px;
 }
+
 .featured-cards-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px; margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
 }
 .featured-project-card {
   background: white; border-radius: 14px; overflow: hidden;
+    max-width: 380px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.08);
   transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
   border: 1px solid rgba(0,85,255,0.05);
@@ -433,7 +437,7 @@ body {
 .cm-brand-name { font-weight: 700; color: #0055ff; font-size: 0.9rem; }
 .cm-sub-text { font-size: 0.6rem; color: #666; }
 .cm-btn-contact { background: #f0f0f0; border: 1px solid #ddd; border-radius: 20px; padding: 12px 15px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
-.cm-btn-vr { background: #0099ff; color: white; border: none; border-radius: 15px; padding: 12px; font-size: 0.9rem; font-weight: 600; cursor: pointer; text-align: center; line-height: 1.2; }
+.cm-btn-vr { background: #0099ff; color: white; border: none;text-decoration: none; border-radius: 15px; padding: 12px; font-size: 0.9rem; font-weight: 600; cursor: pointer; text-align: center; line-height: 1.2; }
 .cm-vr-subtext { display: block; font-size: 0.65rem; font-weight: 400; opacity: 0.9; }
 
 .cm-bottom-bar {
@@ -632,7 +636,8 @@ body {
 /* ============================================================
    BOOK A VISIT — book-a-visit.css
    Place this file in the same folder as style.css
-   Link it in <head> AFTER style.css
+   Link it in <head>
+<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png"> AFTER style.css
    ============================================================ */
 
 
@@ -879,7 +884,23 @@ body {
   color: #ef4444; margin-top: 3px; display: none;
 }
 .bav-error-hint.show { display: block; }
-
+.bs-bottom-section { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
+.bs-links a {
+  position: relative;
+}
+.bs-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #0055ff;
+  transition: width 0.3s ease;
+}
+.bs-links a:hover::after {
+  width: 100%;
+}
 /* ── CONSENT ─────────────────────────────────────────────── */
 .bav-consent {
   display: flex; align-items: flex-start; gap: 12px;
@@ -977,3 +998,168 @@ body {
   .bav-header-stats { display: none; }
   .bav-trust-row { display: none; }
 }
+/* ============================================
+   BEST REAL ESTATE DEVELOPERS SECTION
+   ============================================ */
+
+.developers-section {
+  padding: 70px 20px 50px;
+  background: linear-gradient(180deg, #f0f6fc 0%, #e8f1fa 100%);
+}
+.developers-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dev-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0055ff;
+  background: rgba(0, 85, 255, 0.08);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dev-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.dev-heading span {
+  color: #0055ff;
+}
+
+.dev-subheading {
+  font-size: 0.92rem;
+  color: #6b7280;
+  max-width: 600px;
+  line-height: 1.7;
+  margin: 0 auto 40px auto; /* auto left/right centers it */
+  font-family: 'Inter', sans-serif;
+}
+
+.developers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.developer-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(0, 85, 255, 0.05);
+  padding: 32px 28px;
+  position: relative;
+}
+
+.developer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.28),
+    transparent
+  );
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.developer-card:hover::before {
+  left: 100%;
+}
+
+.developer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 85, 255, 0.12);
+  border-color: rgba(0, 85, 255, 0.18);
+}
+
+.dev-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0055ff;
+  background: linear-gradient(135deg, #f0f5ff, #e8efff);
+  border: 1px solid rgba(0, 85, 255, 0.1);
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.dev-para {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1024px) {
+  .developers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .developers-section {
+    padding: 50px 16px 40px;
+  }
+
+  .developers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .developer-card {
+    padding: 24px 20px;
+  }
+
+  .dev-heading {
+    font-size: 1.6rem;
+  }
+
+  .dev-number {
+    font-size: 0.62rem;
+  }
+
+  .dev-para {
+    font-size: 0.84rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .developer-card {
+    padding: 20px 16px;
+  }
+}
+
+
+
+

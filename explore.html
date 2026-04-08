@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png">
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Explore – BetterSide</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="explore-style.css"/>
+  <link rel="stylesheet" href="./subpage/Explore/explore-style.css"/>
 </head>
 <body>
 
@@ -17,28 +18,31 @@
         onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
     </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="/index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li class="active">Explore</li>
-    <li><a href="/subpage/About/index.html">About</a></li>
-      <li class="has-dropdown" id="unitsDropdown">
+    <li><a href="about.html">About</a></li>
+  <li class="has-dropdown" id="unitsDropdown">
           <a href="#" class="dropdown-trigger">Property Listing <span class="dd-chevron"></span></a>
-          <ul class="dropdown-menu">
-           <li><a href="/#mdb-section">3+1 BHK</a></li>
-<li><a href="/#cm-section">4 BHK</a></li>
-<li><a href="/#featured-projects-section">Penthouse</a></li>
-          </ul>
+    <ul class="dropdown-menu">
+  <li><a href="/index.html?filter=3bhk">3+1 BHK</a></li>
+  <li><a href="/index.html?filter=4bhk">4 BHK</a></li>
+  <li><a href="/index.html?filter=penthouse">Penthouse</a></li>
+  <li><a href="/index.html?filter=apartments">Apartments</a></li>
+  <li><a href="/index.html?filter=commercial">Commercials</a></li>
+  <li><a href="/index.html?filter=all">Show All</a></li>
+</ul>
         </li>
     <li>Blog</li>
     
-    <li><a href="/subpage/Contact/contact.html">Contact FAQ</a></li>
+    <li><a href="contact.html">Contact FAQ</a></li>
     <li class="mobile-auth-btn">
-      <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
+      <button class="login-btn" onclick="window.location.href='login.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
     </li>
     
   </ul>
   <div class="nav-actions">
     
-    <button class="login-btn" onclick="window.location.href='/subpage/Login/index.html'">Login</button>
+    <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
   </div>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
@@ -119,27 +123,27 @@
     </div>
     <div class="wt-photos-grid">
       <div class="wt-photo wt-photo-large">
-        <div class="wt-photo-inner"><img src="1.png" alt="AGI Majestic"/></div>
+        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/1.png" alt="AGI Majestic"/></div>
         <div class="wt-photo-label">AGI Majestic</div>
       </div>
       <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="2.png" alt="Ananta Street"/></div>
+        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/2.png" alt="Ananta Street"/></div>
         <div class="wt-photo-label">Ananta Street</div>
       </div>
       <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="3.png" alt="Kitchen Render"/></div>
+        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/3.png" alt="Kitchen Render"/></div>
         <div class="wt-photo-label">MDB Lutyens</div>
       </div>
       <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="4.png" alt="Bathroom Render"/></div>
+        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/4.png" alt="Bathroom Render"/></div>
         <div class="wt-photo-label">MDB Lutyens</div>
       </div>
       <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="5.png" alt="Balcony Render"/></div>
+        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/5.png" alt="Balcony Render"/></div>
         <div class="wt-photo-label">AGI Majestic</div>
       </div>
       <div class="wt-photo wt-photo-wide">
-        <div class="wt-photo-inner"><img src="6.png" alt="Aerial View Render"/></div>
+        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/6.png" alt="Aerial View Render"/></div>
         <div class="wt-photo-label">CM Infinia</div>
       </div>
     </div>
@@ -206,7 +210,7 @@
     </div>
     <div class="project-row">
       <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="1.png" alt="AGI-Majestic"/></div>
+        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/1.png" alt="AGI-Majestic"/></div>
         <div class="project-live-badge">Live</div>
         <div class="project-num-tag">01</div>
       </div>
@@ -224,7 +228,7 @@
     </div>
     <div class="project-row">
       <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="MDB_Lutyens.jpg" alt="MDB Lutyens"/></div>
+        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/2.png" alt="MDB Lutyens"/></div>
         <div class="project-live-badge">Live</div>
         <div class="project-num-tag">02</div>
       </div>
@@ -242,7 +246,7 @@
     </div>
     <div class="project-row">
       <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="AnantaStree.jpg" alt="Ananta Street"/></div>
+        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/Ananta-ipx.jpg" alt="Ananta Street"/></div>
         <div class="project-live-badge">Live</div>
         <div class="project-num-tag">03</div>
       </div>
@@ -272,7 +276,7 @@
     </div>
     <div class="project-row">
       <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="cm.jpg" alt="CM Infinia"/></div>
+        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/cm.jpg" alt="CM Infinia"/></div>
         <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
         <div class="project-num-tag">01</div>
       </div>
@@ -290,7 +294,7 @@
     </div>
     <div class="project-row">
       <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="MDB_Lutyens.jpg" alt="MDB Lutyens"/></div>
+        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/MDB-ipx.jpg" alt="MDB Lutyens"/></div>
         <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
         <div class="project-num-tag">02</div>
       </div>
@@ -308,7 +312,7 @@
     </div>
     <div class="project-row">
       <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="AnantaStree.jpg" alt="Ananta Street"/></div>
+        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/Ananta-ipx.jpg" alt="Ananta Street"/></div>
         <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
         <div class="project-num-tag">03</div>
       </div>
