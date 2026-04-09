@@ -6,7 +6,8 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 
 connectDB();
-const cors = require("cors");
+
+const app = express(); // ✅ ADD THIS
 
 const allowedOrigins = [
   "http://127.0.0.1:5500",
@@ -23,17 +24,17 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-// ✅ ADD THIS LINE (VERY IMPORTANT)
+// ✅ IMPORTANT
 app.options("*", cors());
 
 app.use(express.json());
 
-// ROUTES — fixed: all routes before app.listen()
+// ROUTES
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/dashboard", require("./routes/dashboard"));
 
 app.get("/", (req, res) => {
-  res.send("Server is running 🚀");
+  res.send("Server is running");
 });
 
 const PORT = process.env.PORT || 5000;
