@@ -59,21 +59,17 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-module.exports = router;
-
 // LOGIN ROUTE
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Check if user exists
     const user = await User.findOne({ email });
 
     if (!user) {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    // Compare password (plain text for now)
     if (user.password !== password) {
       return res.status(400).json({ message: "Invalid email or password" });
     }
@@ -91,3 +87,6 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
+
+// ✅ ALWAYS export at the end
+module.exports = router;
