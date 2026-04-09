@@ -6,20 +6,25 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 
 connectDB();
+const cors = require("cors");
 
-const app = express();
+const allowedOrigins = [
+  "http://127.0.0.1:5500",
+  "http://localhost:5500",
+  "https://betterside.onrender.com",
+  "https://betterside-api.onrender.com",
+  "https://www.betterside.in",
+  "https://betterside.in"
+];
 
-// CORS — fixed: added betterside-api origin & moved all origins here
 app.use(cors({
-  origin: [
-    "http://127.0.0.1:5500",
-    "http://localhost:5500",
-    "https://betterside.onrender.com",
-    "https://betterside-api.onrender.com",
-     "https://www.betterside.in"
-  ],
-  credentials: true
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+// ✅ ADD THIS LINE (VERY IMPORTANT)
+app.options("*", cors());
 
 app.use(express.json());
 
