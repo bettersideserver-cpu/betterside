@@ -16,6 +16,7 @@ app.use(cors({
     "http://localhost:5500",
     "https://betterside.onrender.com",
     "https://betterside-api.onrender.com"
+     "https://www.betterside.in"
   ],
   credentials: true
 }));
