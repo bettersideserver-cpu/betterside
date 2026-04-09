@@ -188,7 +188,7 @@
                     localStorage.setItem("userCity", data.user.city);
                     localStorage.setItem("userPhone", data.user.phone);
                     logToSheet({ role: "buyer", name: data.user.name, phone: data.user.phone, email: data.user.email, city: data.user.city, budget: data.user.budget || "-" });
-                    window.location.href = "../Dashboard/dashboard.html";
+                    window.location.href = "dashboard.html";
                 } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
             } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });
@@ -214,7 +214,7 @@
                     localStorage.setItem("userPhone", data.user.phone);
                     localStorage.setItem("companyName", data.user.companyName);
                     logToSheet({ role: "partner", name: data.user.name, phone: data.user.phone, email: data.user.email, city: data.user.city, companyName: data.user.companyName || "-" });
-                    window.location.href = "../Dashboard/dashboard.html";
+                    window.location.href = "dashboard.html";
                 } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
             } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });
@@ -240,7 +240,7 @@
                     localStorage.setItem("userPhone", data.user.phone);
                     localStorage.setItem("developerName", data.user.developerName);
                     logToSheet({ role: "developer", name: data.user.name, developerName: data.user.developerName || "-", phone: data.user.phone, email: data.user.email, city: data.user.city, gstNumber: data.user.gstNumber || "-", reraNumber: data.user.reraNumber || "-", documentLink: data.user.documentLink || "-" });
-                    window.location.href = "../Dashboard/dashboard.html";
+                    window.location.href = "dashboard.html";
                 } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
             } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });
