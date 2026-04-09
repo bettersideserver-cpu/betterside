@@ -175,7 +175,7 @@
             setBtnLoading(btn, true);
             const f = new FormData(this);
             try {
-                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
+                const res = await fetch("https://betterside.in/api/auth/signup", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name: f.get("fullName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), budget: f.get("budget"), role: "buyer" })
