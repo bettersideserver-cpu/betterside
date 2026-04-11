@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BetterSide | Portal Access</title>
@@ -16,7 +15,7 @@
             <div class="logo">
                 <img src="/subpage/Sign up/media/image/Betterside_Logo_1_1-removebg-preview.png" alt="BetterSide Logo">
             </div>
-            <a href="index.html" class="back-btn-small">
+            <a href="/" class="back-btn-small">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
             <h1>Welcome Back</h1>
@@ -175,7 +174,7 @@
             setBtnLoading(btn, true);
             const f = new FormData(this);
             try {
-                const res = await fetch("https://betterside-yjfx.onrender.com/api/auth/signup", {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name: f.get("fullName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), budget: f.get("budget"), role: "buyer" })
@@ -188,7 +187,7 @@
                     localStorage.setItem("userCity", data.user.city);
                     localStorage.setItem("userPhone", data.user.phone);
                     logToSheet({ role: "buyer", name: data.user.name, phone: data.user.phone, email: data.user.email, city: data.user.city, budget: data.user.budget || "-" });
-                    window.location.href = "dashboard.html";
+                    window.location.href = "../Dashboard/dashboard.html";
                 } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
             } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });
@@ -200,7 +199,7 @@
             setBtnLoading(btn, true);
             const f = new FormData(this);
             try {
-                const res = await fetch("https://betterside-yjfx.onrender.com/api/auth/signup", {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name: f.get("fullName"), companyName: f.get("companyName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), role: "partner" })
@@ -214,7 +213,7 @@
                     localStorage.setItem("userPhone", data.user.phone);
                     localStorage.setItem("companyName", data.user.companyName);
                     logToSheet({ role: "partner", name: data.user.name, phone: data.user.phone, email: data.user.email, city: data.user.city, companyName: data.user.companyName || "-" });
-                    window.location.href = "dashboard.html";
+                    window.location.href = "../Dashboard/dashboard.html";
                 } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
             } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });
@@ -226,7 +225,7 @@
             setBtnLoading(btn, true);
             const f = new FormData(this);
             try {
-                const res = await fetch("https://betterside-yjfx.onrender.com/api/auth/signup", {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/signup", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name: f.get("contactName"), developerName: f.get("developerName"), phone: f.get("phone"), email: f.get("email"), city: f.get("city"), password: f.get("password"), gstNumber: f.get("gstNumber"), reraNumber: f.get("reraNumber"), documentLink: f.get("documentLink"), role: "developer" })
@@ -240,7 +239,7 @@
                     localStorage.setItem("userPhone", data.user.phone);
                     localStorage.setItem("developerName", data.user.developerName);
                     logToSheet({ role: "developer", name: data.user.name, developerName: data.user.developerName || "-", phone: data.user.phone, email: data.user.email, city: data.user.city, gstNumber: data.user.gstNumber || "-", reraNumber: data.user.reraNumber || "-", documentLink: data.user.documentLink || "-" });
-                    window.location.href = "dashboard.html";
+                    window.location.href = "../Dashboard/dashboard.html";
                 } else { alert(data.message || "Signup failed"); setBtnLoading(btn, false); }
             } catch(err) { alert("Network error: " + err.message); setBtnLoading(btn, false); }
         });

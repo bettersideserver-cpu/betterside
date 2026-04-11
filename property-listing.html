@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Listing — BetterSide Real Estate</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Page Stylesheet -->
+  <link rel="stylesheet" href="./subpage/property-listing/property.css">
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" id="mainNav">
+    <a href="index.html" class="logo-space">
+      <img src="images/Betterside Logo 1.png" alt="BetterSide"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Questrial;font-size:1.3rem;font-weight:700;color:#0055ff\'>Better<span style=\'color:#000\'>Side</span></span>')"/>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="explore.html">Explore</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="property-listing.html" class="nav-active">Property Listing</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact FAQ</a></li>
+      <li class="mobile-auth-btn">
+        <button class="login-btn" onclick="window.location.href='login.html'"
+          style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+     
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="pl-hero">
+    <div class="pl-hero-badge"><span></span>Punjab's Premium Real Estate</div>
+    <h1>Explore Our <span>Property Listings</span></h1>
+    <p>Browse curated luxury residential and commercial developments across Punjab — filter by type, BHK, or budget to find your perfect match.</p>
+  </section>
+
+  <!-- ── Filter Bar ── -->
+  <div class="pl-filter-wrap">
+    <div class="pl-filter-bar">
+      <span class="pl-filter-label"><i class="fa-solid fa-sliders"></i> Filter by</span>
+
+      <div class="pl-filter-chips" id="filterChips">
+        <button class="pl-chip active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> Show All
+        </button>
+        <button class="pl-chip" data-filter="3bhk">
+          <i class="fa-solid fa-house"></i> 3+1 BHK
+        </button>
+        <button class="pl-chip" data-filter="4bhk">
+          <i class="fa-solid fa-building"></i> 4 BHK
+        </button>
+        <button class="pl-chip" data-filter="penthouse">
+          <i class="fa-solid fa-star"></i> Penthouse
+        </button>
+        <button class="pl-chip" data-filter="apartments">
+          <i class="fa-solid fa-city"></i> Apartments
+        </button>
+        <button class="pl-chip" data-filter="commercial">
+          <i class="fa-solid fa-store"></i> Commercial
+        </button>
+      </div>
+
+      <div class="pl-search-wrap">
+        <i class="fa-solid fa-magnifying-glass pl-search-icon"></i>
+        <input type="text" class="pl-search-input" id="plSearch" placeholder="Search projects...">
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Results Meta ── -->
+  <div class="pl-results-meta">
+    <p class="pl-result-count">Showing <strong id="resultCount">3</strong> properties</p>
+    <div class="pl-sort-wrap">
+      <span class="pl-sort-label">Sort by:</span>
+      <select class="pl-sort-select" id="plSort">
+        <option value="default">Default</option>
+        <option value="name">Name A–Z</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ── Cards Grid ── -->
+  <div class="pl-grid" id="plGrid">
+
+    <!-- Card 1: CM Infinia -->
+    <div class="pl-card"
+      data-type="4bhk penthouse"
+      data-category="apartments"
+      data-name="CM Infinia"
+      data-price="100">
+      <div class="pl-card-img">
+        <img src="images/cm.jpg" alt="CM Infinia">
+        <span class="pl-card-badge apartments">Apartments</span>
+        <button class="pl-card-fav" title="Save"><i class="fa-regular fa-heart"></i></button>
+      </div>
+      <div class="pl-card-body">
+        <h3>CM Infinia</h3>
+        <p class="pl-card-loc"><i class="fa-solid fa-location-dot"></i> CM Valley, Jainpur, Ludhiana</p>
+        <p class="pl-card-desc">Premium luxury residential tower in the heart of Ludhiana — featuring world-class amenities, sky lounges, and unparalleled views.</p>
+        <div class="pl-card-specs">
+          <span class="pl-card-spec"><i class="fa-solid fa-ruler-combined"></i> 4600+ sq.ft</span>
+          <span class="pl-card-spec"><i class="fa-solid fa-layer-group"></i> 4 BHK / Penthouse</span>
+          <span class="pl-card-spec"><i class="fa-solid fa-shield-halved"></i> Gated</span>
+        </div>
+        <div class="pl-card-footer">
+          <div class="pl-card-price">On Request <span>/ sq.ft</span></div>
+          <a href="./property-listing/cm-infinia.html" class="pl-card-btn">
+            View IPX <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: MDB Lutyens -->
+    <div class="pl-card"
+      data-type="3bhk 4bhk penthouse"
+      data-category="apartments"
+      data-name="MDB Lutyens"
+      data-price="70">
+      <div class="pl-card-img">
+        <img src="images/MDB_Lutyens_1766146795158.jpg" alt="MDB Lutyens">
+        <span class="pl-card-badge apartments">Apartments</span>
+        <button class="pl-card-fav" title="Save"><i class="fa-regular fa-heart"></i></button>
+      </div>
+      <div class="pl-card-body">
+        <h3>MDB Lutyens</h3>
+        <p class="pl-card-loc"><i class="fa-solid fa-location-dot"></i> Fauji Colony, Banur, Punjab</p>
+        <p class="pl-card-desc">An iconic luxury residential development redefining modern living with infinity pools, lush green parks, and a state-of-the-art clubhouse.</p>
+        <div class="pl-card-specs">
+          <span class="pl-card-spec"><i class="fa-solid fa-indian-rupee-sign"></i> ₹7000/sq.ft</span>
+          <span class="pl-card-spec"><i class="fa-solid fa-layer-group"></i> 3+1 / 4 BHK</span>
+          <span class="pl-card-spec"><i class="fa-solid fa-tree"></i> Green View</span>
+        </div>
+        <div class="pl-card-footer">
+          <div class="pl-card-price">₹7,000 <span>/ sq.ft</span></div>
+          <a href="./property-listing/mdb-the-lutyens.html" class="pl-card-btn">
+            View IPX <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Ananta Street -->
+    <div class="pl-card"
+      data-type="commercial"
+      data-category="commercial"
+      data-name="Ananta Street"
+      data-price="70">
+      <div class="pl-card-img">
+        <img src="images/AnantaStreet_1766146992482.jpg" alt="Ananta Street">
+        <span class="pl-card-badge commercial">Commercial</span>
+        <button class="pl-card-fav" title="Save"><i class="fa-regular fa-heart"></i></button>
+      </div>
+      <div class="pl-card-body">
+        <h3>Ananta Street</h3>
+        <p class="pl-card-loc"><i class="fa-solid fa-location-dot"></i> Canal Rd, South City, Ludhiana</p>
+        <p class="pl-card-desc">A serene premium commercial township alongside the canal with lush greenery — an ideal destination for retail and business investment.</p>
+        <div class="pl-card-specs">
+          <span class="pl-card-spec"><i class="fa-solid fa-indian-rupee-sign"></i> ₹7000/sq.ft</span>
+          <span class="pl-card-spec"><i class="fa-solid fa-store"></i> Commercial</span>
+          <span class="pl-card-spec"><i class="fa-solid fa-water"></i> Canal Side</span>
+        </div>
+        <div class="pl-card-footer">
+          <div class="pl-card-price">₹7,000 <span>/ sq.ft</span></div>
+          <a href="./property-listing/ananta-street.html" class="pl-card-btn">
+            View IPX <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Results Message -->
+    <div class="pl-no-results" id="noResults">
+      <i class="fa-regular fa-face-frown"></i>
+      <h3>No properties found</h3>
+      <p>Try adjusting your filters or search query.</p>
+      <button onclick="resetFilters()">Show All Properties</button>
+    </div>
+
+  </div>
+
+  <!-- ── Footer Bar ── -->
+  <div class="pl-footer-bar">
+    © 2026 <a href="index.html">BetterSide Real Estate</a> — All rights reserved &nbsp;·&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;·&nbsp; <a href="#">Privacy Policy</a>
+  </div>
+
+  <!-- Page Script -->
+  <script src="./subpage/property-listing/property.js"></script>
+
+</body>
+</html>

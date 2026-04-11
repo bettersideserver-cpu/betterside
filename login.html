@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="/images/Betterside Logo 1.png">
     <meta charset="UTF-8">
     <title>Sign Up | BetterSide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,7 @@
                 <img src="/subpage/Login/media/image/Betterside_Logo_1_1-removebg-preview.png" alt="BetterSide Logo">
             </div>
 
-            <a href="index.html" class="back-btn">
+            <a href="/" class="back-btn">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
 
@@ -65,7 +64,7 @@
             const password = formData.get("password");
 
             try {
-                const res = await fetch("https://betterside-yjfx.onrender.com/api/auth/login", {
+                const res = await fetch("https://betterside-api.onrender.com/api/auth/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email, password })
@@ -77,7 +76,7 @@
                     localStorage.setItem("userName", data.user.name);
                     localStorage.setItem("userRole", data.user.role);
                     alert("Login successful 🎉");
-                    window.location.href = "dashboard.html";
+                    window.location.href = "../Dashboard/dashboard.html";
                 } else {
                     alert(data.message);
                 }

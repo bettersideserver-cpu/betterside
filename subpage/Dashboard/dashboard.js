@@ -20,7 +20,7 @@ document.getElementById("logoutBtn").addEventListener("click", function(e) {
     localStorage.removeItem("userName");
     localStorage.removeItem("userRole");
     localStorage.removeItem("userProfileImage");
-    window.location.href = "/index.html";
+    window.location.href = "/";
 });
 
 // --- Profile Data ---
