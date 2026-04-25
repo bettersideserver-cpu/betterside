@@ -378,7 +378,10 @@ body {
   font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
   color: #9ca3af;
 }
-
+/* Adjust ONLY the second founder's photo */
+.team-card:nth-child(2) .team-photo {
+  object-position: center 6%;
+}
 .team-info { padding: 30px 30px 28px; flex: 1; display: flex; flex-direction: column; }
 
 .team-name {
