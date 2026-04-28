@@ -12,7 +12,7 @@ body {
   background: #f4f7fc;
 }
 
-/* ── NAVBAR — exact match with explore.css ── */
+/* ── NAVBAR — exact match with Services.css ── */
 .navbar {
   will-change: transform; transform: translateZ(0);
   position: fixed; top: 0; left: 0; width: 100%; z-index: 999;
@@ -307,7 +307,7 @@ body {
   .pl-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0 20px; }
 }
 
-/* Matches explore.css breakpoint at 860px */
+/* Matches Services.css breakpoint at 860px */
 @media screen and (max-width: 860px) {
   .navbar { padding: 0 24px; height: 70px; }
   .navbar.scrolled { padding: 10px 24px; border-radius: 0; }

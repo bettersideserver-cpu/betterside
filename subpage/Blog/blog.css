@@ -16,7 +16,7 @@
 }
 
 /* ============================================================
-   NAVBAR — exact match with explore.css
+   NAVBAR — exact match with Services.css
    ============================================================ */
 .navbar {
   will-change: transform; transform: translateZ(0);
@@ -780,7 +780,7 @@
   .bln-glow  { display: none; }
 }
 
-/* Matches explore.css breakpoint */
+/* Matches Services.css breakpoint */
 @media screen and (max-width: 860px) {
   .navbar { padding: 0 24px; height: 70px; }
   .navbar.scrolled {
