@@ -196,8 +196,35 @@
               </div>
             </div>
           </div>
+          <div class="team-card reveal" style="transition-delay:.24s; grid-column: 1 / -1; max-width: calc(50% - 0.75rem); margin: 0 auto;">
+            <div class="team-photo-wrap">
+              <img src="/subpage/About/media/image/third.jpeg" alt="Founder" class="team-photo"
+                onerror="this.style.opacity='0'" />
+              <div class="team-photo-placeholder"></div>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Himanshu Gupta</h4>
+              <span class="team-role">Co-Founder</span>
+              <p class="team-bio">
+                <span class="short-text">
+                A passionate real estate enthusiast with a strong interest in market trends, property development, and investment strategies. With a proactive mindset and a drive to learn, they continuously explore new opportunities within the industry.
+                </span>
+
+                <span class="full-text">
+                 At Betterside, we contribute fresh perspectives and research-driven insights, supporting the company’s strategic initiatives and overall growth. Their involvement helps strengthen innovative thinking and aligns with the brand’s vision of building a dynamic and future-ready real estate platform.
+                </span>
+
+                <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
+              </p>
+              <div class="team-tags"></div>
+            </div>
+          </div>
         </div>
+
+        
+        
       </section>
+
 
       <div class="section-divider reveal"></div>
 
@@ -313,16 +340,13 @@
   <script>
     function toggleReadMore(btn) {
       const bio = btn.parentElement;
-      const shortText = bio.querySelector('.short-text');
       const fullText = bio.querySelector('.full-text');
 
       if (fullText.style.display === "inline") {
         fullText.style.display = "none";
-        shortText.style.display = "inline";
         btn.innerText = "Read More";
       } else {
         fullText.style.display = "inline";
-        shortText.style.display = "none";
         btn.innerText = "Read Less";
       }
     }
