@@ -38,19 +38,19 @@
       <li><a href="services.html">Services</a></li>
       <li class="active"><a href="./about.html">About</a></li>
       <li><a href="explore.html">Explore</a></li>
-      <li><a href="#">Blog</a></li>
+      <li><a href="/blog.html">Blog</a></li>
 
       <li><a href="contact.html">Contact</a></li>
       <li class="mobile-auth-btn">
         <button class="login-btn" onclick="window.location.href='/subpage/Login/'"
           style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
       </li>
-    
+
       </li>
     </ul>
     <div class="nav-actions">
 
-       <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
     </div>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
@@ -148,7 +148,7 @@
 
                 <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
               </p>
-             
+
             </div>
           </div>
           <div class="team-card reveal" style="transition-delay:.12s">
@@ -192,7 +192,7 @@
                 <span class="read-more-btn" onclick="toggleReadMore(this)">Read More</span>
               </p>
               <div class="team-tags">
-               
+
               </div>
             </div>
           </div>
@@ -221,8 +221,8 @@
           </div> -->
         </div>
 
-        
-        
+
+
       </section>
 
 
@@ -278,65 +278,65 @@
 
     </div>
   </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-    // ── Set email via JS so Cloudflare cannot obfuscate it ──
-    var u = 'info';
-    var d = '@betterside.com';
-    var el = document.getElementById('email-link');
-    var tx = document.getElementById('email-text');
-    if (el && tx) {
-      el.href = 'mailto:' + u + d;
-      tx.textContent = u + d;
-    }
+      // ── Set email via JS so Cloudflare cannot obfuscate it ──
+      var u = 'info';
+      var d = '@betterside.com';
+      var el = document.getElementById('email-link');
+      var tx = document.getElementById('email-text');
+      if (el && tx) {
+        el.href = 'mailto:' + u + d;
+        tx.textContent = u + d;
+      }
 
-    // ── Navbar scroll hide/show ──
-    var navbar = document.getElementById('navbar');
-    if (navbar) {
-      var lastY = window.scrollY;
-      window.addEventListener('scroll', function () {
-        var curr = window.scrollY;
-        navbar.classList.toggle('scrolled', curr > 60);
-        if (curr > lastY && curr > 120) {
-          navbar.classList.add('nav-hide');
-        } else if (curr < lastY) {
-          navbar.classList.remove('nav-hide');
-        }
-        lastY = curr;
-      });
-    }
-
-    // ── Hamburger ──
-    var hamburger = document.getElementById('hamburger');
-    var navLinks = document.getElementById('navLinks');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
-      });
-      navLinks.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          navLinks.classList.remove('active');
+      // ── Navbar scroll hide/show ──
+      var navbar = document.getElementById('navbar');
+      if (navbar) {
+        var lastY = window.scrollY;
+        window.addEventListener('scroll', function () {
+          var curr = window.scrollY;
+          navbar.classList.toggle('scrolled', curr > 60);
+          if (curr > lastY && curr > 120) {
+            navbar.classList.add('nav-hide');
+          } else if (curr < lastY) {
+            navbar.classList.remove('nav-hide');
+          }
+          lastY = curr;
         });
-      });
-    }
+      }
 
-    // ── Scroll Reveal ──
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
+      // ── Hamburger ──
+      var hamburger = document.getElementById('hamburger');
+      var navLinks = document.getElementById('navLinks');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function () {
+          navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+          });
+        });
+      }
 
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      observer.observe(el);
+      // ── Scroll Reveal ──
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+
     });
-
-  });
-</script>
+  </script>
   <script>
     function toggleReadMore(btn) {
       const bio = btn.parentElement;

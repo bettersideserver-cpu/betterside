@@ -1,502 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="title" content="Explore Real Estate Listings in Punjab | Homes, Plots & Commercial – BetterSide">
-<meta name="description" content=" Browse top property listings in Punjab including homes, plots, and commercial spaces. Compare prices, view details, and find the perfect property on BetterSide.">
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description"
+    content=" Browse top property listings in Punjab including homes, plots, and commercial spaces. Compare prices, view details, and find the perfect property on BetterSide.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore Real Estate Listings in Punjab | Homes, Plots & Commercial – BetterSide</title>
   <link rel="icon" type="image/svg+xml" href="/BetterSide_Mini-Logo.svg">
-<link rel="icon" type="image/png" href="/loogos.png">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="./subpage/Explore/explore-style.css"/>
+  <link rel="icon" type="image/png" href="/loogos.png">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Questrial&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./subpage/Explore/explore-style.css" />
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
- <a href="./../../" class="logo-space">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="./../../" class="logo-space">
       <img src="../../images/Betterside Logo 1.png" alt="BetterSide"
-        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')"/>
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'logo-text\'>Better<span>Side</span></span>')" />
     </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="/">Home</a></li>
-    <li class="active">Services</li>
-    <li><a href="about.html">About</a></li>
-   <li><a href="explore.html">Explore</a></li>
-  
-     
-    <li>Blog</li>
-    
-    <li><a href="contact.html">Contact</a></li>
-    <li class="mobile-auth-btn">
-      <button class="login-btn" onclick="window.location.href='login.html'" style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
-    </li>
-    
-  </ul>
-  <div class="nav-actions">
-    
-    <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li class="active">Services</li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="explore.html">Explore</a></li>
+
+
+      <li><a href="/blog.html">Blog</a></li>
+
+      <li><a href="contact.html">Contact</a></li>
+      <li class="mobile-auth-btn">
+        <button class="login-btn" onclick="window.location.href='login.html'"
+          style="width:150px;margin-bottom:10px;border:1px solid #ccc;">Login</button>
+      </li>
+
+    </ul>
+    <div class="nav-actions">
+
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- HERO -->
+    <section class="explore-hero">
+      <div class="explore-eyebrow">Our Services</div>
+      <h1>Everything Your Property<br />Needs to <span class="accent">Stand Out</span></h1>
+      <p>From immersive 3D experiences to complete digital marketing — BetterSide covers every step of the modern real
+        estate journey.</p>
+    </section>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" data-filter="all">All Services</button>
+      <button class="tab-btn" data-filter="3d">3D Solutions</button>
+      <button class="tab-btn" data-filter="tech">Technology</button>
+    </div>
+
+    <!-- SERVICE CARDS -->
+    <div class="services-grid" id="servicesGrid">
+      <div class="service-card" data-category="3d" data-showcase="walkthrough">
+        <div class="card-glow"></div>
+        <div class="card-icon-wrap">🏠</div>
+        <div class="card-tag">Immersive · 3D</div>
+        <div class="card-title">3D Walkthrough</div>
+        <p class="card-desc">Photorealistic room-by-room tours that let buyers explore every finish, view, and space —
+          before a single brick is laid.</p>
+        <ul class="card-list">
+          <li>📷 High-res photos first</li>
+          <li>🎬 Cinematic walkthrough videos</li>
+          <li>Mobile &amp; desktop ready</li>
+        </ul>
+        <span class="card-cta">View Photos &amp; Videos <i class="fas fa-arrow-down"></i></span>
+        <div class="card-num">01</div>
+      </div>
+      <div class="service-card" data-category="3d" data-showcase="websites">
+        <div class="card-glow"></div>
+        <div class="card-icon-wrap">🌐</div>
+        <div class="card-tag">Digital · Web</div>
+        <div class="card-title">3D Websites</div>
+        <p class="card-desc">Browser-based WebGL property websites that captivate visitors and convert browsers into
+          buyers with animated floor plans.</p>
+        <ul class="card-list">
+          <li>WebGL powered experience</li>
+          <li>Interactive floor plans</li>
+          <li>Built-in lead capture</li>
+        </ul>
+        <span class="card-cta">View Projects <i class="fas fa-arrow-down"></i></span>
+        <div class="card-num">02</div>
+      </div>
+      <div class="service-card" data-category="tech" data-showcase="ipx">
+        <div class="card-glow"></div>
+        <div class="card-icon-wrap">⚡</div>
+        <div class="card-tag">Technology · IPX</div>
+        <div class="card-title">IPX Solutions</div>
+        <p class="card-desc">Intelligent Property Experience — smart integrations that connect your digital assets with
+          CRM, sales pipeline, and buyer journey.</p>
+        <ul class="card-list">
+          <li>CRM &amp; pipeline integration</li>
+          <li>Live analytics dashboard</li>
+          <li>Automated buyer follow-ups</li>
+        </ul>
+        <span class="card-cta">Explore IPX <i class="fas fa-arrow-down"></i></span>
+        <div class="card-num">03</div>
+      </div>
+    </div>
+
+    <!-- WALKTHROUGH DIVIDER -->
+    <div class="wt-divider" id="walkthroughDivider">
+      <div class="showcase-divider-line"></div>
+    </div>
+
+    <!-- WALKTHROUGH SHOWCASE -->
+    <section class="wt-section" id="walkthroughSection">
+      <div class="wt-block-header">
+        <div class="section-label">3D Walkthrough · Photos</div>
+        <h2>Stills from Our <span>Projects</span></h2>
+        <p>High-resolution renders capturing every finish, material, and moment of light.</p>
+      </div>
+      <div class="wt-photos-grid">
+        <div class="wt-photo wt-photo-large">
+          <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/1.png" alt="AGI Majestic" /></div>
+          <div class="wt-photo-label">AGI Majestic</div>
+        </div>
+        <div class="wt-photo">
+          <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/2.png" alt="Ananta Street" /></div>
+          <div class="wt-photo-label">Ananta Street</div>
+        </div>
+        <div class="wt-photo">
+          <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/3.png" alt="Kitchen Render" /></div>
+          <div class="wt-photo-label">MDB Lutyens</div>
+        </div>
+        <div class="wt-photo">
+          <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/4.png" alt="Bathroom Render" /></div>
+          <div class="wt-photo-label">MDB Lutyens</div>
+        </div>
+        <div class="wt-photo">
+          <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/5.png" alt="Balcony Render" /></div>
+          <div class="wt-photo-label">AGI Majestic</div>
+        </div>
+        <div class="wt-photo wt-photo-wide">
+          <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/6.png" alt="Aerial View Render" /></div>
+          <div class="wt-photo-label">CM Infinia</div>
+        </div>
+      </div>
+
+      <div class="wt-inner-divider">
+        <div class="wt-inner-divider-line"></div>
+        <span class="wt-inner-divider-label">🎬 Videos</span>
+        <div class="wt-inner-divider-line"></div>
+      </div>
+
+      <div class="wt-block-header" style="margin-top:0;">
+        <div class="section-label">3D Walkthrough · Videos</div>
+        <h2>Cinematic <span>Walkthroughs</span></h2>
+        <p>Full room-by-room video tours with ambient sound and cinematic camera paths.</p>
+      </div>
+
+      <div class="wt-videos-grid">
+        <!-- Ananta Street -->
+        <div class="wt-video-card">
+          <div class="wt-video-thumb wt-video-thumb--yt">
+            <iframe src="https://www.youtube.com/embed/7u-NFSaB9V0" title="Ananta Street — Full Walkthrough"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="wt-video-body">
+            <div class="wt-video-tag">Full Tour</div>
+            <div class="wt-video-title">Ananta Street — Complete Walkthrough</div>
+            <p class="wt-video-desc">A full cinematic tour of every space in this luxury residential development — from
+              entrance to rooftop.</p>
+          </div>
+        </div>
+        <!-- London Square -->
+        <div class="wt-video-card">
+          <div class="wt-video-thumb wt-video-thumb--yt">
+            <iframe src="https://www.youtube.com/embed/1gTv7-B3IEQ" title="London Square — Highlight Reel"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="wt-video-body">
+            <div class="wt-video-tag">Highlight Reel</div>
+            <div class="wt-video-title">London Square — Highlight Reel</div>
+            <p class="wt-video-desc">Key spaces and hero moments edited into a fast-paced highlight reel for social
+              media.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS DIVIDER -->
+    <div class="showcase-divider" id="projectsDivider">
+      <div class="showcase-divider-line"></div>
+    </div>
+
+    <!-- 3D WEBSITES PROJECT SHOWCASE -->
+    <section class="projects-section" id="projectsSection">
+      <div class="projects-header">
+        <div class="section-label">3D Websites</div>
+        <h2>Our Featured <span>Projects</span></h2>
+        <p>Real 3D web experiences we've built — click to explore each one live.</p>
+      </div>
+      <div class="project-row">
+        <div class="project-row-img">
+          <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/1.png" alt="AGI-Majestic" /></div>
+          <div class="project-live-badge">Live</div>
+          <div class="project-num-tag">01</div>
+        </div>
+        <div class="project-row-body">
+          <div class="project-row-type">3D Website</div>
+          <div class="project-row-name">AGI-Majestic</div>
+          <p class="project-row-desc">Full 3D tour of AGI-Majestic, a premium luxury residential tower in the heart of
+            city.</p>
+          <div class="project-row-tags">
+            <span class="project-row-tag">WebGL</span>
+            <span class="project-row-tag">Interactive</span>
+            <span class="project-row-tag">Residential</span>
+          </div>
+          <a href="" target="_blank" class="view-project-btn">View Project</a>
+        </div>
+      </div>
+      <div class="project-row">
+        <div class="project-row-img">
+          <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/2.png" alt="MDB Lutyens" /></div>
+          <div class="project-live-badge">Live</div>
+          <div class="project-num-tag">02</div>
+        </div>
+        <div class="project-row-body">
+          <div class="project-row-type">3D Website</div>
+          <div class="project-row-name">MDB Lutyens</div>
+          <p class="project-row-desc">Full 3D tour of MDB Lutyens, a premium luxury residential tower in the heart of
+            the city.</p>
+          <div class="project-row-tags">
+            <span class="project-row-tag">WebGL</span>
+            <span class="project-row-tag">Commercial</span>
+            <span class="project-row-tag">3D Tour</span>
+          </div>
+          <a href="https://www.mdbthelutyens.in/" target="_blank" class="view-project-btn">View Project</a>
+        </div>
+      </div>
+      <div class="project-row">
+        <div class="project-row-img">
+          <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/Ananta-ipx.jpg"
+              alt="Ananta Street" /></div>
+          <div class="project-live-badge">Live</div>
+          <div class="project-num-tag">03</div>
+        </div>
+        <div class="project-row-body">
+          <div class="project-row-type">3D Website</div>
+          <div class="project-row-name">Ananta Street</div>
+          <p class="project-row-desc">Full 3D tour of Ananta Street, a premium luxury residential development.</p>
+          <div class="project-row-tags">
+            <span class="project-row-tag">WebGL</span>
+            <span class="project-row-tag">Villa</span>
+            <span class="project-row-tag">Lead Gen</span>
+          </div>
+          <a href="https://bettersideserver-cpu.github.io/AnantaStreet/" target="_blank" class="view-project-btn">View
+            Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- IPX DIVIDER -->
+    <div class="ipx-divider" id="ipxDivider">
+      <div class="showcase-divider-line"></div>
+    </div>
+
+    <!-- IPX SOLUTIONS SECTION -->
+    <section class="ipx-section" id="ipxSection">
+      <div class="ipx-header">
+        <div class="section-label">IPX Solutions</div>
+        <h2>Intelligent Property <span>Experience</span></h2>
+        <p>Choose the IPX module that fits your project — click any option to learn more or get started.</p>
+      </div>
+      <div class="project-row">
+        <div class="project-row-img">
+          <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/cm.jpg" alt="CM Infinia" /></div>
+          <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
+          <div class="project-num-tag">01</div>
+        </div>
+        <div class="project-row-body">
+          <div class="project-row-type">IPX Module</div>
+          <div class="project-row-name">CM Infinia</div>
+          <p class="project-row-desc">Full 3D tour of CM Infinia, a premium luxury residential tower in the heart of
+            city.</p>
+          <div class="project-row-tags">
+            <span class="project-row-tag">WebGL</span>
+            <span class="project-row-tag">Interactive</span>
+            <span class="project-row-tag">Residential</span>
+          </div>
+          <a href="https://www.cminfiniaimmersive.com/" target="_blank" class="view-project-btn">View Full IPX</a>
+        </div>
+      </div>
+      <div class="project-row">
+        <div class="project-row-img">
+          <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/MDB-ipx.jpg" alt="MDB Lutyens" />
+          </div>
+          <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
+          <div class="project-num-tag">02</div>
+        </div>
+        <div class="project-row-body">
+          <div class="project-row-type">IPX Module</div>
+          <div class="project-row-name">MDB Lutyens</div>
+          <p class="project-row-desc">Full 3D tour of MDB Lutyens, a premium luxury residential tower in the heart of
+            city.</p>
+          <div class="project-row-tags">
+            <span class="project-row-tag">WebGL</span>
+            <span class="project-row-tag">Interactive</span>
+            <span class="project-row-tag">Residential</span>
+          </div>
+          <a href="https://www.mdbthelutyens.in/" target="_blank" class="view-project-btn">View Full IPX</a>
+        </div>
+      </div>
+      <div class="project-row">
+        <div class="project-row-img">
+          <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/Ananta-ipx.jpg"
+              alt="Ananta Street" /></div>
+          <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
+          <div class="project-num-tag">03</div>
+        </div>
+        <div class="project-row-body">
+          <div class="project-row-type">IPX Module</div>
+          <div class="project-row-name">Ananta Street</div>
+          <p class="project-row-desc">Full 3D tour of Ananta Street, a premium luxury residential development.</p>
+          <div class="project-row-tags">
+            <span class="project-row-tag">WebGL</span>
+            <span class="project-row-tag">Interactive</span>
+            <span class="project-row-tag">Leads</span>
+          </div>
+          <a href="https://bettersideserver-cpu.github.io/AnantaStreet/" target="_blank" class="view-project-btn">View
+            Full IPX</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+      <div class="section-label">The Process</div>
+      <h2 class="section-heading">How BetterSide <span>Works</span></h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📋</div>
+          <div class="step-title">Share Your Project</div>
+          <p class="step-desc">Send us your floor plans, renders, or site details. We review your goals and recommend
+            the right digital solution.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">🎨</div>
+          <div class="step-title">We Build the Experience</div>
+          <p class="step-desc">Our team crafts your 3D walkthrough, website, or VR tour — tailored to your brand and
+            project identity.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">🔍</div>
+          <div class="step-title">Review &amp; Refine</div>
+          <p class="step-desc">You get a preview link. We iterate until every detail matches your vision — unlimited
+            revisions in our process.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <div class="step-icon">🚀</div>
+          <div class="step-title">Launch &amp; Sell</div>
+          <p class="step-desc">Go live with your digital experience. Pair it with our marketing campaigns to drive
+            enquiries from day one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Ready to See Your Home<br />in <span class="accent">3D</span>?</h2>
+          <p>Let's build a digital experience that sells your project before the foundation is laid.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-white">Book a Demo</button>
+          <button class="btn-outline-white">View Projects</button>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
 
-<div class="page-wrapper">
+  <!-- FOOTER -->
+  <footer class="explore-footer">
+    <div class="footer-brand">Better<span>Side</span></div>
+    <div class="footer-copy">© 2026 BetterSide. All rights reserved.</div>
+  </footer>
 
-  <!-- HERO -->
-  <section class="explore-hero">
-    <div class="explore-eyebrow">Our Services</div>
-    <h1>Everything Your Property<br/>Needs to <span class="accent">Stand Out</span></h1>
-    <p>From immersive 3D experiences to complete digital marketing — BetterSide covers every step of the modern real estate journey.</p>
-  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
 
-  <!-- FILTER TABS -->
-  <div class="filter-tabs">
-    <button class="tab-btn active" data-filter="all">All Services</button>
-    <button class="tab-btn" data-filter="3d">3D Solutions</button>
-    <button class="tab-btn" data-filter="tech">Technology</button>
-  </div>
-
-  <!-- SERVICE CARDS -->
-  <div class="services-grid" id="servicesGrid">
-    <div class="service-card" data-category="3d" data-showcase="walkthrough">
-      <div class="card-glow"></div>
-      <div class="card-icon-wrap">🏠</div>
-      <div class="card-tag">Immersive · 3D</div>
-      <div class="card-title">3D Walkthrough</div>
-      <p class="card-desc">Photorealistic room-by-room tours that let buyers explore every finish, view, and space — before a single brick is laid.</p>
-      <ul class="card-list">
-        <li>📷 High-res photos first</li>
-        <li>🎬 Cinematic walkthrough videos</li>
-        <li>Mobile &amp; desktop ready</li>
-      </ul>
-      <span class="card-cta">View Photos &amp; Videos <i class="fas fa-arrow-down"></i></span>
-      <div class="card-num">01</div>
-    </div>
-    <div class="service-card" data-category="3d" data-showcase="websites">
-      <div class="card-glow"></div>
-      <div class="card-icon-wrap">🌐</div>
-      <div class="card-tag">Digital · Web</div>
-      <div class="card-title">3D Websites</div>
-      <p class="card-desc">Browser-based WebGL property websites that captivate visitors and convert browsers into buyers with animated floor plans.</p>
-      <ul class="card-list">
-        <li>WebGL powered experience</li>
-        <li>Interactive floor plans</li>
-        <li>Built-in lead capture</li>
-      </ul>
-      <span class="card-cta">View Projects <i class="fas fa-arrow-down"></i></span>
-      <div class="card-num">02</div>
-    </div>
-    <div class="service-card" data-category="tech" data-showcase="ipx">
-      <div class="card-glow"></div>
-      <div class="card-icon-wrap">⚡</div>
-      <div class="card-tag">Technology · IPX</div>
-      <div class="card-title">IPX Solutions</div>
-      <p class="card-desc">Intelligent Property Experience — smart integrations that connect your digital assets with CRM, sales pipeline, and buyer journey.</p>
-      <ul class="card-list">
-        <li>CRM &amp; pipeline integration</li>
-        <li>Live analytics dashboard</li>
-        <li>Automated buyer follow-ups</li>
-      </ul>
-      <span class="card-cta">Explore IPX <i class="fas fa-arrow-down"></i></span>
-      <div class="card-num">03</div>
-    </div>
-  </div>
-
-  <!-- WALKTHROUGH DIVIDER -->
-  <div class="wt-divider" id="walkthroughDivider"><div class="showcase-divider-line"></div></div>
-
-  <!-- WALKTHROUGH SHOWCASE -->
-  <section class="wt-section" id="walkthroughSection">
-    <div class="wt-block-header">
-      <div class="section-label">3D Walkthrough · Photos</div>
-      <h2>Stills from Our <span>Projects</span></h2>
-      <p>High-resolution renders capturing every finish, material, and moment of light.</p>
-    </div>
-    <div class="wt-photos-grid">
-      <div class="wt-photo wt-photo-large">
-        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/1.png" alt="AGI Majestic"/></div>
-        <div class="wt-photo-label">AGI Majestic</div>
-      </div>
-      <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/2.png" alt="Ananta Street"/></div>
-        <div class="wt-photo-label">Ananta Street</div>
-      </div>
-      <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/3.png" alt="Kitchen Render"/></div>
-        <div class="wt-photo-label">MDB Lutyens</div>
-      </div>
-      <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/4.png" alt="Bathroom Render"/></div>
-        <div class="wt-photo-label">MDB Lutyens</div>
-      </div>
-      <div class="wt-photo">
-        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/5.png" alt="Balcony Render"/></div>
-        <div class="wt-photo-label">AGI Majestic</div>
-      </div>
-      <div class="wt-photo wt-photo-wide">
-        <div class="wt-photo-inner"><img src="/subpage/Explore/media/image/6.png" alt="Aerial View Render"/></div>
-        <div class="wt-photo-label">CM Infinia</div>
-      </div>
-    </div>
-
-    <div class="wt-inner-divider">
-      <div class="wt-inner-divider-line"></div>
-      <span class="wt-inner-divider-label">🎬 Videos</span>
-      <div class="wt-inner-divider-line"></div>
-    </div>
-
-    <div class="wt-block-header" style="margin-top:0;">
-      <div class="section-label">3D Walkthrough · Videos</div>
-      <h2>Cinematic <span>Walkthroughs</span></h2>
-      <p>Full room-by-room video tours with ambient sound and cinematic camera paths.</p>
-    </div>
-
-    <div class="wt-videos-grid">
-      <!-- Ananta Street -->
-      <div class="wt-video-card">
-        <div class="wt-video-thumb wt-video-thumb--yt">
-          <iframe
-            src="https://www.youtube.com/embed/7u-NFSaB9V0"
-            title="Ananta Street — Full Walkthrough"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="wt-video-body">
-          <div class="wt-video-tag">Full Tour</div>
-          <div class="wt-video-title">Ananta Street — Complete Walkthrough</div>
-          <p class="wt-video-desc">A full cinematic tour of every space in this luxury residential development — from entrance to rooftop.</p>
-        </div>
-      </div>
-      <!-- London Square -->
-      <div class="wt-video-card">
-        <div class="wt-video-thumb wt-video-thumb--yt">
-          <iframe
-            src="https://www.youtube.com/embed/1gTv7-B3IEQ"
-            title="London Square — Highlight Reel"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="wt-video-body">
-          <div class="wt-video-tag">Highlight Reel</div>
-          <div class="wt-video-title">London Square — Highlight Reel</div>
-          <p class="wt-video-desc">Key spaces and hero moments edited into a fast-paced highlight reel for social media.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS DIVIDER -->
-  <div class="showcase-divider" id="projectsDivider"><div class="showcase-divider-line"></div></div>
-
-  <!-- 3D WEBSITES PROJECT SHOWCASE -->
-  <section class="projects-section" id="projectsSection">
-    <div class="projects-header">
-      <div class="section-label">3D Websites</div>
-      <h2>Our Featured <span>Projects</span></h2>
-      <p>Real 3D web experiences we've built — click to explore each one live.</p>
-    </div>
-    <div class="project-row">
-      <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/1.png" alt="AGI-Majestic"/></div>
-        <div class="project-live-badge">Live</div>
-        <div class="project-num-tag">01</div>
-      </div>
-      <div class="project-row-body">
-        <div class="project-row-type">3D Website</div>
-        <div class="project-row-name">AGI-Majestic</div>
-        <p class="project-row-desc">Full 3D tour of AGI-Majestic, a premium luxury residential tower in the heart of city.</p>
-        <div class="project-row-tags">
-          <span class="project-row-tag">WebGL</span>
-          <span class="project-row-tag">Interactive</span>
-          <span class="project-row-tag">Residential</span>
-        </div>
-        <a href="" target="_blank" class="view-project-btn">View Project</a>
-      </div>
-    </div>
-    <div class="project-row">
-      <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/2.png" alt="MDB Lutyens"/></div>
-        <div class="project-live-badge">Live</div>
-        <div class="project-num-tag">02</div>
-      </div>
-      <div class="project-row-body">
-        <div class="project-row-type">3D Website</div>
-        <div class="project-row-name">MDB Lutyens</div>
-        <p class="project-row-desc">Full 3D tour of MDB Lutyens, a premium luxury residential tower in the heart of the city.</p>
-        <div class="project-row-tags">
-          <span class="project-row-tag">WebGL</span>
-          <span class="project-row-tag">Commercial</span>
-          <span class="project-row-tag">3D Tour</span>
-        </div>
-        <a href="https://www.mdbthelutyens.in/" target="_blank" class="view-project-btn">View Project</a>
-      </div>
-    </div>
-    <div class="project-row">
-      <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/Ananta-ipx.jpg" alt="Ananta Street"/></div>
-        <div class="project-live-badge">Live</div>
-        <div class="project-num-tag">03</div>
-      </div>
-      <div class="project-row-body">
-        <div class="project-row-type">3D Website</div>
-        <div class="project-row-name">Ananta Street</div>
-        <p class="project-row-desc">Full 3D tour of Ananta Street, a premium luxury residential development.</p>
-        <div class="project-row-tags">
-          <span class="project-row-tag">WebGL</span>
-          <span class="project-row-tag">Villa</span>
-          <span class="project-row-tag">Lead Gen</span>
-        </div>
-        <a href="https://bettersideserver-cpu.github.io/AnantaStreet/" target="_blank" class="view-project-btn">View Project</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- IPX DIVIDER -->
-  <div class="ipx-divider" id="ipxDivider"><div class="showcase-divider-line"></div></div>
-
-  <!-- IPX SOLUTIONS SECTION -->
-  <section class="ipx-section" id="ipxSection">
-    <div class="ipx-header">
-      <div class="section-label">IPX Solutions</div>
-      <h2>Intelligent Property <span>Experience</span></h2>
-      <p>Choose the IPX module that fits your project — click any option to learn more or get started.</p>
-    </div>
-    <div class="project-row">
-      <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/cm.jpg" alt="CM Infinia"/></div>
-        <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
-        <div class="project-num-tag">01</div>
-      </div>
-      <div class="project-row-body">
-        <div class="project-row-type">IPX Module</div>
-        <div class="project-row-name">CM Infinia</div>
-        <p class="project-row-desc">Full 3D tour of CM Infinia, a premium luxury residential tower in the heart of city.</p>
-        <div class="project-row-tags">
-          <span class="project-row-tag">WebGL</span>
-          <span class="project-row-tag">Interactive</span>
-          <span class="project-row-tag">Residential</span>
-        </div>
-        <a href="https://www.cminfiniaimmersive.com/" target="_blank" class="view-project-btn">View Full IPX</a>
-      </div>
-    </div>
-    <div class="project-row">
-      <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/MDB-ipx.jpg" alt="MDB Lutyens"/></div>
-        <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
-        <div class="project-num-tag">02</div>
-      </div>
-      <div class="project-row-body">
-        <div class="project-row-type">IPX Module</div>
-        <div class="project-row-name">MDB Lutyens</div>
-        <p class="project-row-desc">Full 3D tour of MDB Lutyens, a premium luxury residential tower in the heart of city.</p>
-        <div class="project-row-tags">
-          <span class="project-row-tag">WebGL</span>
-          <span class="project-row-tag">Interactive</span>
-          <span class="project-row-tag">Residential</span>
-        </div>
-        <a href="https://www.mdbthelutyens.in/" target="_blank" class="view-project-btn">View Full IPX</a>
-      </div>
-    </div>
-    <div class="project-row">
-      <div class="project-row-img">
-        <div class="project-img-placeholder"><img src="/subpage/Explore/media/image/Ananta-ipx.jpg" alt="Ananta Street"/></div>
-        <div class="project-live-badge" style="background:rgba(0,85,255,0.88);">Live</div>
-        <div class="project-num-tag">03</div>
-      </div>
-      <div class="project-row-body">
-        <div class="project-row-type">IPX Module</div>
-        <div class="project-row-name">Ananta Street</div>
-        <p class="project-row-desc">Full 3D tour of Ananta Street, a premium luxury residential development.</p>
-        <div class="project-row-tags">
-          <span class="project-row-tag">WebGL</span>
-          <span class="project-row-tag">Interactive</span>
-          <span class="project-row-tag">Leads</span>
-        </div>
-        <a href="https://bettersideserver-cpu.github.io/AnantaStreet/" target="_blank" class="view-project-btn">View Full IPX</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-section">
-    <div class="section-label">The Process</div>
-    <h2 class="section-heading">How BetterSide <span>Works</span></h2>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">01</div>
-        <div class="step-icon">📋</div>
-        <div class="step-title">Share Your Project</div>
-        <p class="step-desc">Send us your floor plans, renders, or site details. We review your goals and recommend the right digital solution.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">02</div>
-        <div class="step-icon">🎨</div>
-        <div class="step-title">We Build the Experience</div>
-        <p class="step-desc">Our team crafts your 3D walkthrough, website, or VR tour — tailored to your brand and project identity.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">03</div>
-        <div class="step-icon">🔍</div>
-        <div class="step-title">Review &amp; Refine</div>
-        <p class="step-desc">You get a preview link. We iterate until every detail matches your vision — unlimited revisions in our process.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">04</div>
-        <div class="step-icon">🚀</div>
-        <div class="step-title">Launch &amp; Sell</div>
-        <p class="step-desc">Go live with your digital experience. Pair it with our marketing campaigns to drive enquiries from day one.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BANNER -->
-  <div class="cta-banner">
-    <div class="cta-inner">
-      <div class="cta-text">
-        <h2>Ready to See Your Home<br/>in <span class="accent">3D</span>?</h2>
-        <p>Let's build a digital experience that sells your project before the foundation is laid.</p>
-      </div>
-      <div class="cta-actions">
-        <button class="btn-white">Book a Demo</button>
-        <button class="btn-outline-white">View Projects</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="explore-footer">
-  <div class="footer-brand">Better<span>Side</span></div>
-  <div class="footer-copy">© 2026 BetterSide. All rights reserved.</div>
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  // ── Navbar Scroll ──
-  const navbar = document.getElementById('navbar');
-  let lastScrollY = window.scrollY;
-  window.addEventListener('scroll', () => {
-    const curr = window.scrollY;
-    navbar.classList.toggle('scrolled', curr > 60);
-    if (curr > lastScrollY && curr > 120) navbar.classList.add('nav-hide');
-    else if (curr < lastScrollY) navbar.classList.remove('nav-hide');
-    lastScrollY = curr;
-  });
-
-  // ── Hamburger ──
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
-
-  // ── Filter Tabs ──
-  const tabs  = document.querySelectorAll('.tab-btn');
-  const cards = document.querySelectorAll('.service-card');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const filter = tab.dataset.filter;
-      cards.forEach(card => {
-        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      // ── Navbar Scroll ──
+      const navbar = document.getElementById('navbar');
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const curr = window.scrollY;
+        navbar.classList.toggle('scrolled', curr > 60);
+        if (curr > lastScrollY && curr > 120) navbar.classList.add('nav-hide');
+        else if (curr < lastScrollY) navbar.classList.remove('nav-hide');
+        lastScrollY = curr;
       });
-    });
-  });
 
-  // ── Section references ──
-  const walkthroughSection = document.getElementById('walkthroughSection');
-  const walkthroughDivider = document.getElementById('walkthroughDivider');
-  const projectsSection    = document.getElementById('projectsSection');
-  const projectsDivider    = document.getElementById('projectsDivider');
-  const ipxSection         = document.getElementById('ipxSection');
-  const ipxDivider         = document.getElementById('ipxDivider');
+      // ── Hamburger ──
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
 
-  const allSections = [
-    walkthroughSection, walkthroughDivider,
-    projectsSection,    projectsDivider,
-    ipxSection,         ipxDivider
-  ].filter(Boolean);
+      // ── Filter Tabs ──
+      const tabs = document.querySelectorAll('.tab-btn');
+      const cards = document.querySelectorAll('.service-card');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const filter = tab.dataset.filter;
+          cards.forEach(card => {
+            card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+          });
+        });
+      });
 
-  function closeAll() {
-    allSections.forEach(el => el.classList.remove('open'));
-    cards.forEach(c => c.classList.remove('active-card', 'card-expanded'));
-  }
+      // ── Section references ──
+      const walkthroughSection = document.getElementById('walkthroughSection');
+      const walkthroughDivider = document.getElementById('walkthroughDivider');
+      const projectsSection = document.getElementById('projectsSection');
+      const projectsDivider = document.getElementById('projectsDivider');
+      const ipxSection = document.getElementById('ipxSection');
+      const ipxDivider = document.getElementById('ipxDivider');
 
-  function openSection(section, divider, card) {
-    closeAll();
-    card.classList.add('active-card', 'card-expanded');
-    if (section) section.classList.add('open');
-    if (divider) divider.classList.add('open');
-    setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }), 80);
-  }
+      const allSections = [
+        walkthroughSection, walkthroughDivider,
+        projectsSection, projectsDivider,
+        ipxSection, ipxDivider
+      ].filter(Boolean);
 
-  cards.forEach(card => {
-    card.addEventListener('click', (e) => {
-      e.preventDefault();
-      const type       = card.dataset.showcase;
-      const isExpanded = card.classList.contains('card-expanded');
-      if (type === 'walkthrough') {
-        isExpanded ? closeAll() : openSection(walkthroughSection, walkthroughDivider, card);
-      } else if (type === 'websites') {
-        isExpanded ? closeAll() : openSection(projectsSection, projectsDivider, card);
-      } else if (type === 'ipx') {
-        isExpanded ? closeAll() : openSection(ipxSection, ipxDivider, card);
-      } else {
+      function closeAll() {
+        allSections.forEach(el => el.classList.remove('open'));
+        cards.forEach(c => c.classList.remove('active-card', 'card-expanded'));
+      }
+
+      function openSection(section, divider, card) {
         closeAll();
-        card.classList.add('active-card');
+        card.classList.add('active-card', 'card-expanded');
+        if (section) section.classList.add('open');
+        if (divider) divider.classList.add('open');
+        setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }), 80);
       }
-    });
-  });
 
-  // ── Scroll-triggered card reveal ──
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+      cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          const type = card.dataset.showcase;
+          const isExpanded = card.classList.contains('card-expanded');
+          if (type === 'walkthrough') {
+            isExpanded ? closeAll() : openSection(walkthroughSection, walkthroughDivider, card);
+          } else if (type === 'websites') {
+            isExpanded ? closeAll() : openSection(projectsSection, projectsDivider, card);
+          } else if (type === 'ipx') {
+            isExpanded ? closeAll() : openSection(ipxSection, ipxDivider, card);
+          } else {
+            closeAll();
+            card.classList.add('active-card');
+          }
+        });
+      });
+
+      // ── Scroll-triggered card reveal ──
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      cards.forEach((card, i) => {
+        card.style.animationDelay = (i * 0.08) + 's';
+        observer.observe(card);
+      });
+
+      // ── Auto-open IPX card on page load ──
+      const ipxCard = document.querySelector('.service-card[data-showcase="ipx"]');
+      if (ipxCard && ipxSection && ipxDivider) {
+        setTimeout(() => {
+          ipxCard.classList.add('active-card', 'card-expanded');
+          ipxSection.classList.add('open');
+          ipxDivider.classList.add('open');
+        }, 600);
       }
+
     });
-  }, { threshold: 0.1 });
-  cards.forEach((card, i) => {
-    card.style.animationDelay = (i * 0.08) + 's';
-    observer.observe(card);
-  });
 
-  // ── Auto-open IPX card on page load ──
-  const ipxCard = document.querySelector('.service-card[data-showcase="ipx"]');
-  if (ipxCard && ipxSection && ipxDivider) {
-    setTimeout(() => {
-      ipxCard.classList.add('active-card', 'card-expanded');
-      ipxSection.classList.add('open');
-      ipxDivider.classList.add('open');
-    }, 600);
-  }
-
-});
-
-  /* ---- Units dropdown — click to toggle ---- */
-      const dropdown = document.getElementById('unitsDropdown');
-      const trigger  = dropdown.querySelector('.dropdown-trigger');
-      trigger.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        dropdown.classList.toggle('open');
-      });
-      /* Close on outside click */
-      document.addEventListener('click', function(e) {
-        if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
-      });
-</script>
+    /* ---- Units dropdown — click to toggle ---- */
+    const dropdown = document.getElementById('unitsDropdown');
+    const trigger = dropdown.querySelector('.dropdown-trigger');
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    /* Close on outside click */
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+    });
+  </script>
 
 </body>
+
 </html>
